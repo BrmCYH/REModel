@@ -1,0 +1,17 @@
+[
+  {
+    "title": "APT攻击",
+    "txt": "APT攻击\nAPT组织Kimsuky展开新一轮的网络攻击\nAPT组织\n展开新一轮的网络攻击\nAPT组织Midnight Blizzard针对微软攻击的技战术分析\nAPT组织Midnight Blizzard针对微软攻击的技战术分析\nAPT组织Blind Eagle针对制造业行业展开攻击\nAPT组织Blind Eagle针对制造业行业展开攻击\n攻击活动\n攻击活动\n黑客声称已经破坏了以色列核设施的计算机网络\n黑客声称已经破坏了以色列核设施的计算机网络\n国际货币基金组织电子邮件账户被黑\n客攻击\n数据泄露\n数据泄露\n富士通遭受网络攻击可能造成数据泄露\n法国Travail 数据泄露可能影响 4300 万工人\n法国\nTravail 数据泄露可能影响 4300 万工人\n恶意软件\n恶意软件\n黑客使用Smokeloader 恶意软件从乌克兰企业窃取资金\n黑客使用Smokeloader 恶意软件从乌克兰企业窃取资金\n勒索软件\n勒索软件\nTeamCity 漏洞导致勒索软件、加密挖矿和 RAT 攻击激增\n揭示利用IP-Guard 漏洞的LIVE勒索软件的策略\n揭示利用\nIP-Guard 漏洞的LIVE勒索软件的策略\nAPT组织Kimsuky展开新一轮的网络攻击\nAhnLab 安全情报中心（ASEC）最近证实，APT组织Kimsuky 通过向韩国国内公共机构分发了伪装成安装程序的恶意软件。本次攻击所涉及的恶意软件是一个植入程序，它会创建 Endoor后门，这是在过去Kimsuky 组织在相同场景攻击中使用的后门恶意软件。虽然在过去历史的实际攻击中，使用的植入式恶意软件尚未得到证实，但攻击所使用植入式恶意软件生成的后门攻击案例在与植入式恶意软件的收集日期相似的时间得到了确认。 攻击者使用后门下载额外的恶意软件或安装窃取屏幕截图的恶意软件。此外，Endoor还在不断被用于攻击，过去还曾与通过鱼叉式网络钓鱼攻击传播的 Nikidoor 一起使用。",
+    "reference": "https://asec.ahnlab.com/ko/62771/"
+  },
+  {
+    "title": "APT组织Midnight Blizzard针对微软攻击的技战术分析",
+    "txt": "2024年1月25日，微软报告俄罗斯APT组织Midnight Blizzard（也称为APT29 和Cozy Bear）对其系统造成了破坏。攻击者执行了密码喷雾，破坏了未启用多重身份验证(MFA)的Microsoft 365测试租户帐户，并利用该帐户对旧版OAuth 应用程序的访问权限来升级权限并从Microsoft企业Exchange Online中窃取电子邮件环境。后来，在 2024 年 3 月 8 日，微软发布了一条更新消息说：“与我们在2024年1月看到的规模相比，Midnight Blizzard在2月份增加了某些方面的攻击数量（例如密码喷射）多达10倍”。据观察，攻击者还试图利用最初泄露的信息来破坏客户环境，这表明他们持续不断地致力于收集更多数据。本文概述了Trellix Helix针对Midnight Blizzard攻击中观察到的技战术提供深度分析。",
+    "reference": "https://www.trellix.com/blogs/research/midnight-blizzard-attack-detection-in-trellix-helix/"
+  },
+  {
+    "title": "APT组织Blind Eagle针对制造业行业展开攻击",
+    "txt": "Blind Eagle，也被追踪为APT-C-36，首次出现于2018年左右。据称的攻击行为者来自南美洲，已知攻击目标是哥伦比亚和该地区的其他国家。威胁行为者利用网络钓鱼电子邮件建立初始立足点。2021年，趋势科技发表了一篇博文，提到了Blind Eagle攻击者部署的各种RAT变种，例如njRAT、Remcos、Imminent Monitor、AsyncRAT、LimeRAT、BitRAT和Warzone RAT。最近，eSentire (TRU)观察到Blind Eagle威胁行为者针对的是制造业。用户收到了钓鱼电子邮件，其中包含下载RAR和BZ2存档的链接，其中包含恶意VBS文件。RAR存档受密码保护，并包含恶意VBS文件。VBS文件包含负责使用File.Copy方法将VBS文件复制到Startup文件夹以实现持久性 (\\AppData\\Roaming\\Microsoft\\Windows\\Start Menu\\Programs\\Startup) 的代码。",
+    "reference": "https://www.esentire.com/blog/blind-eagles-north-american-journey"
+  }
+]

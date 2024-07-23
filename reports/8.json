@@ -1,0 +1,42 @@
+[
+  {
+    "title": "疑似巴基斯坦TransparentTribe（APT36）组织使用跨平台编程语言武器展开攻击",
+    "txt": "Transparent Tribe，也被称为APT36、ProjectM、Mythic Leopard或Earth Karkaddan，是一个疑似巴基斯坦的网络APT组织。该组织主要针对印度国防、政府和教育部门进行网络攻击活动的历史。尽管该组织并没有过于复杂的技术，但它积极适应其攻击向量和工具包的更新以逃避检测。近期，BlackBerry的研究人员在2023年末到2024年4月期间发现并分析了该组织新的攻击活动。该组织在攻击活动中特别依赖跨平台编程语言，例如Python、Golang和Rust，以及滥用流行的网络服务，如Telegram、Discord、Slack和Google Drive。研究人员观察到该组织部署了一系列恶意工具，既有以往活动中使用过的工具，也有新版本。研究人员在调查过程中发现了多个证据，支持了对Transparent Tribe的归因溯源。例如，一个文件在其基础设施上设置了时区（TZ）变量为“Asia/Karachi”，这是巴基斯坦标准时间。研究人员还发现了一个与巴基斯坦移动数据网络运营商相关的远程IP地址，嵌入在一个鱼叉式钓鱼邮件中。针对印度国家安全至关重要的关键部门的战略性目标选择，也表明了该组织可能与巴基斯坦的利益一致。除了熟悉的策略，Transparent Tribe还引入了新的技战术跟新迭代。他们在2023年10月引入了ISO映像作为攻击向量，这在他们当前的活动中有所记录。BlackBerry还发现了一个由该组织使用的新的Golang编译的“一体化”间谍攻击工具。\n图 1 反编译攻击脚本执行的操作",
+    "reference": "https://blogs.blackberry.com/en/2024/05/transparent-tribe-targets-indian-government-defense-and-aerospace-sectors"
+  },
+  {
+    "title": "疑似朝鲜APT组织Springtail启用新的Linux后门木马展开攻击",
+    "txt": "安全公司Symantec的研究团队揭露了名为Springtail（也被称作Kimsuky）的朝鲜APT组织开发的一种新型Linux后门木马，命名为Linux.Gomir。这一发现与该组织近期针对韩国组织的一场网络攻击活动有关。Linux.Gomir后门与之前Springtail组织使用的GoBear后门在结构上极为相似，两者之间存在大量的代码共享，表明它们可能有共同的起源。Springtail组织最初以韩国公共部门组织为目标，2014年因攻击韩国水电和核电公司而进入公众视野。美国政府声称该小组隶属于朝鲜军事情报机构——侦察总局（RGB）。最近，该组织因尝试利用配置不当的DNS DMARC记录政策来掩盖社交工程尝试而受到美国政府的警告。在2024年2月，Springtail组织通过木马化的软件安装包传播了名为Troll Stealer的新型恶意软件家族，该恶意软件能够从受感染的计算机中窃取文件、屏幕截图、浏览器数据和系统信息等。Troll Stealer特别设计了复制感染计算机上的GPKI文件夹的功能，该文件夹是韩国政府人员和国家组织的公钥基础设施架构，暗示政府机构是此次攻击的目标之一。Troll Stealer与GoBear后门有关联，都被签署了一个颁发给“D2innovation Co.,LTD”的合法证书。GoBear后门也被发现通过模仿韩国交通组织应用安装程序的投放器来分发，该投放器使用看似被盗的证书进行签名。Symantec研究团队进一步的调查揭露了Gomir后门，这是GoBear的Linux版本，具备在不同操作系统上运行的能力。Gomir后门在执行时会检查命令行参数，如果发现“install”参数，将尝试实现持久性安装。如果以超级用户权限运行，它将复制自身到/var/log/syslogd并创建systemd服务以自启动；如果不是以超级用户权限运行，则尝试通过crontab在每次重启时启动后门。安装并运行后，Gomir会定期与其C&C服务器通信，通过发送HTTP POST请求执行命令。",
+    "reference": "https://symantec-enterprise-blogs.security.com/blogs/blog-post/springtail-kimsuky-backdoor-espionage"
+  },
+  {
+    "title": "疑似俄罗斯APT组织Turla使用了两个新的后门木马针对欧洲展开攻击",
+    "txt": "近期，安全公司ESET研究人员揭露了与俄罗斯有关的Turla APT组织（也被称为Snake,Uroburos,Waterbug,Venomous Bear和KRYPTON）使用两种新的后门程序，LunarWeb和LunarMail，来侵入欧洲国家外交部及其驻外使团。这些后门的设计目的是在目标网络中进行长期潜伏、数据外泄以及维持对受感染系统的控制。Turla APT组织自2004年以来一直活跃，主要针对中东、亚洲、欧洲、南北美洲等。\nLunarWeb后门被部署在服务器上，使用HTTPS进行命令与控制（C&C）通信，并模仿合法请求以避开检测。LunarMail后门则被部署在装有Microsoft Outlook的工作站上，作为一个Outlook插件存在，并使用电子邮件消息进行C&C通信，以躲避在HTTPS流量受到监控的环境中的检测。LunarWeb使用多种持久性方法，包括创建组策略扩展、替换系统DLL和作为合法软件的一部分部署。执行链始于一个名为LunarLoader的加载器，它使用RC4对称密钥密码来解密有效载荷。一旦Lunar后门侵入系统，它就会等待来自C2服务器的命令，网络攻击还使用被盗的凭证进行横向移动。另外，LunarWeb还能执行shell和PowerShell命令、收集系统信息、运行Lua代码，并以AES-256加密的形式外泄数据。LunarMail则通过Outlook消息API（MAPI）进行电子邮件通信，通常将有效载荷隐藏在.PNG图片中。LunarMail能够创建进程、截屏、写文件和执行Lua脚本，间接运行shell和PowerShell命令。\n研究人员注意到，这些入侵活动的复杂性存在差异。一些情况下，攻击者在受感染服务器上的精心安装行为似乎是为了规避安全软件的扫描，然而在后门程序中却发现了编码错误和不同的编码风格。这种对比表明，可能有不止一个参与者涉足了这些工具的开发和运用。尽管所描述的入侵活动看似是最近才发生的，但根据在Lunar工具集中发现的证据，研究人员推断这些后门程序至少自2020年起就已经被使用。\n图 2 APT组织Turla攻击示意图",
+    "reference": "https://securityaffairs.com/163314/apt/turla-apt-new-backdoors.html"
+  },
+  {
+    "title": "攻击者通过福昕PDF阅读器向用户传输恶意软件",
+    "txt": "根据安全公司Check Point的研究人员所述，网络攻击者正在利用Foxit PDF Reader的一个漏洞，通过设置陷阱的PDF文档来传递恶意软件，福昕PDF阅读器用户展开攻击。研究人员已经确定了一些针对Foxit Reader用户的恶意PDF文件的活动。攻击者正在利用各种.NET和Python漏洞生成器，特别是“PDF漏洞生成器”，用于创建包含执行命令或脚本的宏的PDF文档。这些命令下载并运行恶意软件，如Agent Tesla、Remcos RAT、Xworm和NanoCore RAT。研究人员分析发现无论使用哪种编程语言，所有构建器都具有一致的结构。用于漏洞利用的PDF模板包含占位符文本，一旦用户提供输入，该文本将被替换为下载恶意文件的URL。此外，攻击者正在利用Foxit Reader中的一些弹出式警告将有害选项设置为打开这些被破坏的文件时的默认选择。攻击者寄希望于用户忽视警告文本，并快速接受默认选项，从而允许Foxit Reader执行恶意命令。全球目前超过7亿人使用Foxit PDF Reader，包括政府和技术领域，它已经被从电子犯罪到APT（高级持续性威胁）组织的多种威胁行为者利用。这些组织多年来一直在利用这种漏洞，经常逃避大多数主要针对Adobe PDF Reader的防病毒软件和沙箱的检测。Check Point已向Foxit报告了该漏洞，该公司已宣布计划在2024 3版本中解决该问题。",
+    "reference": "https://www.cysecurity.news/2024/05/how-attackers-distribute-malware-to.html"
+  },
+  {
+    "title": "支持巴勒斯坦的黑客活动组织针对埃及、阿联酋和沙特阿拉伯的网络攻击活动",
+    "txt": "CYFIRMA研究人员调查发现，支持巴勒斯坦的黑客活动组织针对埃及、阿联酋和沙特阿拉伯的网络攻击活动有所增加。这些攻击与以色列和巴勒斯坦之间持续的冲突有关，一些支持巴勒斯坦的团体针对以色列及其盟友的关键基础设施发起网络攻击。2024年3月，埃及的Etisalat（一家阿联酋国有的电信公司）遭到支持巴勒斯坦的黑客组织攻击。此前一个月，Etisalat UAE的系统被LockBit勒索软件组织加密，尽管在LockBit洋葱网站上没有发现有关此事件的信息。CYFIRMA的报告指出，这些攻击是对中东国家支持以色列的抗议。埃及因为被指控延迟向巴勒斯坦难民提供人道主义援助而遭到攻击，支持巴勒斯坦的黑客活动组织破坏了开罗的官方网站和政府税务局。同样，沙特阿拉伯加强了对反以色列言论的逮捕，激起了多个支持巴勒斯坦的黑客活动组织的反击。Anonymous Collective等支持巴勒斯坦的黑客活动组织使用了DDoS攻击、网站篡改和数据泄露等手段，沙特阿拉伯的关键基础设施也成为攻击目标，例如对沙特电力公司的DDoS攻击导致暂时中断。2024年5月10日，来自阿富汗的“TEAM1916”组织对迪拜官方网站进行了DDoS攻击。CYFIRMA团队在调查中还发现了Anonymous Sudan对Etisalat Egypt在3月第一周进行的DDoS攻击，导致Etisalat Egypt官方网站暂时中断数小时。",
+    "reference": "https://www.cyfirma.com/research/cyber-attacks-on-egypt-uae-and-saudi-arabia/"
+  },
+  {
+    "title": "西悉尼大学数据泄露暴露学生数据",
+    "txt": "西悉尼大学（WSU）遭遇了一起严重的数据泄露事件，该事件在2024年1月被校方IT团队发现并及时切断了未授权访问。经过调查，发现攻击者最早于2023年5月17日就已渗透进WSU的Microsoft Office 365环境，包括电子邮件账户和SharePoint文件。泄露的数据内容因个人而异，涉及电子邮件通信和SharePoint存储的文件。此次泄露影响了约7,500名个人，他们将很快通过电子邮件和电话收到个性化的通知。尽管调查仍在进行中，但目前尚未有勒索软件或敲诈团体声称对此次攻击负责，攻击者的身份和动机仍然不明。WSU的Solar Car Laboratory基础设施可能在此次事件中被利用。尽管如此，大学的核心技术运营并未受到影响，预计不会干扰到课程、考试、注册或研究项目的正常进行。WSU没有收到任何要求公开被访问的私人信息的威胁，也没有收到任何以保护隐私为交换条件的要求。为了预防未来类似事件的发生，WSU已经加强了安全措施，并获得了新南威尔士州最高法院的禁令，以防止在攻击期间访问或被盗的任何数据的传播。",
+    "reference": "https://www.bleepingcomputer.com/news/security/western-sydney-university-data-breach-exposed-student-data/"
+  },
+  {
+    "title": "Grandoreiro银行木马再次出现，目标是全球1500多家银行",
+    "txt": "Grandoreiro银行木马在2024年3月重新出现，其背后的威胁行为者在1月的执法打击后再次发起了一场全球性的活动。这次大规模的网络钓鱼攻击针对全球超过1,500家银行，这些银行遍布中南美洲、非洲、欧洲和印度-太平洋地区的60多个国家。IBM X-Force表示，虽然Grandoreiro主要关注拉丁美洲、西班牙和葡萄牙，但这次扩张可能是在巴西当局试图关闭其基础设施后战略转变的一部分。与更广泛的目标足迹同步的是恶意软件本身的重大改进，这表明了积极的开发。安全研究人员表示，对恶意软件的分析揭示了字符串解密和域生成算法（DGA）内的重大更新，以及利用受感染主机上的Microsoft Outlook客户端进一步传播钓鱼邮件的能力。攻击始于网络钓鱼邮件，指示收件人点击链接查看发票或根据消息中冒充的政府实体的性质进行付款。点击链接的用户被重定向到PDF图标的图像，最终导致下载包含Grandoreiro加载程序可执行文件的ZIP归档。自定义加载程序被人为增加到超过100 MB，以绕过反恶意软件扫描软件。它还负责确保受感染的主机不在沙盒环境中，将基本受害者数据收集到命令和控制（C2）服务器，并下载并执行主银行木马。值得注意的是，验证步骤还包括跳过定位到俄罗斯、捷克共和国、波兰和荷兰的系统，以及在美国没有安装防病毒软件的Windows 7机器。木马组件通过Windows注册表建立持久性开始执行，然后使用重新设计的DGA与C2服务器建立连接以接收进一步的指令。Grandoreiro支持各种命令，允许威胁行为者远程控制系统，执行文件操作，并启用特殊模式，包括一个新模块，该模块收集Microsoft Outlook数据并滥用受害者的电子邮件账户向其他目标发送垃圾邮件。研究人员表示，为了与本地Outlook客户端交互，Grandoreiro使用Outlook安全管理工具，这是一个用于开发Outlook插件的软件。这背后的主要原因是，如果Outlook对象模型守卫检测到对受保护对象的访问，它将触发安全警报。通过使用本地Outlook客户端发送垃圾邮件，Grandoreiro可以通过受感染的受害者收件箱通过电子邮件传播，这可能有助于从Grandoreiro观察到的大量垃圾邮件量。",
+    "reference": "https://thehackernews.com/2024/05/grandoreiro-banking-trojan-resurfaces.html"
+  },
+  {
+    "title": "黑客",
+    "txt": "利用 Microsoft 的快速助手功能进行勒索软件攻击\n微软威胁情报团队发现，一个名为Storm-1811的网络犯罪组织正在滥用微软的客户端管理工具Quick Assist，以社交工程攻击的方式针对用户展开攻击。Storm-1811是一个以财务为动机的网络犯罪集团，部署Black Basta勒索软件。该攻击链涉及使用语音网络钓鱼进行身份冒充，诱骗不知情的受害者安装远程监控和管理（RMM）工具，随后传递QakBot、Cobalt Strike，最终部署Black Basta勒索软件。攻击者滥用Quick Assist的功能，通过假装是受信任的联系人，例如微软技术支持或目标用户所在公司的IT专业人员，以获得目标设备的初始访问权限。Quick Assist是微软的一个合法应用程序，允许用户与他人共享他们的Windows或macOS设备，主要是为了远程解决系统上的技术问题。它默认安装在运行Windows 11的设备上。为了使攻击更具说服力，攻击者发起链接列表攻击，这是一种电子邮件轰炸攻击，目标电子邮件地址被注册到各种合法的电子邮件订阅服务中，用订阅内容充斥他们的收件箱。然后，对手通过电话冒充公司的IT支持团队，假装向目标用户提供解决垃圾邮件问题的协助，并说服他们通过Quick Assist授予对其设备的访问权限。一旦用户允许访问和控制，攻击者就运行一系列脚本化的cURL命令，下载用于传递恶意负载的批处理文件或ZIP文件。Storm-1811利用他们的访问权限，执行进一步的键盘操作活动，如域枚举和横向移动。然后，Storm-1811使用PsExec在整个网络中部署Black Basta勒索软件。微软表示，正在密切监视Quick Assist在这些攻击中的滥用情况，并正在努力在软件中加入警告消息，以通知用户可能的技术支持诈骗，这可能有助于勒索软件的传递。据Rapid7称，这场攻击活动于2024年4月中旬开始，已针对包括制造业、建筑业、食品和饮料以及运输业在内的多个行业和领域，显示出攻击的机会主义性质。",
+    "reference": "https://thehackernews.com/2024/05/cybercriminals-exploiting-microsofts.html"
+  }
+]

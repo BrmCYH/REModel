@@ -1,0 +1,27 @@
+[
+  {
+    "title": "APT攻击",
+    "txt": "APT攻击\n疑似朝鲜APT组织Andariel正在对韩国公司进行持续攻击\n揭秘APT组织Earth Kapre的攻击技术策略\n攻击活动\n攻击活动\n英国莱斯特市议会的 IT 系统和电话系统黑客网络攻击\n亲俄黑客行动主义者花费不超过 500 美元攻击了数百个法国网站\n数据泄露\n数据泄露\n2023年，超过1200万个身份验证机密和密钥在GitHub上泄露\n美国电动汽车行业服务公司Qmerit大规模泄露客户信息数据（585.81GB）\n恶意软件\n恶意软件\n新的银行木马 CHAVECLOAK 通过网络钓鱼策略针对巴西用户\n勒索软件\n勒索软件\nLockBit勒索软件成员被判入狱四年\n疑似朝鲜APT组织Andariel正在对韩国公司进行持续攻击\n疑似朝鲜APT组织Andariel正在对韩国公司进行持续攻击\n据AhnLab安全情报中心（ASEC）近日证实，APT组织Andariel正在对韩国国内企业进行持续攻击。此次确认的攻击的一个特点是，确认了攻击过程中安装了MeshAgent的恶意软件。MeshAgent是一款远程管理工具，提供多种远程控制功能，因此与其他远程管理工具一样，被攻击者滥用的案例也时有发生。与之前的案例一样，攻击者利用目标单位资产管理系统安装恶意代码，最明显的是AndarLoader和ModeLoader。作为参考，Andariel攻击组织一直在不断滥用目标单位的资产管理系统，从过去的Innorix Agent开始，在横向移动过程中传播恶意软件。\n据AhnLab安全情报中心（ASEC）近日证实，APT组织Andariel正在对韩国国内企业进行持续攻击。此次确认的攻击的一个特点是，确认了攻击过程中安装了MeshAgent的恶意软件。MeshAgent是一款远程管理工具，提供多种远程控制功能，因此与其他远程管理工具一样，被攻击者滥用的案例也时有发生。与之前的案例一样，攻击者利用目标单位资产管理系统安装恶意代码，最明显的是AndarLoader和ModeLoader。作为参考，Andariel攻击组织一直在不断滥用目标单位的资产管理系统，从过去的Innorix Agent开始，在横向移动过程中传播恶意软件。",
+    "reference": "https://asec.ahnlab.com/ko/62771/"
+  },
+  {
+    "title": "揭秘APT组织Earth Kapre的攻击技术策略",
+    "txt": "APT攻击组织Earth Kapre（又名 RedCurl 和 Red Wolf）一直在积极针对俄罗斯、德国、乌克兰、英国、斯洛文尼亚、加拿大、澳大利亚和美国的组织开展网络钓鱼活动。他们在攻击中使用包含恶意附件（.iso和.img）的网络钓鱼电子邮件，打开后就会成功感染。这会触发创建持久性计划任务，同时未经授权收集敏感数据并将其传输到命令和控制(C&C) 服务器。研究人员分析观察到该恶意软件与其C&C服务器建立连接，这表明存在潜在的数据盗窃情况。有趣的是，在这种情况下，Earth Kapre组织又重新使用了一种与其最近的活动不同的先前已知技术：他们使用合法工具Powershell.exe和curl.exe来获取后续阶段的下载程序。为了混入网络并逃避检测，Earth Kapre被发现使用程序兼容性助手 ( pcalua.exe ) 来执行恶意命令行。",
+    "reference": "https://www.trendmicro.com/en_us/research/24/c/unveiling-earth-kapre-aka-redcurls-cyberespionage-tactics-with-t.html"
+  },
+  {
+    "title": "英国莱斯特市议会的 IT 系统和电话系统黑客网络攻击",
+    "txt": "英国莱斯特市议会在上周四（2024.03.07）遭受网络攻击后，被迫关闭并中断IT 系统和电话系统。虽然攻击的性质仍未披露，但当地官员们正在与网络安全专家和执法部门合作，评估损害并恢复功能。这一事件凸显了地方当局对网络威胁的脆弱性，本次网络攻击造成该市政税支付和许可证更新等基本服务目前不可用，长时间的停电停工也给当地居民带来了极大的不便。当地政府预计将会分阶段恢复，优先考虑恢复基本服务能力。网络安全专家称，鉴于对地方议会进行网络攻击的历史，这可能是一次代价高昂且具有破坏性的勒索软件攻击。",
+    "reference": "https://www.hackread.com/leicester-council-cyber-attack-system-phone-down/"
+  },
+  {
+    "title": "亲俄黑客行动主义者花费不超过 500 美元攻击了数百个法国网站",
+    "txt": "ZATAZ透露，自2024年03月06日以来，包括 Anonymous Sudan、Noname057（16）、Usersec、CyberArmy of Russia 和 22C 在内的多个黑客团体，针对法国政府在线平台发起了攻击。此举估计是为了抗议法国政府对乌克兰的支持。针对这次法国的DDoS网络攻击是由Anonymous Sudan黑客组织在DDoS服务提供商InfraShutDown的支持下精心策划的，网络攻击者总花费不超过 500 美元。InfraShutDown 还将自己描述为“坚定不移的网络主导地位的巅峰之作”，提供定制的 DDoS 网络攻击活动服务，以满足其“全球客户群”的特定需求，包括政府机构、私营公司和个人等。",
+    "reference": "https://www.zataz.com/les-cyberattaques-contre-les-ministeres-francais-un-cout-inferieur-a-500/"
+  },
+  {
+    "title": "2023年，超过1200万个身份验证机密和密钥在GitHub上泄露",
+    "txt": "2023年，GitHub用户意外暴露了300多万个公共存储库中的1280万个身份验证和敏感机密，其中绝大多数在五天后仍然有效。根据GitGuardian的网络安全专家的说法，他们向那些暴露秘密的人发送了180万封免费电子邮件警报，只有1.8%的联系人迅速采取行动纠正错误。暴露的秘密包括帐户密码、API密钥、TLS/SSL证书、加密密钥、云服务凭据、OAuth令牌和其他敏感数据，这些数据可能会使外部行为者无限制地访问各种私人资源和服务，从而导致数据泄露和财务损失。",
+    "reference": "https://www.bleepingcomputer.com/news/security/over-12-million-auth-secrets-and-keys-leaked-on-github-in-2023/?__cf_chl_tk=tqC9x0O7WmuxvI8wPF7ViRicqzstiCmPy4vbR.98yTs-1710410286-0.0.1.1-1407"
+  }
+]

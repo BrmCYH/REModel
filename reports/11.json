@@ -1,0 +1,27 @@
+[
+  {
+    "title": "APT组织TA547针对德国展开钓鱼式攻击",
+    "txt": "网络安全公司Proofpoint发现APT组织TA547针对德国组织开展了钓鱼式电子邮件攻击活动，以发送Rhadamanthys恶意软件。这是也研究人员首次观察到TA547使用Rhadamanthys，这是一种被多个网络犯罪威胁行为者使用的信息窃取程序。此外，该攻击者似乎使用了PowerShell脚本，研究人员怀疑该脚本是由ChatGPT、Gemini、CoPilot等大型语言模型（LLM）生成的。攻击者发送的电子邮件冒充德国零售公司Metro，声称与发票有关。这些电子邮件针对德国各行各业的数十个组织，邮件包含受密码保护的ZIP文件（密码：MAR26），其中包含LNK文件。执行LNK文件时，它会触发PowerShell运行远程PowerShell脚本。此PowerShell脚本对存储在变量中的Base64编码的Rhadamanthys可执行文件进行解码，并将其作为程序集加载到内存中，然后执行程序集的入口点。这实质上是在内存中执行恶意代码，而不将其写入磁盘。值得注意的是，在进行反混淆处理时，用于加载Rhadamanthys的第二个PowerShell脚本包含攻击者（或合法程序员）使用的代码中不常见的有趣特征。具体来说，PowerShell脚本在脚本的每个组件上方包含一个井号，后跟语法正确且超具体的注释。这是LLM生成的编码内容的典型输出，表明TA547使用某种类型的支持LLM的工具来编写（或重写）PowerShell，或者从使用它的其他源复制脚本。",
+    "reference": "https://www.proofpoint.com/us/blog/threat-insight/security-brief-ta547-targets-german-organizations-rhadamanthys-stealer"
+  },
+  {
+    "title": "运营10年的罗马尼亚攻击组织RUBYCARP浮出水面",
+    "txt": "据研究人员分析发现一个名为RUBYCARP疑似罗马尼亚的攻击组织维护着一个长期运行的僵尸网络，用于进行加密挖掘、分布式拒绝服务（DDoS）和网络钓鱼攻击。有证据表明，该组织应该已经活跃了至少10年，他们的主要操作方法是利用各种公开漏洞和僵尸网络，通过公共和私人IRC网络进行通信，开发网络攻击武器和获取目标数据等，并通过加密挖矿和网络钓鱼获取经济利益。RUBYCARP可能与APT组织\nOutlaw\n有关，因为它确实具有许多相同的策略、技术和程序（TTP）。但是，由于这些共享TTP在许多僵尸网络运营商中都很常见，因此研究人员还无法明确得出这一结论。RUBYCARP在其运营过程中经常使用 Perl Shellbot，这也可能导致归因混淆，因为该工具是攻击者的常见选择。",
+    "reference": "https://sysdig.com/blog/rubycarp-romanian-botnet-group/"
+  },
+  {
+    "title": "“大规模网络攻击”袭击法国五个城市，影响可能持续“数月”",
+    "txt": "法国西海岸卢瓦尔河附近的五个市镇的共享计算机服务器遭到“大规模网络攻击”，工作人员无法访问文件或继续工作。根据圣纳泽尔网站上的一份声明，圣纳泽尔、布列塔尼山、东斯、马莱教堂和波尼谢特的服务目前正在下降。官员告诉当地媒体，恢复可能需要数月时间。由圣纳泽尔市长主持危机会议，目前每天举行两次，分别为上午11点和下午5点。法国网络安全机构ANSSI正在提供支持。根据圣纳泽尔的公告，袭击发生在周二晚上。受影响的地方当局的官员无法访问他们的工作空间、文件或商业软件。当地媒体报道称，当工作人员周三早上到达时，他们被指示不要打开电脑，也不要用手机查看收件箱。市长David Samzun警告说，这次袭击将产生“重大后果”。市政当局使用的电子邮件和电话系统目前已瘫痪。今年1月，一个法国小镇布列塔尼遭到勒索软件攻击，导致所有社区服务暂时关闭。据法国隐私监察机构称，法国3300多万人（约占总人口的一半）的数据在1月底的一次网络攻击中被泄露。",
+    "reference": "https://therecord.media/france-cyberattack-loire-municipalities"
+  },
+  {
+    "title": "针对全球VPN、SSH服务等的大规模暴力攻击活动持续增加",
+    "txt": "自2024年3月18日以来，Cisco Talos正在积极监测全球针对各种目标的暴力攻击，包括虚拟专用网络（VPN）服务、网络应用程序身份验证接口和SSH服务等。这些攻击似乎都源于TOR出口节点和一系列其他匿名隧道和代理。根据目标环境的不同，成功的此类攻击可能会导致未经授权的网络访问、帐户锁定或拒绝服务。与这些攻击有关的流量随着时间的推移而增加，并且可能继续上升。下面列出了已知的受影响服务。但是，其他服务可能会受到这些攻击的影响。\nlCisco Secure Firewall VPN\nlCheckpoint VPN\nlFortinet VPN\nlSonicWall VPN\nlRD Web Services\nlMiktrotik\nlDraytek\nlUbiquiti\n暴力强制尝试使用通用用户名和特定组织的有效用户名。这些袭击的目标似乎是不分青红皂白的，并非针对特定地区或行业。此流量的源IP地址通常与代理服务相关联，代理服务包括但不限于：\nlTOR\nlVPN Gate\nlIPIDEA Proxy\nlBigMama Proxy\nlSpace Proxies\nlNexus Proxy\nlProxy Rack",
+    "reference": "https://blog.talosintelligence.com/large-scale-brute-force-activity-targeting-vpns-ssh-services-with-commonly-used-login-credentials/"
+  },
+  {
+    "title": "参考链接：",
+    "txt": "https://securityaffairs.com/161685/data-breach/att-data-breach-51m-customers.html\n黑客从美国咨询公司窃取了 340,000 个社会安全号码\n美国咨询公司Greylock McKinnon Associates（GMA）发现了一起数据泄露事件，黑客从公司获取了341,650个社会安全号码。GMA公司主要为参与民事诉讼的美国公司和政府机构（包括司法部）提供经济和诉讼支持。根据他们的数据泄露通告分析，GMA公司通知受影响的个人，他们的个人信息数据是由美国司法部（DOJ）获得的，作为GMA支持的民事诉讼事项的一部分。GMA通知受害者，“您的私人和医疗保险数据可能在这次事件中受到影响”，其中包括姓名，出生日期，家庭住址，一些医疗和健康保险信息，以及医疗保险索赔号码，包括社会安全号码。",
+    "reference": "https://www.cysecurity.news/2024/04/hackers-siphon-340000-social-security.html"
+  }
+]
