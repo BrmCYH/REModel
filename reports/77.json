@@ -1,0 +1,12 @@
+[
+  {
+    "title": "勒索软件",
+    "txt": "勒索软件\n亲俄罗斯的黑客使用Killnet勒索软件瞄准对手\n\n新APT组织OPERA1ER针对非洲目标开展攻击活动",
+    "reference": "https://blog.group-ib.com/opera1er-apt-fr"
+  },
+  {
+    "title": "新的Black Basta勒索软件可能与FIN7有联系",
+    "txt": "近日，Sentinel Labs的安全研究人员披露了将Black Basta勒索软件团伙与出于经济动机的APT组织FIN7（也称为“Carbanak”）建立关联的证据。研究人员在分析勒索软件团伙使用的工具时，发现有迹象表明，FIN7的开发人员编写了自2022年6月以来Black Basta专门使用的规避EDR（端点检测和响应）检测的工具。同时，将两者联系起来的进一步证据还包括FIN7在2022年初使用的IP地址和特定的TTP，也出现在几个月后Black Basta的攻击中。",
+    "reference": "https://www.sentinelone.com/labs/black-basta-ransomware-attacks-deploy-custom-edr-evasion-tools-tied-to-fin7-threat-actor/"
+  }
+]

@@ -1,0 +1,22 @@
+[
+  {
+    "title": "APT攻击",
+    "txt": "APT攻击\nAPT37利用福岛污水排放主题的恶意CHM文档开展攻击\nLazarus Group所支持的VMConnect供应链攻击活动\nAPT37利用恶意LNK文件传播恶意后门文件\n疑似Kimsuky使用SuperBear恶意软件针对记者群体开展攻击\n研究人员对APT-C-60组织近期活动的追踪\n披露APT37的样本\n攻击活动\n攻击活动\n针对Mac用户投递Atomic Stealer恶意软件的攻击活动\n\n漏洞情报\n漏洞情报\nAtlas VPN存在零日漏洞可泄露用户真实IP地址\nAtlas VPN存在零日漏洞可泄露用户真实IP地址\n\n数据泄露\n数据泄露\nFreecycle承认大规模数据泄露事件影响700万用户\n悉尼大学遭遇数据泄露影响近日申请者\n悉尼大学遭遇数据泄露影响近日申请者\n\n恶意软件\n恶意软件\n揭秘Remcos Rat的恶意软件活动\n\n勒索软件\n勒索软件\n攻击者以MSSQL服务器为目标分发FreeWorld勒索软件\n\nAPT37利用福岛污水排放主题的恶意CHM文档开展攻击\n",
+    "reference": "https://asec.ahnlab.com/ko/56654/"
+  },
+  {
+    "title": "Lazarus Group所支持的VMConnect供应链攻击活动",
+    "txt": "\n近日，ReversingLabs的研究人员披露，在2023年8月初其观察到了一个恶意的软件供应链攻击活动VMConnect。经调查，本次攻击活动涉及向PyPI存储库上传24个有害的Python包，这些有害的Python包伪装为流行的开源Python工具(如vConnector、eth-tester和quantiumbase)，其目的是寻求使用虚拟化工具的IT专业人员。经过研究人员的深入发掘，发现最近VMConnect活动的另外3个恶意Python包，包括：\"tablediter\"(有736次下载)、\"request-plus\"(有43次下载)和\"requestspro\"(有341次下载)。在新发现的软件包中，第一个似乎伪装成表编辑实用程序，其模仿了流行的Python工具Prettytable，而另外两个软件包则模仿了用于发出HTTP请求的流行requests Python库。经关联分析发现，最初发现恶意包的Crowdstrike公司高度确信VMConnect活动是由朝鲜组织Lazarus Group的一个子组织Labyrinth Chollima所为。JPCERT/CC则将其发现的攻击与Lazarus Group的另一个子组织DangerousPassword联系起来。经过分析，ReversingLabs的研究人员最终得出结论，这两次攻击都归属于同一APT组织Lazarus Group。",
+    "reference": "https://www.reversinglabs.com/blog/vmconnect-supply-chain-campaign-continues"
+  },
+  {
+    "title": "APT37利用恶意LNK文件传播恶意后门文件",
+    "txt": "\nAPT37组织，也称为RedEyes、ScarCruft，是具有朝鲜背景的APT组织，该组织使用的恶意软件以前以CHM格式传播，但现在以LNK格式传播。经研究人员分析，恶意代码通过mshta进程执行特定url中存在的附加脚本，从攻击者的服务器接收命令，并执行附加的恶意操作。此外，研究人员还发现，LNK文件是由攻击者将包含恶意代码的压缩文件上传到正常站点来分发的。恶意LNK文件以文件名REPORT.ZIP上传。该文件在LNK内包含正常的Excel文档数据和恶意脚本代码。近期，许多文件大小超过10MB的LNK文件已被证实为恶意软件，因此，研究人员提醒，用户不应执行未知创建者的大型LNK文件。",
+    "reference": "https://asec.ahnlab.com/ko/56526/"
+  },
+  {
+    "title": "疑似Kimsuky使用SuperBear恶意软件针对记者群体开展攻击",
+    "txt": "\n近日，Interlab的研究人员发现一个针对记者群体的样本，并将其命名为“SuperBear”。攻击者伪装为某活动的内部人员向记者发送邮件，邮件附件为LNK文件。当用户尝试打开文件时，文件将执行其隐藏的命令，在文档旁边生成一个隐藏的Powershell窗口，并在该窗口执行Powershell命令。命令执行后将生成一个VBS脚本到指定目录，脚本将从攻击者已攻陷的Wordpress网站下载有效载荷。有效载荷为编译并打包的AutoIT3脚本，脚本可通过调用Windows API实现process hollowing技术，随后，该脚本可与C2服务器建立连接，进行窃取进程和系统数据、执行命令、下载文件等恶意操作。",
+    "reference": "https://interlab.or.kr/archives/19416"
+  }
+]

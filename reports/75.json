@@ -1,0 +1,7 @@
+[
+  {
+    "title": "APT攻击",
+    "txt": "APT攻击\n针对乌克兰的新勒索软件RansomBoggs与Sandworm有关ScarCruft使用新后门Dolphin开展攻击Lazarus Group以日本瑞穗銀行等招聘信息为诱饵的攻击活动Kimsuky以IBM公司安全产品为诱饵的攻击活动披露Gamaredon Group的样本\n\n攻击活动\n攻击活动\n针对中东个人和企业的网络钓鱼活动\n\n数据泄露\n数据泄露\n540万Twitter用户的被盗数据遭到泄露\n\n恶意软件\n恶意软件\n黑客利用TikTok的热门挑战活动传播恶意软件\n\n勒索软件\n勒索软件\n通过COVID相关虚假网站传播的Punisher勒索软件变种\n通过COVID相关虚假网站传播的Punisher勒索软件变种\n\n新的勒索软件Trigona出现的越来越频繁\n\n针对乌克兰的新勒索软件RansomBoggs与Sandworm有关\n近日，ESET的研究人员披露了针对乌克兰的新型勒索软件RansomBoggs的攻击活动，并将其归因为APT组织Sandworm。新型勒索软件RansomBoggs于今年11月21日首次被ESET的研究人员检测到。通过分析后发现，虽然用.NET编写的恶意软件是新的，但分发机制类似于之前归因于Sandworm的攻击活动。用于从域控制器分发.NET勒索软件的PowerShell脚本几乎与去年4月在Industroyer2事件中攻击能源组织时使用的脚本相同。除此之外，研究人员还发现，该勒索软件一旦进入受害者网络，就会生成一个随机密钥，并在CBC模式下使用AES-256加密文件，同时会在文件末尾附加\".chsch\"扩展名。",
+    "reference": "https://www.welivesecurity.com/2022/11/28/ransomboggs-new-ransomware-ukraine/"
+  }
+]

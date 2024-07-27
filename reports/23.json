@@ -1,0 +1,47 @@
+[
+  {
+    "title": "APT组织BlueNoroff使用新型macOS后门SpectralBlur开展网络攻击",
+    "txt": "\n近日，研究人员发现了一个名为SpectralBlur的新Apple macOS后门，该后门与已知的恶意软件家族重叠，该恶意软件家族被认为是具有朝鲜背景的APT组织BlueNoroff所为。SpectralBlur是一个功能中等的后门，可以根据命令和控制服务器(C2)发出的命令上传/下载文件、运行 shell、更新其配置、删除文件、休眠或睡眠。该恶意软件与KANDYKORN （又名 SockRacket）有相似之处，后者是一种高级植入程序，充当远程访问木马，能够控制受感染的主机。KANDYKORN活动还与 Lazarus子组织BlueNoroff精心策划的另一项活动相交叉，该活动最终部署了一个名为RustBucket的后门和一个名为ObjCShellz的后期有效载荷。近几个月来，研究人员观察到攻击者将这两个感染链的不同部分结合起来，利用RustBucket droppers来传播KANDYKORN。",
+    "reference": "https://g-les.github.io/yara/2024/01/03/100DaysofYARA_SpectralBlur.html"
+  },
+  {
+    "title": "Sea Turtle组织针对荷兰IT和电信公司发起间谍活动",
+    "txt": "Sea Turtle，别名Teal Kurma、Marbled Dust、SILICON、Cosmic Wolf，是一个与土耳其有关的APT组织，从2017年开始活跃，主要进行窃密活动，常围绕欧洲和中东组织进行攻击，攻击目标涉及政府、库尔德工人党(PKK)等库尔德团体、非政府组织、电信机构、IT服务提供商等，该组织的攻击手段处于中等水平，主要利用公开漏洞获取初始访问权限。在2023年的最新活动中，安全人员观察到攻击者破坏cPanel账户并使用SSH服务实现对目标主机的初始访问，同时利用一个名为SnappyTCP的反向TCP shell来建立持久性。攻击者还通过重置Bash、MySQL历史文件以及重写系统日志来进行防御绕过。\nSea Turtle，别名Teal Kurma、Marbled Dust、SILICON、Cosmic Wolf，是一个与土耳其有关的APT组织，从2017年开始活跃，主要进行窃密活动，常围绕欧洲和中东组织进行攻击，攻击目标涉及政府、库尔德工人党(PKK)等库尔德团体、非政府组织、电信机构、IT服务提供商等，该组织的攻击手段处于中等水平，主要利用公开漏洞获取初始访问权限。在2023年的最新活动中，安全人员观察到攻击者破坏cPanel账户并使用SSH服务实现对目标主机的初始访问，同时利用一个名为SnappyTCP的反向TCP shell来建立持久性。攻击者还通过重置Bash、MySQL历史文件以及重写系统日志来进行防御绕过。",
+    "reference": "https://www.huntandhackett.com/blog/turkish-espionage-campaigns"
+  },
+  {
+    "title": "APT组织Transparent Tribe组织利用RlmRat针对印度开展攻击",
+    "txt": "\nTransparent Tribe是一个具有巴基斯坦政府背景的APT组织，最早攻击活动可追溯至2012年，长期以来通过鱼叉钓鱼、水坑攻击等方式，针对周边国家和地区(特别是印度)的政治、军事目标实施定向攻击，旨在收集各类情报。近期，360安全人员监测到Transparent Tribe组织针对Android平台下发RlmRat恶意软件。本次攻击活动最早出现于2023年3月，主要受影响地区为印度，尼泊尔少量用户也遭到影响。攻击者通过Whatsapp等社交应用向受害者发送具有恶意代码的APK安装包，安装包伪装成Aadhaar、Training Pics、Student Profile等程序诱导用户运行。经过分析，这些程序均为RlmRat的精简版本，攻击者削减掉了RlmRat的大量恶意功能，仅保留了文件窃取功能。并且，这些恶意样本只需要访问网络和读写设备外置存储的权限，这些权限是大多数应用都需要的权限，因此极难引起用户注意。程序启动后将向用户展示程序的正常页面，同时暗地与C2服务器进行通信，接收命令并窃取设备上的文件。",
+    "reference": "https://mp.weixin.qq.com/s/I-beF5SWmqVMGTfUifieZg"
+  },
+  {
+    "title": "APT组织Homeland Justice利用擦除器瞄准阿尔巴尼亚",
+    "txt": "\n近日，ClearSky的研究人员发现一个名为\"Homeland Justice\"的伊朗组织正利用No-Justice Windows擦除器瞄准阿尔巴尼亚。其中，Homeland Justice自2022年7月以来一直活跃，并专门策划针对阿尔巴尼亚的破坏性攻击。研究人员表示，该组织于2023年12月24日再次露面，声称为消灭恐怖分子的支持者，并将其最新的活动描述为#DestroyDurresMilitaryCamp，而阿尔巴尼亚都拉斯市目前正是持不同政见的伊朗人民圣战者组织(MEK)的所在地。目前，其攻击目标涉及阿尔巴尼亚航空、通信、议会等领域。据悉，活动期间，Homeland Justice部署的两个主要工具包括可执行擦除器No-Justice和PowerShell脚本，脚本负责在启用Windows远程管理(WinRM)后将擦除器传播到目标网络中的其他计算机。No-Justice擦除器(NACL.exe)则是一个220.34KB的二进制文件，它需要管理员权限以通过从主引导记录(MBR)中删除引导签名来擦除计算机上的数据。此外，攻击者还利用了Plink(又名PuTTY Link)、RevSocks和Windows 2000资源工具包等合法工具，以实现侦察、横向移动和持续远程访问。\nClearSky的研究人员",
+    "reference": "https://www.clearskysec.com/wp-content/uploads/2024/01/No-Justice-Wiper.pdf"
+  },
+  {
+    "title": "攻击者利用新型BandookRAT恶意软件发起网络钓鱼攻击",
+    "txt": "近日，据报道，一种名为Bandook的远程访问木马新变种通过网络钓鱼攻击进行传播，其目的是渗透到 Windows 计算机，这凸显了该恶意软件的不断演变。研究人员于 2023 年10月发现了该活动，并表示该恶意软件是通过 PDF 文件分发的，该文件嵌入了受密码保护的 .7z 存档的链接。受害者使用 PDF 文件中的密码提取恶意软件后，恶意软件会将其有效载荷注入到msinfo32.exe中。Bandook于2007年首次被发现，是一种现成的恶意软件，具有多种功能，可以远程控制受感染的系统。攻击链图如下图所示。\n",
+    "reference": "https://www.fortinet.com/blog/threat-research/bandook-persistent-threat-that-keeps-evolving"
+  },
+  {
+    "title": "恶意软件AsyncRAT通过钓鱼活动分发",
+    "txt": "\n近期，AT&T实验室捕获到一起分发AsyncRAT的攻击活动。攻击者通过嵌入网络钓鱼页面的初始JS文件来传递恶意文件。AsyncRAT是2019年发布的开源远程访问工具，具有键盘记录、投递后续载荷等功能。程序涉及多个阶段，初始阶段，钓鱼页面中的JS代码会向受害者传递恶意脚本，脚本经过高度混淆，通过层层递进的方式下载下一阶段脚本，并且其中存在的C2服务器URL采用十进制的形式进行存储。恶意脚本还会检测当前环境是否为沙箱环境，通过Get-MpComputerStatus等命令获取信息，只有在所有信息都符合要求的情况下，脚本会继续运行。安全人员在2023年共捕获到与该活动相关的数百个样本，目前这些样本涉及到的网络基础设施仍在持续活动中。",
+    "reference": "https://cybersecurity.att.com/blogs/labs-research/asyncrat-loader-obfuscation-dgas-decoys-and-govno"
+  },
+  {
+    "title": "印度ISP Hathway近400万用户的个人信息被公开",
+    "txt": "\n近日，据媒体报道，某黑客最近公开了一个数据库，声称该数据库与Hathway（以前称为 BITV Cable Networks，正式名称为 Hathway Cable & Datacom Ltd）有关。Hathway 是印度领先的互联网服务提供商 (ISP) 和有线电视服务运营商。黑客在数据库泄露论坛上发表的帖子中透露，数据泄露事件发生在 2023 年 12 月，当时他们利用 Laravel 框架应用程序（内容管理系统）中存在的安全漏洞成功突破了 Hathway 的防御措施(CMS)。对泄露的数据分析显示，用户数量为 3500 万。此外，这些帐户的很大一部分似乎是虚拟帐户或重复帐户。去掉这些重复账户后，受影响账户的实际数量减少至近 400 万个，远低于最初声称的 4100 万个账户。该黑客为潜在受害者开发了暗网搜索引擎。该工具允许他们搜索他们的电子邮件地址和电话号码，以检查他们的数据是否泄露。",
+    "reference": "https://www.hackread.com/indian-isp-hathway-data-breach-user-data-kyc-leak/"
+  },
+  {
+    "title": "攻击者利用YouTube视频传播破解软件以分发Lumma窃取器",
+    "txt": "近日，研究人员发现攻击者利用包含与破解软件相关内容的 YouTube 视频来诱骗用户下载名为 Lumma 的信息窃取恶意软件。这些 YouTube 视频通常包含与破解应用程序相关的内容，为用户提供类似的安装指南，并包含通常使用 TinyURL 和 Cuttly 等服务缩短的恶意 URL。这并不是 YouTube 上的盗版软件视频第一次成为窃取恶意软件的有效诱饵。此前曾观察到类似的攻击链会传播窃取程序、剪切程序和加密货币挖矿恶意软件。在此过程中，威胁行为者不仅可以利用受感染的机器窃取信息和加密货币，还可以滥用资源进行非法采矿。在 YouTube 上搜索 Vegas Pro 等合法视频编辑工具的破解版本的用户会被提示点击视频描述中的链接，从而导致下载 MediaFire 上托管的虚假安装程序。",
+    "reference": "https://www.fortinet.com/blog/threat-research/lumma-variant-on-youtube"
+  },
+  {
+    "title": "Atomic Stealer新版本利用虚假网站感染Mac用户",
+    "txt": "\n近日，安全人员观察到一起恶意广告活动，攻击者使用与分发FakeBat相似的策略，下发Atomic Stealer，并且安全人员还观察到一个针对Mac用户的有效载荷。攻击者仿造通信工具Slack的Google搜索广告来引诱用户，并将点击广告的用户重定向至一个与Slack官网相似的网站，该网站提供Windows和Mac版应用程序。其中，针对Windows平台的MSI程序用于部署FakeBat程序，针对Mac平台的DMG文件用于部署Atomic Stealer。当用户运行DMG文件后，文件将弹出说明以及用户输入系统密码的对话框窗口。这将允许Atomic Stealer收集密码及其他访问受限的敏感文件。",
+    "reference": "巴拉圭军方声称Tigo运营商数据泄露可能是遭受Black Hunt勒索软件攻击"
+  }
+]

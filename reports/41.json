@@ -1,0 +1,7 @@
+[
+  {
+    "title": "APT攻击",
+    "txt": "APT攻击\nLazarus Group通过ManageEngine漏洞部署QuiteRAT\nAPT34使用SideTwist变种木马开展新一轮网络钓鱼活动\nLazarus Group复用其基础设施传播新工具CollectionRAT\nKimsuky使用韩文域名进行恶意活动\n披露Transparent Tribe的样本\n披露Transparent Tribe的样本\n\n攻击活动\n攻击活动\nKittenSec黑客组织声称针对北约国家政府和私营部门进行网络攻击\nKittenSec黑客组织声称针对北约国家政府和私营部门进行网络攻击\n\n数据泄露\n数据泄露\n法国就业机构遭遇网络攻击导致1000万人敏感数据受影响\n法国就业机构遭遇网络攻击导致1000万人敏感数据受影响\n\n恶意软件\n恶意软件\nDreamBus恶意软件利用RocketMQ漏洞感染服务器\nDreamBus恶意软件利用RocketMQ漏洞感染服务器\n物联网僵尸网络病毒Gafgyt新变种\n物联网僵尸网络病毒Gafgyt新变种\n\n勒索软件\n勒索软件\n研究人员披露ADHUBLLKA勒索软件家族\n研究人员披露ADHUBLLKA勒索软件家族\n\nLazarus Group通过ManageEngine漏洞部署QuiteRAT\n",
+    "reference": "https://blog.talosintelligence.com/lazarus-quiterat/"
+  }
+]

@@ -1,0 +1,7 @@
+[
+  {
+    "title": "恶意软件",
+    "txt": "恶意软件\n新的Redis后门恶意软件——Redigo\n新的基于Go的\"Zerobot\"僵尸网络活动\n\n勒索软件\n勒索软件\n跨国医疗组织Keralty遭受RansomHouse勒索软件攻击\n\nAPT37利用IE浏览器0Day漏洞开展攻击\n近日，谷歌的研究人员披露了具有朝鲜背景的APT组织APT37，使用一个此前未被披露的Internet Explorer 0Day漏洞展开了攻击。该漏洞被追踪为CVE-2022-41128，存在于浏览器的“JScript9”JavaScript引擎中，远程攻击者可以利用该漏洞在目标系统上执行任意代码。谷歌将安全缺陷描述为导致类型混淆的错误JIT优化问题。攻击者使用的恶意Microsoft Office文件引用了2022年10月29日万圣节庆祝活动期间在首尔发生的悲惨事件，利用CVE-2022-41128漏洞攻击韩国目标。该恶意文档一旦在受害者的设备上打开，在下载一个RTF格式的远程模板后传递一个未知的载荷，同时调用Internet Explorer访问远程HTML。远程加载的包含漏洞利用的HTML内容允许攻击者触发上述0Day漏洞。即使目标并未将Internet Explorer作为默认Web浏览器，攻击过程也仍然有效。虽然谷歌的研究人员无法确认APT37在其韩国目标计算机上分发的最终恶意载荷，但是却观察到了同一组可能的植入物，包括ROKRAT、BLUELIGHT和DOLPHIN。",
+    "reference": "https://blog.google/threat-analysis-group/internet-explorer-0-day-exploited-by-north-korean-actor-apt37/"
+  }
+]

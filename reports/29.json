@@ -1,0 +1,47 @@
+[
+  {
+    "title": "勒索软件",
+    "txt": "勒索软件\n伪装成免费软件的恶意程序加载器传播DJvu勒索软件变体\n伪装成免费软件的恶意程序加载器传播DJvu勒索软件变体\n伪装成免费软件的恶意程序加载器传播DJvu勒索软件变体\n摩诃草组织利用Spyder下载器投递Remcos木马\n\n摩诃草，又名Patchwork、白象、Hangover、Dropping Elephant等，疑似为一个具有南亚国家背景的APT组织，其最早攻击活动可追溯到2009年11月，主要针对亚洲地区国家进行网络间谍活动，受害国家包括中国、巴基斯坦等，攻击行业涉及政府、军事、电力、工业、科研教育、外交和经济等。近期，奇安信的研究而宁愿观察到摩诃草组织利用Spyder下载器投递Remcos木马。研究人员此次共捕捉到三个版本的Spyder下载器以及三个版本的Remcos木马。Spyder版本2比版本1新增了异或加密明文字符串的功能。此外版本2和版本1在请求C2服务器的字符串有所不同，版本2的请求URL中增加了更多的参数。版本3的Spyder则将与C2服务器交互的数据修改成JSON格式同时JSON字符串经过base64编码。最终Spyder样本将访问指定URL下载Remcos木马。Remcos木马通过内存映射方式避开安全检测，随后程序通过RC4解密获取木马的重点数据，并在内存中加载执行。研究人员在查看了此次捕获的Spyder样本名称及其配置信息后，推测本次攻击活动的受害者包括巴基斯坦、孟加拉国、阿富汗等国。",
+    "reference": "https://mp.weixin.qq.com/s/cew83Kzo6omopGlPG-qgxw"
+  },
+  {
+    "title": "研究人员对TA544使用的WailingCrab恶意软件的剖析",
+    "txt": "\nWailingCrab，也称为WikiLoader，是一种包含加载器、注入器、下载器和后门的多组件恶意软件，由X-Force追踪为Hive0133(别称TA544)的组织提供。该恶意软件于2022年12月首次披露，此后被广泛用于通过Excel、OneNote或PDF附件向意大利目标传播Gozi后门的垃圾邮件活动中。近几个月来，TA544针对意大利以外的组织又开展了以逾期交货或运输发票为主题的分发WailingCrab的恶意电子邮件活动。据悉，WailingCrab的核心组件是其后门，只有在恶意软件的初始阶段成功完成后，它才会安装在系统上。自2023年中期以来，WailingCrab的后门组件还开始转向使用MQTT协议(一种轻量级物联网消息传递协议)与C2进行通信。此外，调查显示，恶意软件作者在对WailingCrab的持续开发中重点关注其隐形和反分析技术。期间，攻击者会将合法的、被黑的网站用于初始C2通信，以降低被网络检测的机会。WailingCrab的有效载荷则通常托管在Discord等知名平台上，它需要成功请求C2控制的服务器才能检索下一阶段，且其C2服务器通常会在活动结束后很快被关闭或停止响应。同时，WailingCrab还会在其整个代码中使用代码混淆、反分析和反沙箱技术。\nTA544",
+    "reference": "https://securityintelligence.com/x-force/wailingcrab-malware-misues-mqtt-messaging-protocol/"
+  },
+  {
+    "title": "Kimsuky 通过伪装进口申报来针对韩国国内的研究机构",
+    "txt": "Kimsuky 通过伪装进口申报来针对韩国国内的研究机构\n\n近期，ASEC监测到Kimsuky组织针对韩国研究机构分发伪装成进口申报内容的恶意JSE文件。文件名为导入声明_seal.jse，是一个下载器文件，内部包含一个经过混淆的Powershell脚本、一个Base64编码的后门文件和一个正常的诱饵PDF文件。诱饵PDF文件通过Powershell脚本以文件名\"导入声明.PDF\"保存并自动执行，该文件包含有关受害目标的部分详细信息，以\"转基因生物进口申报表\"为内容。研究人员表示由于正常PDF文件的迷惑，用户很难发现正在执行的恶意后门文件。最终脚本使用rundll32.exe下发后门文件，后门文件命名为vuVvMKg.i3IO，被存放在指定路径下。恶意代码还会被复制到特定路径下的IconCache.db文件中，通过创建计划任务建立持久性。后门文件运行后将通过wmic命令检查受害主机的防病毒状态，随后后门将收集受害主机中的各类信息，包括主机名、用户名、操作系统等信息，并将信息通过特定编码方式传输至C2服务器。",
+    "reference": "https://asec.ahnlab.com/ko/59209/"
+  },
+  {
+    "title": "研究人员对SysJoker恶意软件的演变追踪",
+    "txt": "\n近期，Check Point的研究人员在追踪由哈马斯附属的APT用于针对以色列的SysJoker恶意软件演变过程中发现，该恶意软件被完全重写为基于Rust语言编写的变体，并转向使用OneDrive来存储动态C2 URL。此外，经进一步分析发现，涉及SysJoker恶意软件新变体的活动与2016-2017年加沙网络团伙Molerats针对以色列电力公司(IEC)的另一个名为\"Operation Electric Powder\"的活动行为存在相似之处，即均使用了以API为主题的URL，并以类似的方式实现了脚本命令。研究人员由此推测这两个活动由同一个威胁组织造成。据悉，SysJoker最初由Intezer于2021年发现，早期版本基于C++编写，是一个多平台后门，具有适用于Windows、Linux和Mac的多个变体。其最新的Rust变体则最早于2023年8月7日编译，并于10月12日以php-cgi.exe的名称提交给VirusTotal。该恶意软件将在其执行的各个阶段采用随机睡眠间隔，以加强反沙箱或反分析措施。另外，它还有两种操作模式，以根据持久性区分第一次执行和任何后续执行。SysJoker通过连接OneDrive上的URL以检索C2服务器地址，此方法的优点是可使让攻击者轻松更改C2地址。最后，恶意软件能够收集有关受感染系统的信息，包括Windows版本、用户名、MAC地址和各种其他数据，并发送至C2服务器上。此外，Intezer的研究人员认为SysJoker恶意软件是由新APT组织WildCard使用的。\nC\nheck Poin\nt的研究人员\nInt\nezer的研究人员认为SysJoker恶意软件是由新APT组织WildCard使用的。\nSysJoker恶意软件是由新APT组织WildCard使用的。\nWildCard使用的。",
+    "reference": "https://research.checkpoint.com/2023/israel-hamas-war-spotlight-shaking-the-rust-off-sysjoker/"
+  },
+  {
+    "title": "https://intezer.com/blog/research/wildcard-evolution-of-sysjoker-cyber-threat/",
+    "txt": "\n疑似Lazarus Group的样本\n\n近日，研究人员披露了Lazarus Group组织的恶意样本，IOC信息如下所示。\nLazarus Gr\noup\nFilename：preinstall.db\npreinstall.db\nSHA256：01c5836655c6a4212676c78ec96c0ac6b778a411e61a2da1f545eba8f784e980\n01c5836655c6a4212676c78ec96c0ac6b778a411e61a2da1f545eba8f784e980",
+    "reference": "https://twitter.com/h2jazi/status/1729943059146645906"
+  },
+  {
+    "title": "黑客组织利用求职流程开展攻击活动",
+    "txt": "\n近期，Unit42的研究人员发现两项针对求职流程的攻击活动分别将这两项活动命名为Contagious Interview和Wagemole。在追踪调查活动期间，研究人员发现两个新的恶意软件家族，并将其命名为BeaverTail和InvisibleFerret。Contagious Interview活动中，攻击者伪装为人工智能、加密货币和 NFT 相关公司或招聘机构工作人员，招聘符合条件的软件开发求职者，随后攻击者可通过电子邮件、社交媒体平台或软件开发人员使用的社区论坛上的聊天渠道接触潜在受害者。在与受害者建立联系后，攻击者会通过视频会议或其他在线协作工具进行面试，并在面试期间说服受害者下载并安装托管在GitHub上的NPM软件包。该软件包存在恶意Javascript代码，被研究人员命名为BeaverTail。NPM包内的BeaverTail恶意代码经过严重混淆，以逃避安全检测。攻击者可能会将整个恶意NPM包上传到GitHub，也可能将BeaverTail代码注入其他开发人员的合法NPM项目中。BeaverTail可以进行敏感信息窃取和恶意程序加载，BeaverTail主要窃取网络浏览器中存储的加密货币钱包和信用卡信息，并且作为加载器可加载下一阶段的恶意软件InvisibleFerret。InvisibleFerret是用Python编写的跨平台恶意软件，具有多种功能组件，包括指纹识别、远程控制、键盘记录、数据泄露等，InvisibleFerret还可下载AnyDesk客户端为攻击者提供进一步的远程控制。在Wagemole活动中，攻击者则伪装为求职者，使用虚假身份文件试图申请远程IT工作，从其伪造的简历可以看出攻击者主要针对美国公司和自由职业市场，每份虚假简历还附有不同的美国电话号码用于个人联系，有些简历则包含LinkedIn个人资料链接和GitHub链接。经安全人员验证这些链接都保持活跃状态，从表面看不存在异常。经过归因分析，研究人员将这两起攻击活动均归因为具有朝鲜背景的APT组织。简化后的攻击链图如下图所示。\n",
+    "reference": "https://unit42.paloaltonetworks.com/two-campaigns-by-north-korea-bad-actors-target-job-hunters/#post-131292-_jr9et22gfvw6"
+  },
+  {
+    "title": "企业软件提供商 TMAXSOFT 泄露 2TB 数据",
+    "txt": "\nTmaxSoft 是一家开发和销售企业软件的韩国 IT 公司，已泄露超过 5000 万条敏感记录。\n2TB 容量的 Kibana 仪表板已经曝光两年多了。\nCybernews 研究人员早在 2023 年 1 月就发现了它，并指出这组\n数据于 2021 年 6 月首次发现。\n泄露的数据包括：\n员工姓名、电\n子邮件和电话号码、员工/雇佣合同编号、发送附件的内容（docx、pdf）、发送的二进制文件的元数据（可执行文件名称、存储它们的文件路径、版本名称等）、员工IP、用户代理以及访问内部工具的URL、内部问题跟踪消息等。",
+    "reference": "https://securityaffairs.com/154567/data-breach/tmaxsoft-leaks-2tb-of-data.html?web_view=true"
+  },
+  {
+    "title": "HelloBot恶意软件针对Linux系统",
+    "txt": "\n近期，火绒监测到一种针对Linux系统的后门病毒。经过分析后确认该病毒为HelloBot恶意软件家族变种。HelloBot是一个针对Linux系统的恶意软件家族，常为攻击者提供远程控制功能，因其配置测试中输出\"hello world\"而得名。HelloBot最早出现于2019年，现已被多个犯罪团伙和APT组织使用。恶意软件运行后首先会释放一个名为worker的elf文件进行初始配置，worker的不同配置将导致不同的恶意行为，包括进程伪装、备份文件、防火墙设置和远程控制等。worker运行后首先会删除自身文件，以内存加载的方式运行，随后通过fork分支多个子进程，子进程1被设置成脱离终端的独立进程，用于后台运行。子进程2用于管理后台操作、校验防火墙配置维持通信，子进程3则负责进行配置更新。此外，此次样本采用常规UPX壳压缩，但其配置部分被加密附加在文件末尾，这会导致安全人员在分析时自动脱壳失败。恶意软件执行流程图如下图所示。\n",
+    "reference": "https://mp.weixin.qq.com/s/7AL4YKJvmLtKrSdEZSNkTA"
+  },
+  {
+    "title": "伪装成免费软件的恶意程序加载器传播DJvu勒索软件变体",
+    "txt": "\n近期，Cybereason的研究人员观察到一些伪装成免费软件或者破解软件的恶意程序加载器分发DJvu勒索软件变体。攻击链从伪装的安装程序压缩包开始，程序多为免费软件或者破解软件。当用户解压压缩包后，压缩文件中包含一个install.exe文件，该文件是一个巨大的二进制文件，查看其元数据可以看出该程序试图伪装成PDF编辑器。进一步分析发现该安装文件携带PrivateLoader代码，PrivateLoader是一个付费下载器，首次出现于2021年，常常出现在提供免费软件与破解软件的网站上。经安全人员观察，该下载器曾与位于俄罗斯、马来西亚、丹麦的C2服务器进行通信，可部署多种恶意软件，包括Redline Stealer、Vidar、Amadey、Nymai、XmRig、LummaC Stealer。此次部署DJvu勒索软件变体的活动中，一旦用户执行下载器，DJvu勒索软件变体将被运行。变体首先会创建注册表建立持久性，外联C2服务器，在指定路径部署Vidar infostealer及Clipbanker恶意程序。第二阶段，程序将使用AES算法加密用户目录下的文件，并且采用Process Hollowing技术避免安全检查。加密文件以Xaro结尾，加密完成后，程序将留下勒索信，勒索信要求受害者通过邮件进行联系，并且表示如果受害者在72小时内联系可获得半价赎金优惠。攻击链图如下图所示。\n",
+    "reference": "https://www.cybereason.com/hubfs/dam/collateral/reports/threat-alert-DJvu-variant.pdf"
+  }
+]

@@ -1,0 +1,7 @@
+[
+  {
+    "title": "APT攻击",
+    "txt": "APT攻击\nDucktail使用Infostealer新变种攻击Facebook企业用户\nDiceyF使用GamePlayerFramework框架针对在线赌场展开攻击\nFIN7使用JssLoader展开定向网络钓鱼攻击\n披露Lazarus Group的样本\n\n攻击活动\n攻击活动\n保加利亚受到俄罗斯黑客KillNet 的网络攻击\n\n数据泄露\n数据泄露\n微软发生数据泄露暴露了客户的部分信息\n\n恶意软件\n恶意软件\nRedLine Stealer通过冒充Convertio网站进行传播\n勒索软件\n勒索软件\n新勒索软件Prestige主要针对乌克兰和波兰的组织\n日本科技公司Oomiya遭LockBit 3.0勒索软件攻击\n\nDucktail使用Infostealer新变种攻击Facebook企业用户",
+    "reference": "https://www.zscaler.com/blogs/security-research/new-php-variant-ducktail-infostealer-targeting-facebook-business-accounts"
+  }
+]

@@ -1,0 +1,7 @@
+[
+  {
+    "title": "APT攻击",
+    "txt": "APT攻击\nMuddyWater和DEV-1084合作在勒索软件活动幌子下实施破坏性攻击\nWarSunflower组织针对CIS国家及中亚地区开展间谍活动\nKarakurt组织及2022年相关活动详情披露\nUNC4736组织是上个月3CX供应链攻击的幕后黑手\n披露Donot的样本\n攻击活动\n攻击活动\n韩国交易所GDAC遭到黑客攻击损失千万美元\n\n数据泄露\n数据泄露\nARES Leaks将成为新的数据泄露服务中心\n\n勒索软件\n勒索软件\n攻击者利用Windows零日漏洞部署Nokoyawa勒索软件\n台湾微星科技遭到Money Message攻击被勒索400万美元\nMuddyWater和DEV-1084合作在勒索软件活动幌子下实施破坏性攻击\n近日，微软的研究人员指出，具有伊朗背景的APT组织MuddyWater正与另一个名为DEV-1084的新兴活动集群合作，以攻击目标的本地和云基础设施，且攻击者试图将伪装成标准的勒索软件攻击活动。研究人员表示，MuddyWater极有可能与DEV-1084合作实施了间谍攻击，后者在MuddyWater成功进入目标环境后实施了一系列破坏性行动。MuddyWater疑似首先利用未打补丁的应用程序漏洞获取初始访问权限，然后将访问权限移交给DEV-1084，DEV-1084再继续执行后续广泛的内部侦察发现、持久性建立、横向移动等操作。经检测发现，DEV-1084最终利用高特权凭据对本地设备进行了加密操作并大规模地删除了云端资源。MuddyWater组织(别称Boggy Serpens、Earth Vetala、ITG17和Yellow Nix)自2017年开始活跃，主要攻击中东国家，过去一年曾利用Log4Shell漏洞破坏以色列实体。DEV-1084与MuddyWater的基础设施和工具存在重叠，DEV-1084被观察到使用了MuddyWater的一个工具：Ligolo。研究人员表示，目前没有确凿的证据可以确定DEV-1084是否独立于MuddyWater运作，或者说是否为MuddyWater的一个分支组织。攻击链图如下图所示。\n本地攻击链图",
+    "reference": "https://www.microsoft.com/en-us/security/blog/2023/04/07/mercury-and-dev-1084-destructive-attack-on-hybrid-environment/"
+  }
+]

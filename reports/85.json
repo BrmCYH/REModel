@@ -1,0 +1,17 @@
+[
+  {
+    "title": "APT攻击",
+    "txt": "Kimsuky攻击韩国的媒体和智囊机构\nNOBELIUM新增恶意工具MagicWeb\nMERCURY利用Log4j2漏洞针对以色列目标\n披露TeamTNT组织的活动时间表\nLazarus Group组织新样本\n“魔笛”开展勒索攻击活动\n\n漏洞情报\nAtlassian Bitbucket命令注入漏洞CVE-2022-36804\n安全厂商Palo Alto Networks操作系统存在漏洞\nTikTok Android应用程序中存在高危漏洞\n恶意软件\n伪装成合法应用程序的Crypto Miner恶意软件\n勒索软件\n基于GoLang的Agenda勒索软件针对亚洲和非洲企业\n\n数据泄露\n黑客攻击DoorDash公司造成数据泄露\nNelnet服务泄露了250万学生贷款账户数据\nKimsuky攻击韩国的媒体和智囊机构\nKimsuky\n攻击韩国的媒体和智囊\n机构\n具有朝鲜背景的APT组织Kimsuky（又名Thallium、Black Banshee）主要针对韩国实体开展攻击活动。Kaspersky研究人员发现Kimsuky使用了被命名为GoldDragon感染链，攻击了韩国的媒体和智囊机构。攻击者发送包含嵌入宏Word文档的鱼叉式网络钓鱼电子邮件，并滥用合法的博客服务来托管Visual Basic脚本，植入的VBS文件能够收集有关受害者的信息并下载其他有效载荷，最后释放一个Windows可执行文件类型的恶意软件，从受害主机窃取信息，包括文件列表、键盘记录和存储的Web浏览器登录凭据等。下图是GoldDragon感染链。\n具有朝鲜背景的APT组织\n具有朝鲜背景的\nKimsuky（又名Thallium、Black Banshee）主要针对韩国实体开展攻击活动。\nKaspersky研究人员发\n现Kimsuky使用了被命名为GoldDragon感染链，攻击了韩国的媒体和智囊机构。攻击者发送包含嵌入宏Word文档的鱼叉式网络钓鱼电子邮件，并滥用合法的博客服务来托管Visual Basic脚本，植入的VBS文件能够收集有关受害者的信息并下载其他有效载荷，最后释放一个Windows可执行文件类型的恶意软件，从受害主机窃取信息，包括文件列表、键盘记录和存储的Web浏览器登录凭据等。下图是GoldDragon感染链。\n现\n使用了被命名为\n感染链，攻击了韩国的媒体和智囊机构。攻击者发送包含嵌入宏\n并滥用合法的博客服务来托管\n，植入的\n受害者的信息并下载其他有效载荷，最后释放一个\n文件类型的恶意软件，从受害主机窃取信息，包括文件列表、键盘记录和存储的\n等。下图是\n感染链。",
+    "reference": "https://securelist.com/kimsukys-golddragon-cluster-and-its-c2-operations/107258/"
+  },
+  {
+    "title": "NOBELIUM新增恶意工具MagicWeb",
+    "txt": "\n具有俄罗斯背景的APT组织NOBELIUM（又名APT29），在近期的攻击中使用了新的恶意工具MagicWeb。MagicWeb是一个恶意DLL，能够操纵Active Directory联合服务(AD FS)的服务器生成的令牌中传递的证书。攻击者通过复制AD FS操作中使用的合法Microsoft.IdentityServer.Diagnostics.dll文件创建了一个后门DLL，并进一步开展攻击活动。",
+    "reference": "https://www.microsoft.com/security/blog/2022/08/24/magicweb-nobeliums-post-compromise-trick-to-authenticate-as-anyone/"
+  },
+  {
+    "title": "MERCURY利用Log4j2漏洞针对以色列目标",
+    "txt": "\n具有伊朗背景的APT组织MERCURY（又名MuddyWater），自2017年针对中东地区开展攻击活动。近期，微软研究人员发现攻击者将存在漏洞的SysAid Server作为初始访问向量，并利用Web shell执行多个命令，通过编码的PowerShell下载横向移动和持久驻留工具，进一步开展攻击活动。下图是完整攻击链。\n",
+    "reference": "https://www.microsoft.com/security/blog/2022/08/25/mercury-leveraging-log4j-2-vulnerabilities-in-unpatched-systems-to-target-israeli-organizations/"
+  }
+]

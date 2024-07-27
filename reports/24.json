@@ -1,0 +1,12 @@
+[
+  {
+    "title": "APT组织UAC-0050利用RemcosRAT远控针对乌克兰政府开展攻击",
+    "txt": "\n近期，Uptycs的研究人员UAC-0050组织发现利用RemcosRAT对乌克兰政府发起攻击。据悉，RemcosRAT是一种远程监视和控制类间谍软件，在其最新的变化中，UAC-0050集成了Windows操作系统中用于进程间通信的管道方法来实现隐蔽的数据传输，进而巧妙地规避EDR和防病毒系统的检测。调查显示，本轮活动时间发生在2023年12月21日，UAC-0050疑似通过向在以色列国防军(IDF)担任顾问的乌克兰军事人员投递伪装为工作职位的网络钓鱼邮件，最终部署了RemcosRAT。其中，邮件包含恶意的LNK文件，该文件负责启动HTA文件的下载链。HTA文件中则含有一个VBS脚本，它执行后会触发PowerShell脚本。PowerShell脚本再尝试从远程服务器中下载恶意载荷(word_update.exe)。word_update.exe启动后将会继续执行cmd.exe并通过管道共享恶意数据，进一步导致explorer.exe程序的启动，最终，恶意的RemcosRAT便被驻留在explorer.exe内存中。经检测， 此Remcos版本为4.9.2 Pro，能够收集有关受害者的信息，包括计算机名称和用户名，它最后还会从浏览器中删除cookie和登录数据，以规避检测。攻击链图如下图所示。\nUAC-0050组织",
+    "reference": "https://www.uptycs.com/blog/remcos-rat-uac-0500-pipe-method"
+  },
+  {
+    "title": "俄罗斯APT28组织利用MASEPIE恶意软件针对乌克兰发起网络钓鱼攻击",
+    "txt": "MASEP\nI\nE恶意软件\n\n近日，乌克兰计算机紧急响应小组(CERT)警告称，具有俄罗斯背景的APT28组织正通过网络钓鱼活动部署新型MASEPIE恶意软件。其中，APT28主要以西方国家和北约组织的政府实体、企业、大学、研究机构和智库为目标，该组织常发起网络钓鱼攻击并广泛使用软件中的零日漏洞。据悉，APT28针对乌克兰的最新活动发生在2023年12月15日至25日期间，攻击者依旧通过网络钓鱼电子邮件诱导收件人点击据称可查看重要文档的链接。链接可将受害者重定向到恶意的Web资源，该资源使用JavaScript来释放Windows快捷方式文件(LNK)，LNK文件则负责启动PowerShell命令以触发名为\"MASEPIE\"的新型Python恶意软件下载器的感染链。MASEPIE主要功能包括上传、下载文件、执行命令以及窃取数据，它通过修改Windows注册表并向Windows启动文件夹添加一个具有欺骗性的LNK文件(\"SystemUpdate.lnk\")来建立持久性。期间，APT28还使用了一组名为\"STEELHOOK\"的PowerShell脚本从基于Chrome的网络浏览器窃取数据，包括密码、身份验证cookie和浏览历史记录等敏感信息。另外，该组织使用的另一个C#后门工具名为OCEANMAP，它能够利用cmd.exe执行Base64编码的命令，并通过在Windows启动文件夹中创建名为\"VMSearch.url\"的.URL文件在系统上建立持久性。",
+    "reference": "https://cert.gov.ua/article/6276894"
+  }
+]

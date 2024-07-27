@@ -1,0 +1,27 @@
+[
+  {
+    "title": "攻击活动",
+    "txt": "攻击活动\n针对美国军事武器承包商的攻击活动\nAnonymous黑客组织声称入侵了俄罗斯国防部\n\n数据泄露\n数据泄露\n以色列国防承包商Elbit的美国分公司发生数据泄露\n\n恶意软件\n恶意软件\nKaspersky研究人员发现新的NullMixer恶意软件\n\n新的APT组织Metador针对电信公\n司、ISP和大学",
+    "reference": "https://www.sentinelone.com/labs/the-mystery-of-metador-an-unattributed-threat-hiding-in-telcos-isps-and-universities/"
+  },
+  {
+    "title": "APT28利用PowerPoint文件投递恶意软件",
+    "txt": "近期，Cluster25的研究人员发现具有俄罗斯背景的APT组织APT28，使用诱饵文档投递Graphite恶意软件的变体。诱饵文档是利用了一种新颖的代码执行技术的PowerPoint文件，该技术设计为当用户启动演示模式并移动鼠标时触发执行，并且是通过超链接触发的。代码执行后会运行一个PowerShell脚本，该脚本会从OneDrive下载并执行一个dropper，而dropper会最终下载有效载荷。攻击者会利用这个有效载荷展开下一步的攻击活动。",
+    "reference": "https://blog.cluster25.duskrise.com/2022/09/23/in-the-footsteps-of-the-fancy-bear-powerpoint-graphite/"
+  },
+  {
+    "title": "Lazarus Group针对加密货币从业者的钓鱼攻击",
+    "txt": "近期，SentinelOne的研究人员发现了具有朝鲜背景的APT组织Lazarus Group，利用流行加密货币交易所Crypto.com的招聘广告作为诱饵，针对使用macOS平台的加密货币行业的从业者，发起网络钓鱼攻击活动。攻击者首先利用LinkedIn接触受害目标，发送一个伪装成PDF的Mach-O二进制文件，其中包含Crypto.com的招聘信息。当受害者打开PDF文件后，该Mach-O二进制文件会在用户的库目录中创建一个文件夹，并分发第二阶段和第三阶段的恶意模块，进而开展下一步的攻击活动。",
+    "reference": "https://www.sentinelone.com/blog/lazarus-operation-interception-targets-macos-users-dreaming-of-jobs-in-crypto/"
+  },
+  {
+    "title": "Lazarus Group使用BYOVD技术的攻击活动",
+    "txt": "近期，AhnLab的研究人员披露了具有朝鲜背景的APT组织Lazarus Group，使用BYOVD技术开展新的攻击活动。根据研究人员分析，攻击者使用BYOVD（自带存在缺陷的驱动程序）技术，并利用了合法戴尔驱动程序中的漏洞CVE-2021-21551。攻击者在获得对内核内存空间的写访问权后，为了防止恶意软件被检出，屏蔽了系统中所有的安全解决方案和监控工具，从而开展后续的攻击活动。",
+    "reference": "https://asec.ahnlab.com/en/38993/"
+  },
+  {
+    "title": "披露Lazarus Group的样本",
+    "txt": "近日，研究人员披露了Lazarus Group组织的恶意样本，IOC信息如下所示：\n文件名：Galaxy JDs.pdf.lnk\nMD5：8878ee5d935facff0e04370324118c60",
+    "reference": "来源："
+  }
+]

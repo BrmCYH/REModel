@@ -1,0 +1,7 @@
+[
+  {
+    "title": "数据泄漏",
+    "txt": "数据泄漏\n法国旅游公司La Malle Postale泄露了9万名徒步旅行者的个人信息\n\n恶意软件\n恶意软件\nCopperStealer恶意软件开始使用新的Rootkit和网络钓鱼工具包\n\n勒索软件\n勒索软件\n新的RA Group勒索软件针对美国公司进行双重勒索攻击\n\nLancefly组织使用定制后门Merdoor针对南亚地区开展攻击\n\n近日，Symantec的研究人员披露了一个常年针对南亚和东南亚实体的APT组织：Lancefly。研究人员表示，该组织通常在其攻击活动中使用自定义编写的后门“Merdoor”。据研究人员观察，后门Merdoor似乎自2018年以来就已经存在。该后门功能强大，具有将自身安装为服务、键盘记录、与C2服务器进行通信、侦听本地端口上的命令等多种功能。2020年至2021年期间，Merdoor还曾被发现用于针对政府、通信和技术部门的攻击，有关Merdoor的攻击活动一直持续到了今年的第一季度。Lancefly的最新攻击活动于2022年年中开始，针对南亚和东南亚的政府、航空、教育和电信等行业。据称，攻击活动的初始接入手段疑似为SSH暴力破解或攻击存在漏洞公开服务器。攻击活动涉及的Merdoor释放器则是一个自解压的RAR(SFX），其中包含三个文件：存在DLL搜索顺序劫持缺陷的合法二进制文件、Merdoor加载程序和包含最终有效负载的加密文件(.pak)。一旦受害者打开RAR文档，Merdoor释放器便会通过执行合法的二进制文件最终植入Merdoor后门。接着，Merdoor再通过注入到perfhost.exe或svchost.exe中隐蔽执行并连接到其C2服务器以接收远程命令。此外，攻击者还会使用伪装的WinRAR(wmiprvse.exe)文件来暂存和加密文件。目前，研究人员表示，尚不清楚攻击者如何从受害者机器中窃取数据，但最有可能的仍然是利用Merdoor后门。",
+    "reference": "https://symantec-enterprise-blogs.security.com/blogs/threat-intelligence/lancefly-merdoor-zxshell-custom-backdoor"
+  }
+]

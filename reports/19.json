@@ -1,0 +1,27 @@
+[
+  {
+    "title": "新APT组织暗爪鹰针对亚美尼亚政府投递VenomRAT",
+    "txt": "暗\n爪\n鹰针对\n近日，安恒信息的研究人员捕获到一个由亚美尼亚上传的恶意LNK文件并根据该文件追踪到完整的攻击链。攻击者主要针对亚美尼亚共和国政府工作人员，通过钓鱼攻击获取目标主机的初始访问权限。攻击者仿冒亚美尼亚国家安全局和亚美尼亚共和国卫生和劳动监察机构内部软件，以各类公务为主题诱惑目标下载邮件附件。附件为DOC文档或者LNK文件，DOC文档可通过恶意宏代码下载EXE文件以执行Powershell命令，Powershell命令执行后将下载加载器，从而在内存解密加载Venom RAT。LNK文件则会执行远程VBS代码，代码将执行Powershell命令以部署Venom RAT。此外，安全人员发现攻击者以亚美尼亚政府职位空缺公告为诱饵，最终下发恶意组件窃取敏感数据。研究人员将此次攻击活动归因为APT-LY-1009(别名暗爪鹰、Darkclaw Eagle)组织。攻击链图如下图所示。\n",
+    "reference": "https://mp.weixin.qq.com/s/ZuZGntN_uIFZUCQZ9Ol-0A"
+  },
+  {
+    "title": "TA576组织在美国纳税期间开展攻击",
+    "txt": "近日，Proofpoint的研究人员发现TA576组织卷土重来，据悉，该组织通常只在美国纳税期间的前几个月活跃，并主要针对北美地区的会计和金融组织开展以税收为主题的网络电子邮件钓鱼活动，最终将投递Parallax远程木马。研究人员表示，在2024年1月观察到的前两次活动中，攻击者首先利用盗取的帐户发送了声称请求税务援助的良性电子邮件。一旦目标回复，攻击者就会继续使用恶意的Google Firebase(web.app)URL进行响应。用户单击该URL，将会被重定向到一个压缩快捷方式(LNK)文件的下载页面。如果执行此快捷方式，它将通过SyncAppvPublishingServer.vbs LOLBAS二进制文件注入运行编码的PowerShell。最终，运用PowerShell命令启动Mshta以从提供的URL处运行HTML应用程序(HTA)负载。",
+    "reference": "https://www.proofpoint.com/us/blog/threat-insight/security-brief-tis-season-tax-hax"
+  },
+  {
+    "title": "APT37冒充网络研讨会主办方分发ROKRAT木马",
+    "txt": "近日，安全人员监测到攻击者冒充网络研讨会主办方开展钓鱼攻击。攻击者以“2023年朝鲜形势评估和2024年展望”为活动主题，发送携带链接的电子邮件。当用户点击链接时，链接将通过DropBox下载zip压缩包，压缩包将释放恶意LNK文件和诱饵PDF文件。LNK文件伪装为PDF文档图标，从而诱导用户运行LNK文件。一旦LNK文件被运行，其携带的Powershell代码将被执行，同时向用户展示诱饵PDF文档。Powershell代码执行后将在特定路径创建public.dat和241223.bat文件。随后241223.bat将执行public.dat中进一步的Powershell命令，最终经过解密、下载有效载荷等操作部署ROKRAT。ROKRAT主要进行信息收集，收集的信息包括主机文件列表、特定扩展名的文件等，并且ROKRAT还具有检测并破坏虚拟环境的功能。攻击者使用pCloud服务作为C2服务器，ROKRAT最终将收集的信息上传至pCloud平台。安全人员根据此次攻击活动的特征，将此次活动归因为APT37组织。攻击链图如下图所示。\n",
+    "reference": "https://www.genians.co.kr/blog/webinar-apt"
+  },
+  {
+    "title": "研究人员对APT组织Peach-Sandstorm后门利用技术的分析",
+    "txt": "近日，Nextron的研究人员对Peach Sandstorm组织用于针对全球国防承包商的FalseFont后门进行了分析。研究人员表示，该后门具有数据泄露和远程访问功能。它伪装成美国国防和情报承包商 Maxar Technologies 的合法应用程序，并为用户提供真实的UI和行为。屏幕录制功能是数据泄露的另一个载体，允许攻击者从未存储在磁盘上的数据（如电子邮件或聊天消息）中获取更多潜在的机密信息。研究人员对其进行技术分析和流程复现。",
+    "reference": "https://www.nextron-systems.com/2024/01/29/analysis-of-falsefont-backdoor-used-by-peach-sandstorm-threat-actor/"
+  },
+  {
+    "title": "针对国内医药企业的钓鱼攻击活动",
+    "txt": "针对国内医药企业的钓鱼攻击活动\n近日，山石情报团队发现一起定向的针对某医药企业的钓鱼攻击正在悄悄进行。在本次事件中，攻击者在钓鱼邮件中使用“紧急通知！”配合仅有一半的图片来吸引用户注意，诱使用户点击该图片，在点击邮件中的图片后，用户会跳转到旨在获取凭据的微软outlook钓鱼网站。此邮件中使用的图片链接来自\"flowcode.com\"，这是一个免费的设计生成二维码的网站，通过该网站生成二维码时还会提供一个重定向的链接，将该链接置入邮件中，即可达到绕过安全设备检测的效果。攻击链图如下图所示。\n",
+    "reference": "https://mp.weixin.qq.com/s/RtfEkpkvNesZagmghFIGxA"
+  }
+]

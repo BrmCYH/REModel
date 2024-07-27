@@ -1,1 +1,37 @@
-[]
+[
+  {
+    "title": "APT组织Lazarus在官方Python存储库中发布恶意Python包",
+    "txt": "\n近期，安全人员证实了具有朝鲜背景的APT组织，Lazarus在官方Python包存储库中发布恶意Python包，涉及到的恶意Python包有pycryptoenv、pycryptoconf、quasarlib、swapmempool。pycryptoenv和pycryptoconf类似pycrypto，是Python中用于加密算法的Python包。目前已确认的多个恶意Python包结构几乎相同，因此安全人员以pycryptoenv为例进行了分析。恶意软件的主体是一个名为test.py的文件，查看可发现该文件并非Python文件而是一个异或编码的DLL文件。文件可通过包中的__init__.py文件解码和执行。安全人员表示，该恶意软件名为Comebacker，是谷歌安全人员在2021年首次发现的一种恶意软件。由于包中并不存在调用解码函数的代码，安全人员推测攻击者会通过其他方式执行解码函数以运行DLL文件。一旦文件执行，文件将创建IconCache.db和NTUSER.DAT文件，NTUSER.DAT中携带加密的恶意代码，当NTUSER.DAT携带的恶意代码被解密后，恶意代码将被加载至内存中，这段代码是Comebacker恶意软件的关键代码。安全人员分析后发现Comebacker中携带独特的特征，即NOP以66 66 66 66开头进行填充，该特征此前也曾在Lazarus组织使用的其他恶意软件中发现。Comebacker在运行后将向C2服务器发送特殊的POST请求，服务器会响应一个Windows可执行文件，Comebacker可将该文件加载至内存中运行。经安全人员统计，截至2024年2月7日，pycryptoenv已被下载594次、pycryptoconf被下载了1263次、quasarlib被下载749次、swapmempool被下载368次。恶意Python包中的恶意软件运行流程如下图所示。\n",
+    "reference": "https://blogs.jpcert.or.jp/en/2024/02/lazarus_pypi.html"
+  },
+  {
+    "title": "Tortoiseshell组织针对中东国家的航空航天和国防部门开展攻击",
+    "txt": "\n近日，Mandiant的安全人员公开了一起具有伊朗背景的APT组织Tortoiseshell（又名UNC1549）针对中东国家尤其是伊朗的攻击活动，此次攻击针对国防、航空航天部门，通过鱼叉式网络钓鱼和信息收集获取初始访问权限，攻击者通过钓鱼攻击传播包含以色列哈马斯相关内容或虚假工作机会的虚假网站链接，虚假工作主要涉及航空、航天、国防等领域，虚假链接最终会导致主机下载恶意负载，恶意负载主要是MINIBIKE或MINIBUS后门，后门外联的C2服务器采用Microsoft Azure服务。MINIBIKE是使用C++编写的自定义后门，能够进行文件上传、命令执行等，使用Azure云基础架构进行通信。MINIBUS与MINIBIKE有许多相似之处，但提供更灵活的代码执行界面和增强的侦察功能。\nTortoiseshell（又名UNC1549）\nUNC1549",
+    "reference": "https://www.mandiant.com/resources/blog/suspected-iranian-unc1549-targets-israel-middle-east"
+  },
+  {
+    "title": "DuckTail组织近期针对数字营销人员的攻击活动剖析",
+    "txt": "\n今日，山石网科的研究人员捕获到了一批疑似与DuckTail黑客组织相关的针对数字营销人员进行的安全事件。据悉，该组织于2022年被首次披露，其攻击活动最早可追溯至2021年，疑似具有鲜明的越南背景，旨在获取经济利益，常针对Facebook Business账号展开窃密行动，目的是操纵页面并获取财务信息，其攻击目标覆盖全球多个国家，活动范围较广。调查显示，本次活动，攻击者主要向目标受害者投递了以服装产品图以及一段mp4视频作为伪装的恶意压缩文件，再通过压缩文件内的lnk快捷方法调用powershell.exe来执行mshta，进而加载远程服务器中的hta文件，最终完成后续恶意软件的下载和执行过程。期间，在hta文件中，还会使用十进制数加上定值的方式来对downloader代码进行混淆。通过lnk下载的样本软件\"dwmm.exe\"则为使用Nuitka进行封装的python脚本，它负责盗取设备中浏览器的Cookies、Password、Credit Card、History等数据，最终通过telegramBot传输被盗数据等。攻击链图如下图所示。\n",
+    "reference": "https://mp.weixin.qq.com/s/eFxoX3cwpPee5z2_3G3wXw"
+  },
+  {
+    "title": "Winter Vivern组织借助Roundcube漏洞入侵80多个组织",
+    "txt": "\n近日，Recorded Future的研究人员披露了与俄罗斯有关的APT组织，Winter Vivern与一项新的网络间谍活动有关。调查显示，本轮活动从2023年10月开始一直持续到2024年2月中旬，目的是收集有关欧洲政治和军事活动的情报。攻击者疑似利用Roundcube网络邮件服务器中的跨站脚本(XSS)漏洞来针对主要位于格鲁吉亚、波兰和乌克兰的80多个组织，目标实体涵盖政府、军队和国家基础设施。经进一步关联分析发现，这些攻击与TAG-70黑客组织在2023年3月针对乌兹别克斯坦政府邮件服务器的活动特征存在重叠。据悉，TAG70至少自2020年12月便开始活跃，疑似专注于进行为白俄罗斯和俄罗斯的利益服务的网络间谍活动，主要攻击欧洲和中亚的政府。其攻击方法具有高度复杂性，常利用社会工程技术以及Roundcube网络邮件服务器中的跨站点脚本漏洞，绕过政府和军事组织的防御，未经授权地访问目标邮件服务器。其攻击链还涉及利用Roundcube漏洞来传播JavaScript有效负载，旨在将用户凭据泄露到攻击者控制的C2服务器。另外，研究人员还发现了TAG-70针对伊朗驻俄罗斯和荷兰大使馆以及格鲁吉亚驻瑞典大使馆的证据。",
+    "reference": "https://go.recordedfuture.com/hubfs/reports/cta-2024-0217.pdf"
+  },
+  {
+    "title": "SideWinder组织使用基于Nim语言的远控程序",
+    "txt": "\n近期，360安全的研究人员捕获到一批SideWinder组织针对不丹、缅甸、尼泊尔的攻击样本，样本通过宏文档释放Nim语言编译的攻击载荷。SideWinder是一个活跃于南亚地区的APT组织，最早活跃时间可追溯至2012年，其主要攻击国家包括巴基斯坦、阿富汗、尼泊尔、不丹、缅甸等数十国，以窃取政府、能源、军事、矿产等领域的敏感信息为主要目的。攻击者伪造国家政府文件，实际文件携带恶意代码。文件打开后首先会诱导用户启用宏，宏启用后，文件携带的代码将被执行。代码将检测主机是否能够联网，在联网的情况下，程序将释放svchost.zip和bat脚本，脚本将解压zip文件并创建计划任务执行解压后的svchost.exe程序。svchost.exe是一个由Nim编译的远控工具，主要功能是执行命令并上传执行结果，此外，该程序还具有安全产品检测、反沙箱检测等功能。据安全人员研究发现，该类样本最早出现于2022年11月，但由于样本经过加密，许多病毒检测引擎均未报毒。",
+    "reference": "https://mp.weixin.qq.com/s/I_s5HrRWdbTW99B99udl1w"
+  },
+  {
+    "title": "五眼情报联盟成员警告警APT29组织转向云攻击",
+    "txt": "五眼情报联盟成员警告\n近日，五眼 (FVEY) 情报联盟成员警告称，APT29 俄罗斯对外情报局 (SVR) 黑客现在正转向针对受害者的云服务进行攻击。APT29（也被称为 Cozy Bear、Midnight Blizzard、The Dukes）在三年多前精心策划的SolarWinds供应链攻击之后，入侵了多个美国联邦机构。APT29最初的云漏洞向量还包括使用被盗的访问令牌（使他们能够在不使用凭据的情况下劫持帐户）、受感染的住宅路由器来代理其恶意活动、绕过多因素身份验证 (MFA) 的 MFA 疲劳以及将自己的设备注册为受害者云租户上的新设备。此通报概述了参与者为获得云环境的初始访问权限而部署的 TTP，并包括检测和缓解此活动的建议。",
+    "reference": "https://www.cisa.gov/news-events/cybersecurity-advisories/aa24-057a"
+  },
+  {
+    "title": "研究人员发现针对石油和天然气行业新的恶意活动",
+    "txt": "近日，Cofense的研究人员正在跟踪一项高级活动，该活动已成功实现攻击石油和天然气行业的预期目标。该活动提供了一种不常见但先进的恶意软件即服务信息窃取程序，即Rhadamanthys Stealer。在执法部门取缔 LockBit 勒索软件组织（最活跃的勒索软件即服务 (RaaS) 之一）后的几天内，这种新的高级网络钓鱼活动采用了最近更新的恶意软件即服务 (MaaS)。该恶意软件家族最近在黑市上出现重大更新，这可能是在如此高级的活动中看到如此陌生的家族的原因。截至目前，存在大量网络钓鱼电子邮件，这些电子邮件采用多种已知的策略、技术和程序来帮助绕过安全电子邮件网关来传播恶意软件。",
+    "reference": "https://cofense.com/blog/new-maas-infostealer-malware-campaign-targeting-oil-gas-sector/?web_view=true"
+  }
+]

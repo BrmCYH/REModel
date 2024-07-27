@@ -1,0 +1,42 @@
+[
+  {
+    "title": "印度APT组织蔓灵花针对我国军工行业发起钓鱼攻击",
+    "txt": "\n近日，瑞星的研究人员捕获到一起印度蔓灵花组织针对我国军工行业发起的APT攻击事件。经分析发现，攻击者试图通过鱼叉式钓鱼攻击手段来投递wmRAT后门程序，以达到窃取我国军事机密的目的。据悉，蔓灵花本次主要向我国军工行业投递带有恶意程序的钓鱼邮件附件，附件内含有恶意的CHM文件。一旦受害者点击CHM文件，就会在本地创建计划任务。该计划任务会设定每隔15到20分钟与攻击者远程服务器通信一次，继而下载MSI文件，然后在受害者电脑内植入wmRAT后门程序。其中，wmRAT作为蔓灵花组织的标志性武器，于2022年被首次披露，披露时远控指令只有16个，并且有一半的指令无实际功能，这表明蔓灵花正在积极开发该后门程序。wmRAT后门设计巧妙，不仅可规避静态查杀，还能够规避沙箱的行为检测。此次攻击中的wmRAT后门则具备截取屏幕图像、上传文件数据、获取指定URL页面内容、遍历磁盘、下载文件等恶意功能，因此具有很强的威胁性。攻击链图如下图所示。\n",
+    "reference": "https://mp.weixin.qq.com/s/Pd6K8sY01iNJ_qm75EOJBg"
+  },
+  {
+    "title": "APT组织UAC-0050向乌克兰安全部门分发询问主题的钓鱼邮件",
+    "txt": "\n近日，乌克兰政府计算机紧急响应小组(CERT-UA)发现UAC-0050组织正向乌克兰安全部门发送主题为\"询问\"的危险网络钓鱼电子邮件。据悉，活动始于2024年1月9日，攻击者大规模发送了标题为\"索取法庭文件\"和\"询问\"的电子邮件。恶意邮件包含压缩文档文件，运行后将最终导致RemcosRAT和QuasarRAT恶意软件的释放。此后，2024年1月11日，研究人员再次检测到大量分发标题为\"Inquiry by Medoc\"的电子邮件，这些电子邮件则附加或链接了RAR存档\"Запит.rar\"，它负责从Bitbucket或Google Drive服务处下载恶意文件。同样，运行附加文件将会导致远程控制软件的安装。\nCERT-UA",
+    "reference": "https://cert.gov.ua/article/6276351"
+  },
+  {
+    "title": "APT组织Mint Sandstorm冒充著名记者进行巧妙的鱼叉式网络钓鱼攻击",
+    "txt": "Mint Sandstorm\n\n近日，微软的研究人员发现一个已知与伊朗军事情报部门有联系的APT组织Mint Sandstorm一直在冒充一名著名记者，诱骗特定人群下载恶意文件。这些定制的鱼叉式网络钓鱼攻击自去年11月以来一直在持续，目标是比利时、法国、加沙、以色列、英国和美国的大学和研究机构中从事中东事务的知名人士。研究人员表示，攻击者会使用合法但受损的帐户发送网络钓鱼诱饵，并利用 Client for URL (curl) 命令连接到其命令和控制 (C2) 服务器。此外，在某些情况下，攻击者会使用一个类似于他们试图冒充的记者的电子邮件地址，向目标发送良性电子邮件，要求他们对一篇有关以色列-哈马斯战争的文章提供意见。在其他情况下，攻击者使用了属于他们试图冒充的个人的合法但已被盗用的电子邮件帐户。最初的电子邮件不包含任何恶意内容。攻击链图如下图所示。\n",
+    "reference": "https://www.microsoft.com/en-us/security/blog/2024/01/17/new-ttps-observed-in-mint-sandstorm-campaign-targeting-high-profile-individuals-at-universities-and-research-orgs/"
+  },
+  {
+    "title": "Mandiant公司X账户遭遇Drainer-as-a-Service组织暴力破解",
+    "txt": "Mandiant 的 X（前身为 Twitter）帐户上周遭到入侵，很可能是“暴力密码攻击”的结果，该攻击将黑客归咎于 Drainer-as-a-Service (DaaS) 组织。通常情况下，[双因素身份验证] 可以缓解这种情况，但由于一些团队的过渡和X 2FA 政策的变化，我们没有得到充分的保护。此次攻击发生于 2023 年 1 月 3 日，攻击者能够控制该公司的 X 帐户，并分发指向钓鱼页面的链接，该钓鱼页面托管着被追踪为 CLINKSINK 的加密货币消耗者。Drainers 指的是恶意脚本和智能合约，这些脚本和智能合约会在受害者被诱骗批准交易后，从受害者的钱包中窃取数字资产。据 Google 旗下子公司称，自 2023 年 12 月以来，据信多个威胁行为者利用 CLINKSINK 窃取 Solana (SOL) 加密货币用户的资金和代币。",
+    "reference": "https://www.bleepingcomputer.com/news/security/mandiants-x-account-hacked-by-crypto-drainer-as-a-service-gang/"
+  },
+  {
+    "title": "Framework Computer披露其会计服务提供商遭网络钓鱼后导致数据泄露",
+    "txt": "Framework Computer 披露了一起数据泄露事件，在其会计服务提供商 Keating Consulting Group 成为网络钓鱼攻击的受害者后，泄露了数量不详的客户的个人信息。这家总部位于加州的可升级和模块化笔记本电脑制造商表示，1 月 11 日，Keating Consulting 的一名会计师被冒充 Framework 首席执行官的威胁者欺骗，分享了一份电子表格，其中包含“与 Framework 购买的未清余额相关”的客户个人身份信息 (PII)。该公司在发给受影响个人的数据泄露通知信中表示：“1 月 9 日凌晨 4:27（太平洋标准时间），攻击者向冒充我们首席执行官的会计师发送了一封电子邮件，要求提供与框架购买的未清余额有关的应收账款信息。”太平洋标准时间 1 月 11 日上午 8:13，会计师回复攻击者并提供了一份包含以下信息的电子表格：全名、电子邮件地址、欠款余额。Framework 表示，其财务主管在太平洋标准时间 1 月 11 日上午 8:42 外部会计师回复攻击者的电子邮件后大约 29 分钟后，就通知了 Keating Consulting 的领导层此次攻击。",
+    "reference": "https://www.bleepingcomputer.com/news/security/framework-discloses-data-breach-after-accountant-gets-phished/"
+  },
+  {
+    "title": "Remcos RAT恶意软件伪装为成人主题游戏进行传播",
+    "txt": "近日，AhnLab的研究人员发现名为Remcos RAT的远程访问木马 (RAT) 通过网络硬盘在韩国伪装成成人主题游戏进行传播。WebHard是网络硬盘的简称，是国内流行的在线文件存储系统，用于上传、下载和共享文件。虽然网络硬盘过去曾被用来传播njRAT、UDP RAT 和 DDoS 僵尸网络恶意软件，但 AhnLab 安全应急响应中心 (ASEC) 的最新分析表明，该技术已被用来传播 Remcos RAT。在这些攻击中，用户被诱骗打开诱杀文件，将其冒充为成人游戏，这些文件在启动时会执行恶意 Visual Basic 脚本，以运行名为“ffmpeg.exe”的中间二进制文件。这会导致从参与者控制的服务器检索 Remcos RAT。攻击链图如下图所示。\nhnLab的研究人员发现\n",
+    "reference": "https://asec.ahnlab.com/en/60270/"
+  },
+  {
+    "title": "基于Python的新型FBot恶意软件针对云和SaaS平台发起攻击",
+    "txt": "一种名为FBot的新的基于 Python 的黑客工具被发现针对 Web 服务器、云服务、内容管理系统 (CMS) 和 SaaS 平台，例如 Amazon Web Services (AWS)、Microsoft 365、PayPal、Sendgrid 和 Twilio。主要功能包括收集垃圾邮件攻击的凭证、AWS 账户劫持工具以及针对 PayPal 和各种 SaaS 账户进行攻击的功能。FBot 是AlienFox、GreenBot（又名 Mainance）、Legion和Predator等云黑客工具列表中的最新成员，后四个工具与 AndroxGh0st 具有代码级别重叠。研究人员将 FBot 描述为“与这些家族相关但又不同”，因为它没有引用 AndroxGh0st 的任何源代码，尽管它与去年首次曝光的 Legion 表现出相似之处。",
+    "reference": "https://www.sentinelone.com/labs/exploring-fbot-python-based-malware-targeting-cloud-and-payment-services/"
+  },
+  {
+    "title": "非营利组织Water for People遭遇Medusa勒索软件攻击",
+    "txt": "Water for People是一个非营利组织，旨在为因缺乏饮用水和卫生设施而健康受到威胁的人们提供更多清洁水，是最新一个遭受勒索软件犯罪分子攻击的组织。勒索软件即服务团伙 Medusa 在其暗网网站上列出了 Water for People，并威胁称，除非该非营利组织支付 30 万美元的勒索费，否则将公布被盗信息。Water for People 的一位发言人称“所访问的数据早于 2021 年，没有损害我们的财务系统，也没有影响任何业务运营。我们正在与顶级事件响应公司以及我们的保险公司合作，并与我们的安全团队一起强化我们的系统，以防止未来发生事件。”",
+    "reference": "https://therecord.media/water-for-people-medusa-ransomware?&web_view=true"
+  }
+]

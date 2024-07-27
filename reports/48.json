@@ -1,0 +1,7 @@
+[
+  {
+    "title": "APT攻击",
+    "txt": "APT攻击\nMuddyWater使用新的恶意C2框架PhonyC2开展攻击\nCharming Kitten使用新变体POWERSTAR后门开展攻击\nREF9135使用RUSTBUCKET恶意软件针对macOS开展攻击\nNoName057(16)利用DDoS工具包DDoSia中断多国网站\n疑似摩诃草组织武器库更新WarHawk后门\nAndariel组织使用新型恶意软件EasyRat开展攻击\n披露DUCKTAIL的样本\n\n攻击活动\n俄罗斯卫星通信供应商Dozor-Teleport遭受网络攻击\n研究人员披露针对金融机构的网络犯罪活动\n\n数据泄露\n数据泄露\n研究人员发现包括多个流行社交平台的数据泄露事件\n印第安纳大学泄露近25万条用户信息\n\n恶意软件\n恶意软件\n针对Windows用户的新型信息窃取程序Meduza Stealer揭秘\n\n勒索软件\n勒索软件\n新型勒索软件Underground Team信息公开\n\nMuddyWater使用新的恶意C2框架PhonyC2开展攻击\n",
+    "reference": "https://www.deepinstinct.com/blog/phonyc2-revealing-a-new-malicious-command-control-framework-by-muddywater"
+  }
+]

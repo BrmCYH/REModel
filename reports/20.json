@@ -1,0 +1,52 @@
+[
+  {
+    "title": "研究人员发现LODEINFO恶意软件针对日本多个行业发起攻击",
+    "txt": "研究人员发现LODEINFO恶意软件针对日本多个行业发起攻击\n研究人员发现LODEINFO恶意软件针对日本多个行业发起攻击\n勒索软件\n勒索软件\n研究人员对Phobos勒索软件变种Faust近期的活动剖析\n研究人员对Phobos勒索软件变种Faust近期的活动剖析\n研究人员对Phobos勒索软件变种Faust近期的活动剖析\nAPT28组织对全球多个组织发起NTLMv2哈希中继攻击\n近日，Trendmicro的研究人员披露了具有俄罗斯背景的APT组织，APT28组织大约从2022年4月到2023年11月起，便一直试图通过不同的方式发起NTLMv2哈希中继攻击，目标涵盖欧洲、北美、南美、亚洲、非洲和中东等地区的政府、国防、能源、交通以及军队等领域实体。据悉，APT28至少从2004年起就一直活跃，常通过暴力破解凭证的方式实现初步入侵，为隐藏痕迹，涉及使用多种工具，包括VPN服务、Tor、数据中心IP地址和受感染的EdgeOS路由器。同时，APT28还获取了世界各地的众多电子邮件帐户，用于发送鱼叉式网络钓鱼电子邮件。研究人员表示，自2019年以来，APT28一直在跨地区探测Microsoft Outlook服务器和企业VPN服务器，试图通过利用数据中心计算机服务器以暴力破解手段访问企业和政府帐户。自2020年以来，APT28开始使用更多的匿名服务技术(包括Tor和商业VPN网络)以实现扫描和探测，在2022-2023年期间，该组织便使用了十几种不同的VPN服务。另外，APT28还涉及通过EdgeOS路由器发送鱼叉式网络钓鱼电子邮件，并在2022年4月到2023年8月期间利用Outlook中的CVE-2023-23397漏洞，以实现NTLMv2哈希中继攻击。即攻击者涉及向目标组织发送一封电子邮件，其中包含扩展消息应用程序接口(MAPI)属性，以及到远程攻击者控制的SMB的通用命名约定(UNC)路径服务器。此后，WinRAR漏洞CVE-2023-38831也被其用于哈希中继攻击。该组织最近的凭据网络钓鱼活动则发生在2023年11月29日至12月11日期间，目标为欧洲各国政府，主要涉及使用webhook站点URL以及Mullvad、\nWhoer和IPVanish VPN IP地址发送电子邮件。攻击链图如下图所示。\n",
+    "reference": "https://www.trendmicro.com/en_us/research/24/a/pawn-storm-uses-brute-force-"
+  },
+  {
+    "title": "and-stealth.html",
+    "txt": "\nAPT组织Kimsuky使用Dropbox实施攻击活动\n\n近期，深信服的研究人员发现Kimsuky组织向目标发送伪装成PDF的恶意LNK文件，文件名称为\"交易斯巴达克斯讲稿-100美元（第二期）\"，因此安全人员推测此次攻击活动主要针对数字货币或金融领域相关人士。同时期，安全人员还发现了涉及政府、外交、媒体、数字货币等行业主题的恶意文档。此次攻击活动中的lnk文件通过Powershell命令，利用dropbox下载第二阶段载荷ps.bin。同时，安全人员还观察到一个名为clientx64.bin的恶意文件，经确认该文件为xeno-rat运控木马。ps.bin文件执行后将下载一个名为r_enc.bin的文件并通过内存加载执行r_enc.bin。经安全人员分析，r_enc.bin文件实际为Tutclient远控组件。Tutclient远控组件可修改计划任务、解密数据、执行脚本，并且为用户展示诱饵文档。最终，程序窃取的信息也将通过接口上传至dropbox云端。",
+    "reference": "https://mp.weixin.qq.com/s/YhaEq6ogz3p5OQO_PyI-OQ"
+  },
+  {
+    "title": "APT组织透明部落针对印度军方发起钓鱼攻击",
+    "txt": "\n近日，奇安信的研究人员监测到了透明部落(别称Transparent Tribe)针对印度军方发起的钓鱼攻击活动。据悉，此次攻击从2023年3月持续至今，活动样本伪装成聊天软件，它配合远程控制框架Lazaspy实现控制受害者设备和采集信息的目的。其中，Lazaspy是一个基于XploitSPY构建的自定义Android RAT，属于L3mon远程控制病毒家族，它在XploitSPY的基础上定制了关键信息的序列化采集功能，包含窃取通讯录、麦克风录音、实时剪切板、窃取短信和设备文件等功能，并且在数据传输上具有双重保障，分别使用WebSocket事件发送和设备序列化作为文件上传的手段。根据其泄露的受害者用户信息表，研究人员发现大部分号码归属地为印度，并与印度军人相关，符合透明部落组织的目标群体及地域分布。经进一步溯源，发现攻击使用的2个服务器解析域名，也都属于透明部落组织。",
+    "reference": "https://mp.weixin.qq.com/s/NBFwjxnm2yIwPfMn87vbRQ"
+  },
+  {
+    "title": "UNC4990组织使用USB可移动设备感染主机",
+    "txt": "\nUNC4990组织至少从2020年开始活跃，主要针对意大利用户，常使用USB设备感染用户，目前UNC4990正在逐渐转向使用GitHub、GitLab、Vimeo等网站托管有效负载。安全人员还观察到攻击者使用EMPTYSPACE(也称为VETTA Loader和BrokerLoader)加载器和QUIETBOARD后门。攻击活动从用户双击可移动USB设备上的LNK文件开始，LNK文件名称以USB设备的供应商和存储大小组成，并且攻击者将该LNK文件设置为Microsoft Windows驱动器的默认图标，以诱惑毫无戒心的用户双击该图标触发嵌入在LNK文件中的恶意代码。恶意代码将运行一个Powershell脚本，脚本将在受害主机上下发EMPTYSPACE程序。EMPTYSPACE是一个下载器，可通过HTTP协议下载C2服务器提供的有效负载，部署QUIETBOARD后门程序。QUIETBOARD是一个基于Python的预编译多组件后门，能够执行任意命令、操纵剪贴板内容以窃取加密货币、USB/可移动驱动器感染、屏幕截图、系统信息收集以及与C2服务器通信。此外，后门还具有模块化扩展和运行独立Python代码的能力。安全人员收集了大量关于UNC4990的情报后发现，UNC4990主要针对位于意大利的欧美企业分部。目前，受影响行业包括医疗保健、运输、建筑和物流。攻击链图如下图所示。\n",
+    "reference": "https://www.mandiant.com/resources/blog/unc4990-evolution-usb-malware"
+  },
+  {
+    "title": "研究人员发现针对百万用户级的WordPress网站数据库插件发起的攻击活动",
+    "txt": "近日，研究人员在24小时内观察到了数千次尝试，是针对“Better Search Replace”WordPress 插件中严重缺陷的恶意活动。Better Search Replace 是一个安装量超过一百万的 WordPress 插件，可在将网站移动到新域或服务器时帮助在数据库中进行搜索和替换操作。管理员可以使用它来搜索和替换数据库中的特定文本或处理序列化数据，它提供选择性替换选项、对 WordPress Multisite 的支持，还包括“试运行”选项以确保一切正常。插件供应商 WP Engine 上周发布了 1.4.5 版本，以解决一个严重程度为 CVE-2023-6933 的 PHP 对象注入漏洞。该安全问题源于反序列化不受信任的输入，并允许未经身份验证的攻击者注入 PHP 对象。成功利用该漏洞可能会导致代码执行、访问敏感数据、文件操作或删除，以及触发无限循环拒绝服务条件。\n针\n对“Better Search Replace”WordPress 插件中严重缺陷的恶意活动",
+    "reference": "https://www.bleepingcomputer.com/news/security/hackers-target-wordpress-database-plugin-active-on-1-million-sites/"
+  },
+  {
+    "title": "奔驰企业网络GitHub令牌配置错误导致源代码泄露",
+    "txt": "处理不当的GitHub令牌可以不受限制地访问梅赛德斯-奔驰的内部GitHub Enterprise Service，从而将源代码暴露给公众。梅赛德斯-奔驰是一家著名的德国汽车、公共汽车和卡车制造商，以其丰富的创新历史、豪华的设计和顶级的制造质量而闻名。与许多现代汽车制造商一样，该品牌在其车辆和服务中使用软件，包括安全和控制系统、信息娱乐、自动驾驶、诊断和维护工具、连接和远程信息处理以及电力和电池管理（用于电动汽车）。2023年9月29日，研究人员在属于 Mercedez 员工的公共存储库中发现了 GitHub 令牌，该令牌可以访问公司内部的 GitHub Enterprise Server。GitHub 令牌可以对托管在内部 GitHub Enterprise Server 上的整个源代码进行‘不受限制’和‘不受监控’的访问 。该事件暴露了包含大量知识产权的敏感存储库，泄露的信息包括数据库连接字符串、云访问密钥、蓝图、设计文档、\nSSO 密码、API 密钥和其他关键内部信息。",
+    "reference": "https://redhuntlabs.com/blog/mercedes-benz-source-code-at-risk-github-token-"
+  },
+  {
+    "title": "mishap-sparks-major-security-concerns/",
+    "txt": "\n保险公司Keenan遭遇数据泄露影响150万个人信息\nKeenan & Associates向150万客户发送数据泄露通知，警告黑客在最近的网络攻击中获取了他们的个人信息。Keenan 是一家总部位于加利福尼亚州的保险经纪和咨询公司，在教育、医疗保健和公共机构领域享有盛誉。该公司向缅因州总检察长办公室提交了一份通知，警告称 2023 年夏季发生的数据泄露事件影响了1509616人。",
+    "reference": "https://www.documentcloud.org/documents/24389387-experian_k7150_keenanassociates_notice-letter?responsive=1&title=1"
+  },
+  {
+    "title": "CryptBot病毒伪装为Windows激活程序盗取用户资金",
+    "txt": "\n近期，火绒的研究人员监测到一款伪装成Windows非法激活程序的窃密病毒正在传播。据悉，活动涉及的样本是一个名为\"Windows_Loader.zip\"的安装包，内含病毒程序，可获取用户电脑和程序信息并且盗取资金，对用户构成较大安全威胁。经进一步分析，研究人员发现该病毒与CryptBot家族有关。CryptBot则是一个窃密软件，最早出现在2019年，主要在Windows系统中通过钓鱼邮件和破解软件进行传播，能窃取受害者浏览器的敏感信息、获取电脑和已安装程序信息、拍摄上传屏幕截图等。不过，与以往不同的是，该病毒新增了\"clipboard hijacker\"模块，通过劫持受害者的剪贴板数据，将其中的加密货币地址替换成自己的钱包地址，进而盗取资金。攻击链图如下图所示。\n",
+    "reference": "https://mp.weixin.qq.com/s/2JrirGHMYeQRrevG3jXs9Q"
+  },
+  {
+    "title": "研究人员发现LODEINFO恶意软件针对日本多个行业发起攻击",
+    "txt": "\nLODEINFO是\n一种无文件\n恶意软件，自2019年12月以来开始活跃，常通过钓鱼攻击感染受害者主机，受影响的行业有日本媒体、外交、公共机构、国防工业等。\n截至2024年1月24日，安全人员观察到LODEINFO的最新版本为v0.7.3。\n在2023年的攻击活动中，攻击者通过钓鱼邮件传播恶意Word文档。\n一旦用户试图打开该恶意文档，文档中携带的VBA代码将被运行，并在受害主机上部署32位和64位的Shellcode加载器以加载LODEINFO后门程序。\n此外，安全人员还观察到LODEINFO v0.6.9版本在部署过程中使用远程模板注入技术，从C2服务器下载并读取恶意的模板。\n模板与恶意Word文档相同，可通过VBA代码下发Shellcode加载器。\nShellcode加载器可从C2服务器下载并解密伪装成PEM文件的恶意文件，最终在受害主机上部署LODEINFO程序。\nLODEINFO后门为攻击者提供远程操控主机的功能，能够执行多种命令，如获取文件列表、上传文件、下载文件、使用WMI、键盘记录等功能。\n由于LODEINFO的加载器和远控模块都是无文件恶意软件，这大大提升了安全产品的检测难度。",
+    "reference": "https://blog-en.itochuci.co.jp/entry/2024/01/24/134100"
+  },
+  {
+    "title": "研究人员对Phobos勒索软件变种Faust近期的活动剖析",
+    "txt": "\nPhobos勒索软件于2019年首次出现，此后参与了多次网络攻击，它拥有多个勒索软件变体，包括Eking和8Base。近日，FortiGuard捕获了一份MS Excel XLAM文档，其中包含一个嵌入式VBA脚本，旨在利用无文件攻击技术来部署shellcode，进而将最终的Faust有效负载(即Phobos的另一个勒索变体)注入受害者的系统。据悉，该勒索软件加密后，文件扩展名为\".id[<\n>-3512].[babylon4367@proton.me].faust\"，并会在加密文件所在的目录中生成名为info.txt和info.hta的勒索赎金文件。经进一步分析发现，打开XLAM文档后，VBA脚本将使用\"Workbook_Open()\"函数触发PowerShell脚本以进入下一阶段。然后，它从Gitea下载经Base64编码的数据，该数据解码为干净的XLSX文件，保存在TEMP文件夹中并自动打开，用以误导用户认为该过程已完成并且不会造成任何损害。不过，PowerShell脚本随后会从C2服务器处下载名为\"cfmifs_CRPT.txt\"的数据文件，它负责提取名为\"AVG update.exe\"的恶意软件下载器。下载器包含大量无关代码来逃避检测并使分析复杂化，它通过采用进程注入技术，为恶意软件分配读-写-执行(RWE)内存，进而将恶意代码注入新生成的进程中。具体来说，下载器将首先解码恶意的\".rdata\"部分，获取MSIL执行文件和随机生成的字符串作为类名，并将其保存为TEMP文件夹中的\"SmartScreen Defender Windows.exe\"。随后使用命令\"cmd /Ccurl -s\"从C2服务器中检索经Base64解码的\"AppVStreamingUX_FST.txt\"，提取数据以获取shellcode。最终，调用基本API将shellcode注入\"SmartScreen Defender Windows.exe\"中。",
+    "reference": "https://www.fortinet.com/blog/threat-research/phobos-ransomware-variant-launches-attack-faust"
+  }
+]

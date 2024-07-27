@@ -1,0 +1,57 @@
+[
+  {
+    "title": "APT组织UNC4841利用CVE-2023-7102漏洞攻击Barracuda ESG设备",
+    "txt": "近日，网络和电子邮件安全公司Barracuda的研究人员表示，UNC4841组织正利用特制的Excel电子邮件附件和零日漏洞(CVE-2023-7102)部署SeaSpy和Saltwater恶意软件。据悉，零日漏洞(CVE-2023-7102)于圣诞节前夕披露，是由于Barracuda ESG设备上运行的Amavis病毒扫描程序所使用的Spreadsheet::ParseExcel开源库中的漏洞造成，该漏洞可允许攻击者通过参数注入在未修补的ESG设备上执行任意代码。2023年12月21日，Barracuda已部署相关安全更新。SeaSpy是一个x64 ELF持久性后门，它伪装成合法的Barracuda Networks服务，并将自身建立为PCAP过滤器，专门监视端口25(SMTP)和端口587上的流量。Saltwater则是Barracuda SMTP守护进程(bsmtpd)的基于Lua的模块，用于监视SMTP HELO/EHLO命令以接收C2 IP地址和端口，并将其作为参数传递给建立反向shell的外部二进制文件，能够上传或下载任意文件、执行命令以及实现代理和隧道功能。此外，Barracuda表示，至少自2022年10月以来，UNC4841组织就频繁利用各种零日漏洞(如CVE-2023-2868)部署新型恶意软件以从受感染系统中窃取数据，且其疑似具有间谍动机，曾针对性地从被破坏的网络向知名政府和高科技用户进行渗透。\n零\n日\n漏洞\n(CVE-2023-7102)",
+    "reference": "https://www.barracuda.com/company/legal/esg-vulnerability"
+  },
+  {
+    "title": "研究人员对APT34组织使用的恶意武器Menorah的分析",
+    "txt": "APT34组织至少自2014年以来便一直活跃，是一个具有伊朗国家背景的网络间谍组织，其目标是中东政府和各种垂直行业，包括医疗、化学、能源、金融和电信等领域。近日，Securityscorecard的安全人员捕获到攻击者使用的Menorah恶意软件变体。该软件运行后，首先会创建一个互斥体，收集主机各类信息，创建新线程来与C2服务器建立通信，C2服务器地址硬编码在恶意软件中。当恶意软件与C2服务器通信后，恶意软件可执行其下发的各类命令，包括创建新进程、获取目录、提取主机中的文件等。通信采用特定格式，包含三个参数，其中参数3是经过base64编码的命令。其中以sp开头的命令可创建一个进程并读取其输出内容，以nu开头的命令会发送特定字符串至服务器，以fl开头的命令则将罗列目录中的文件及其子目录，以dn开头的命令将文件内容传输至C2服务器。",
+    "reference": "https://securityscorecard.com/research/menorah-malware-apt34/"
+  },
+  {
+    "title": "APT组织SideCopy近期针对印度国防部进行双平台渗透攻击",
+    "txt": "\nSideCopy组织于2020年首次被披露，主要针对印度国防、外交等部门持续发动网络攻击。近年来，该组织活动频繁，其攻击武器涵盖多种语言，如C#、Delphi、GoLang、Python等，攻击能力覆盖包括Linux、Windows和MacOS在内的多个平台，并且攻击组件也一直在变化更新。近期，360发现SideCopy组织同时针对Windows和Linux系统进行无差别渗透攻击，并且为节省开发时间，其部分载荷为支持Windows和Linux双平台的远控工具。其中，在Linux环境下，初始攻击样本为含有恶意ELF文件的ZIP压缩包文件，受害者运行其中的ELF文件后会下载关于印度国防部的诱饵文档(如DocScanner_AUG_2023․pdf)，同时下载一个由Python打包的双平台攻击武器，该武器具备完整的远控功能。在Windows环境下，SideCopy同样使用含有恶意LNK的ZIP压缩文件作为攻击入口，一旦受害者点击LNK文件，便会继续下载hta文件，从而开启一段复杂多阶段的攻击链，最终释放D-RAT等远控组件，从而完成窃密活动。攻击链图如下图所示。\n",
+    "reference": "https://mp.weixin.qq.com/s/H7_ZnPbTeF5TKMLmEBSNlA"
+  },
+  {
+    "title": "APT组织UAC-0099持续向乌克兰投递LONEPAGE恶意软件",
+    "txt": "\n近日，Deep Instinct的研究人员披露了UAC-0099组织针对乌克兰的恶意软件钓鱼活动。据悉，UAC-0099自2022年中期以来便一直针对乌克兰。2023年8月，该组织使用ukr.net电子邮件服务向一名在乌克兰境外公司远程工作的乌克兰员工发送了一封冒充利沃夫市法院的包含LNK文件附件的SFX钓鱼邮件，进而诱导其下载执行恶意的PowerShell。随后，PowerShell代码解码两个base64 blob并将输出写入VBS和DOCX文件。其中，VBS文件实际上为LonePage恶意软件，执行时，它会创建一个隐藏的PowerShell进程，进而实现与硬编码的C2 URL通信以获取文本文件，并进行检索键盘记录程序、窃取信息、屏幕截图以及下载其它payload等恶意操作。此外，研究人员发现，11月，UAC-0099继续发送PDF钓鱼文档，通过使用HTA和ZIP文件，以及利用WinRAR漏洞(CVE-2023-38831)来传播LONEPAGE。其中，CVE-2023-38831漏洞于2023年4月被发现，当用户在未修补的WinRAR版本中打开攻击者特制的ZIP文件并双击良性文件时，将执行扩展名为\"cmd\"的文件。目前，WinRAR更新版本已于2023年8月2日发布。攻击链图如下图所示。\n",
+    "reference": "https://www.deepinstinct.com/blog/threat-actor-uac-0099-continues-to-target-ukraine"
+  },
+  {
+    "title": "APT组织Kimsuky使用AppleSeed新变种AlphaSeed实施攻击活动",
+    "txt": "\nKimsuky组织自2013年以来一直活跃，主要攻击目标为韩国各个行业，常采用鱼叉式钓鱼攻击。近日，ASEC的安全人员监测到Kimsuky组织使用AppleSeed新变种AlphaSeed开展攻击活动。AppleSeed是一种后门恶意软件，可以执行从C&C服务器接收到的攻击者命令。攻击者可以使用AppleSeed来控制受感染的系统，AppleSeed还支持安装插件，具有下载程序、键盘记录和屏幕捕获功能，以及从用户系统收集和传输文件的信息盗窃功能。而新变种AlphaSeed由Go语言开发，功能与AppleSeed大部分相似。不过AlphaSeed支持通过电子邮件的方式与C2服务器进行通信，使用ChromeDP工具实现。据安全人员观察，AlphaSeed至少自2022年开始出现。此外，攻击者在使用AlphaSeed的同时还在使用Meterpreter控制受感染系统，并且利用TightVNC和HVNC(TinyNuke)恶意软件建立通信。",
+    "reference": "https://asec.ahnlab.com/ko/59933/"
+  },
+  {
+    "title": "金融公司First American在遭遇网络攻击后导致IT系统离线",
+    "txt": "\n美国第二大产权保险公司 First American 金融公司今天关闭了部分系统，以遏制网络攻击的影响。该公司在专门针对网络攻击的网站上发表的一份声明中表示。本文发表前，其官网已下线。作为回应，该公司已经关闭了某些系统，并正在努力尽快恢复正常业务运营。First American 成立于 1889 年，为购房者和卖家、房地产专业人士以及其他参与住宅和商业地产交易的人员提供金融和结算服务。",
+    "reference": "https://www.firstamupdate.com/"
+  },
+  {
+    "title": "Mint Mobile遭遇数据泄露事件影响客户个人信息",
+    "txt": "\nMint Mobile 披露了一起新的数据泄露事件，该事件暴露了其客户的个人信息，包括可用于执行 SIM 交换攻击的数据。Mint 是一家移动虚拟网络运营商 (MVNO)，提供预算预付费移动套餐。T-Mobile 提议支付 13 亿美元收购该公司。该公司于 12 月 22 日开始通过标题为“有关您帐户的重要信息”的电子邮件通知客户，称他们遭遇了安全事件，黑客获取了客户信息。Mint Mobile 数据泄露通知警告称：“我们写这封信是为了通知您我们最近发现的一起安全事件，其中未经授权的行为者获取了某些有限类型的客户信息。”该公司表示，他们解决了漏洞，并正在与第三方网络安全专家合作以保护他们的系统。泄露中暴露的客户数据包括：姓名、电话号码、电子邮件地址、SIM 序列号和 IMEI 号（类似于序列号的设备标识符）、购买的服务计划的简要说明。",
+    "reference": "https://twitter.com/CyleRickner/status/1738186087502168292"
+  },
+  {
+    "title": "医疗软件提供商ESO Solutions遭遇数据泄露影响270万人",
+    "txt": "\nESO Solutions 是一家为医疗机构和消防部门提供软件产品的提供商，该公司透露，由于勒索软件攻击，属于 270 万患者的数据已被泄露。根据通知，此次入侵发生在 9 月 28 日，在黑客对多个公司系统进行加密之前，导致数据被泄露。在事件调查过程中，ESO Solutions 发现攻击者访问了一台包含敏感个人数据的计算机。10 月 23 日，该公司确定勒索软件攻击造成的数据泄露影响了与其客户相关的患者，包括美国的医院和诊所。暴露的数据类型包括以下内容：全名、出生日期、电话号码、患者账号/病历号码、受伤类型和日期、诊断信息、治疗类型和日期、手续信息、社会安全号码 (SSN)。",
+    "reference": "https://www.tmh.org/news/2023/disclosure-regarding-eso-inc-breach-and-patient-information"
+  },
+  {
+    "title": "攻击者利用Android后门Xamalicious感染大量安卓用户",
+    "txt": "Andro\nid\n",
+    "reference": "https://www.mcafee.com/blogs/other-blogs/mcafee-labs/stealth-backdoor-android-xamalicious-actively-infecting-devices/"
+  },
+  {
+    "title": "基于Nim语言的恶意后门通过虚假尼泊尔政府邮件进行传播",
+    "txt": "\n近期，安全人员发现一起伪装成尼泊尔政府官员的电子邮件钓鱼活动。攻击者假扮尼泊尔政府官员的发送电子邮件，邮件携带恶意word附件。当用户打开该word附件时，附件将提示启用宏，一旦用户启用宏，文件携带的恶意代码将开始执行。恶意代码触发vbs脚本，为其添加开机启动项、隐藏文件，随后调用各种函数加载最终载荷。最终载荷被命名为conhost.exe，由Nim语言编写，其编译时间为2023年9月20日。后门运行后具有与当前用户相同的权限，可与C2服务器进行通信。后门还会获取当前运行的进程列表，若列表中包含分析类工具，后门将自行终止。若不存在分析类工具，后门则会收集主机信息，并采用特定格式将信息传输至C2服务器。随后，后门通过HTTP GET请求获取C2服务器命令，命令执行结果使用特定密钥进行加密传输。",
+    "reference": "https://www.netskope.com/blog/a-look-at-the-nim-based-campaign-using-microsoft-word-docs-to-impersonate-the-nepali-government"
+  },
+  {
+    "title": "研究人员披露Kuiper勒索组织",
+    "txt": "\n近期，安恒捕获到Kuiper勒索组织的三个样本并对其进行了追踪分析。2023年9月，Kuiper勒索组织首次被观察到实施勒索活动。该勒索组织主要使用开源工具和历史漏洞获取受害主机访问权限，部署Kuiper勒索软件。攻击者常用的工具有nuclei、masscan、SubDomainizer、RedWarden、Ngrok等，目前已发现利用的漏洞包括CVE-2021-26855、CVE-2021-34473和CVE-2021-34523，此外，攻击者使用transfer工具窃取敏感数据和文件。Kuiper勒索软件由Go语言编写，支持Windows、Linux和MacOS系统，采用AES或ChaCha算法结合RSA算法进行文件加密，文件加密完成后将创建名为README_TO_DECRYPT.txt的勒索信，要求用户支付比特币或门罗币作为赎金。此外，安全人员还发现攻击者伪造Facebook钓鱼页面分发Kuiper勒索软件。目前Kuiper勒索组织的主要目标为政府机构、教育机构、基础设施企业等。攻击链图如下图所示。\n",
+    "reference": "https://mp.weixin.qq.com/s/eIWH2p22HYybnmmuT8vizg"
+  }
+]

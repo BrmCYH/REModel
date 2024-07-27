@@ -1,1 +1,12 @@
-[]
+[
+  {
+    "title": "APT组织Lazarus 在Rootkit（获取内核权限）攻击中使用了微软的0day漏洞",
+    "txt": "近期 ，Avast的研究人员发现，具有朝鲜背景的APT组织Lazarus在最近的一次网络攻击中使用了Windows AppLocker（CVE-2024-21338）零日漏洞，来获得内核级访问权限并关闭安全工具，从而能够轻松绕过BYOVD（自带漏洞驱动程序）技术。Lazarus组织利用的新漏洞（CVE-2024-21338）位于appid.sys，这是 AppLocker背后的核心驱动程序，AppLocker是Windows中内置的应用程序白名单技术。Lazarus组织通过操纵appid.sys驱动程序中的输入和输出控制（IOCTL）调度程序来调用任意指针，诱使内核执行不安全代码，从而绕过安全检查。FudModule rootkit与漏洞利用程序构建在同一模块内，FudModule rootkit采用直接内核对象操作（DKOM）技术，来破坏各种内核安全机制，以关闭安全产品、隐藏恶意活动并维持被入侵系统的持久性。此攻击活动中实现直接禁用特定的安全产品有AhnLab V3 Endpoint Security、Windows Defender、CrowdStrike Falcon和HitmanPro。Lazarus组织目前仍然是最多产和最长期的高级持续威胁（APT）行为者之一。尽管他们的标志性战术和技术现在已经得到广泛认可，但他们仍然偶尔会以意想不到的技术复杂程度给我们带来惊喜，Avast研究人员说，FudModule rootkit是最新的例子，代表了Lazarus武器库中最复杂的工具之一。\nC\nVE-2024-213\n3\n8\n",
+    "reference": "https://decoded.avast.io/janvojtesek/lazarus-and-the-fudmodule-rootkit-beyond-byovd-with-an-admin-to-kernel-zero-day/"
+  },
+  {
+    "title": "APT组织Kimsuky利用软件公司产品安装程序进行伪装展开攻击",
+    "txt": "\nKimsuky，别名Mystery Baby、Baby Coin、Smoke Screen、Black Banshe等，该APT组织于2013年首次公开披露，疑似具有东北亚国家背景。Kimsuky主要攻击目标为韩国，涉及国防、教育、能源、政府、医疗以及智囊团等领域，以机密信息窃取为主。该组织通常使用社会工程学、鱼叉邮件、水坑攻击等手段投递恶意软件，攻击手法多样，拥有针对Windows和Android平台的攻击武器。近期，奇安信的研究人员发现一批以韩国软件公司SGA旗下产品安装程序为伪装的窃密攻击样本，样本运行后释放正常的安装包迷惑受害者，并暗中执行经过VMProtect处理的恶意DLL，恶意DLL由Go语言实现，收集感染设备上的各类信息回传给攻击者，然后清除攻击痕迹。根据窃密软件样本携带的数字签名我们关联到另一种用作后门的恶意软件，同样为Go编写，并带有VMProtect保护壳。此后门软件与Kimsuky组织历史攻击样本存在多处特征重叠，因此我们认为这两种恶意软件均和Kimsuky组织存在关联。攻击链图如下图所示。\n",
+    "reference": "https://ti.qianxin.com/blog/articles/Undercover-Kimsuky-APT-Q-2-Espionage-Campaign-Disguised-as-Software-Installers-CN/"
+  }
+]

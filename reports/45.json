@@ -1,0 +1,7 @@
+[
+  {
+    "title": "APT攻击",
+    "txt": "APT攻击\nAPT29借助Microsoft Teams服务针对全球组织开展钓鱼活动\n疑似Kimsuky组织利用诱饵文档攻击投资领域用户\nTA544利用WikiLoader针对意大利的企业分发Ursnif\nBahamut组织利用安卓恶意软件进行网络钓鱼活动\nKonni组织疑似针对韩国企业的攻击活动\n披露BITTER的样本\n\n攻击活动\n攻击活动\n幽谍犬黑产团伙伪装为国家税务服务平台实施窃密攻击\n数据泄露\n数据泄露\n美国南方独立学校协会泄露572GB的数据信息\n美国南方独立学校协会泄露572GB的数据信息\n\n恶意软件\n恶意软件\nNodeStealer 2.0可窃取Facebook企业帐户\nNodeStealer 2.0可窃取Facebook企业帐户\n新型P2P僵尸网络恶意软件P2Pinfect\n\n勒索软件\n勒索软件\nBankCard USA遭到Black Basta攻击已交5万美元赎金\n\nAPT29借助Microsoft Teams服务针对全球组织开展钓鱼活动\n",
+    "reference": "https://www.microsoft.com/en-us/security/blog/2023/08/02/midnight-blizzard-conducts-targeted-social-engineering-over-microsoft-teams/"
+  }
+]

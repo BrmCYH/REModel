@@ -1,0 +1,27 @@
+[
+  {
+    "title": "https://www.volexity.com/blog/2024/02/13/charmingcypress-innovating-persistence/",
+    "txt": "\nAPT组织Lazarus通过YoMix Tumbler清洗被盗的加密货币\nLazarus\n具有朝鲜背景的APT组织 Lazarus 因多年来实施多次大规模加密货币盗窃而臭名昭著，现已转而使用YoMix比特币混合器来洗钱被盗收益。研究人员表示，2023年，YoMix出现了大量资金涌入，这并不是因为人气增加，而是因为Lazarus的活动。然而，每当一个平台受到制裁并与加密货币空间隔离时，Lazarus就会转向一个新的平台。YoMix 是朝鲜APT组织使用的最新服务。研究人员对2023年洗钱活动向到更多服务存款地址蔓延，加上 Lazarus组织的新策略，进行了深入分析。\nLazarus",
+    "reference": "https://www.chainalysis.com/blog/2024-crypto-money-laundering/"
+  },
+  {
+    "title": "APT组织Sticky Werewolf以下载CCleaner为幌子攻击白俄罗斯公司",
+    "txt": "\n近日，F.A.C.C.T的研究人员发现APT组织Sticky Werewolf试图以计算机清理和优化软件CCleaner6.20为幌子传播Ozone RAT远程访问木马。据悉，Sticky Werewolf是一个网络间谍组织，专门针对俄罗斯和白俄罗斯的政府机构和金融公司。该组织常通过带有恶意文件链接的网络钓鱼电子邮件作为其初始攻击媒介，并会配合使用Darktrack RAT和Ozone RAT以及MetaStealer窃取程序(RedLine Stealer的变体)等工具。一月底，Avast防病毒软件和CCleaner清理程序在俄罗斯停止运行，因此，Sticky Werewolf开始利用这一点来攻击白俄罗斯公司。2023年12月，Sticky Werewolf两次以紧急情况部和建设部为幌子，通过邮件攻击俄罗斯药品组织。2024年1月，攻击者又伪装为俄罗斯联邦安全局以虚假信件攻击俄罗斯组织。研究人员表示，此次活动涉及的恶意链接最早于2月9日被检测到上传至VirusTotal平台，它会下载名为\"ccleaner_downloads.exe\"的自解压文档(SFX)，文件大小为75.79MB，为CCleaner的安装程序，可用于清理和优化Windows，它增加了SFX存档的大小。此外，还涉及一个在7z中准备的SFX存档ChemExamples.exe，它内含各种文件，包括一个模糊的AutoIt脚本和一个BAT文件，该文件负责从其余文件组装合法的AutoIt解释器。AutoIt脚本运行后，将会在ipconfig.exe进程内存中引入恶意程序，即Ozone RAT远程访问木马的下载模块。\nF.A.C.C.T的研究人员发现APT组织",
+    "reference": "https://habr.com/ru/companies/f_a_c_c_t/news/792672/"
+  },
+  {
+    "title": "APT组织Turla利用新型后门TinyTurla-NG针对波兰非政府组织开展攻击",
+    "txt": "波兰非政府组织开展攻击\n\n近期，思科的研究人员发现了一个由Turla组织编写和运行的新后门，并将其命名为TinyTurla-NG，该后门与TinyTurla类似，是一个小型后门。TinyTurla-NG首次被发现于2023年12月，攻击者使用该后门针对支持乌克兰的波兰非政府组织。Turla组织是一个来自于俄罗斯的黑客组织，常针对美国、欧盟、乌克兰和亚洲等地区，以支持俄罗斯的战略和政治目标。TinyTurla-NG是一个DLL文件，通过svchost.exe启动，并且使用不同的线程启动不同的恶意功能。TinyTurla-NG可通过Powershell执行命令，接收C2服务器指令并执行，包含窃取文件、创建文件等功能。",
+    "reference": "https://blog.talosintelligence.com/tinyturla-next-generation/"
+  },
+  {
+    "title": "APT组织Water Hydra利用微软零日漏洞针对金融交易者开展攻击",
+    "txt": "\n近日，Trendmicro的研究人员发现APT组织Water Hydra(别名DarkCasino)借助Microsoft Defender SmartScreen零日漏洞(CVE-2024-21412)攻击了金融市场交易者。据悉，活动始于2023年12月下旬，攻击者涉及在外汇交易论坛和股票交易Telegram频道上部署鱼叉式网络钓鱼活动，并会配合利用各种社会工程技术(例如发布请求或提供交易的帖子)，引诱潜在交易者进一步操作。期间，钓鱼帖子会回复有关交易图表技术分析的一般外汇或股票交易问题，并包含股票图表的链接作为诱惑，最终将受害者指向托管在WordPress上的受感染的俄罗斯交易和加密货币信息网站(fxbulls[.]ru)。该网站负责提供包含特洛伊木马股票图表的URL，且链接伪装为JPEG文件的链接，指向WebDAV共享。一旦用户单击，浏览器将要求其在Windows资源管理器中打开该链接，最终利用CVE-2024-21412漏洞在受感染机器中植入DarkMe恶意软件下载器。其中，DarkMe是一个用Visual Basic编写的DLL，负责通过cmd.exe命令解释器运行一系列命令，以从攻击者的WebDAV下载并执行下一阶段的有效负载。此外，研究人员观察到Water Hydra组织自2024年1月下旬以来，更新了其感染链，通过利用CVE-2024-21412执行恶意Microsoft安装程序文件(.MSI)，从而简化了DarkMe感染过程。最新活动的攻击链图如下图所示。\nTrendmicro的研究人员发现APT组织\n",
+    "reference": "https://www.trendmicro.com/en_us/research/24/b/cve202421412-water-hydra-targets-traders-with-windows-defender-s.html"
+  },
+  {
+    "title": "GoldFactory组织开发针对iOS系统的GoldPickaxe木马病毒",
+    "txt": "\n近日，Group-IB的研究人员发布报告称，一个代号为\"GoldFactory\"的网络犯罪组织开始针对iPhone用户发起银行木马攻击，并表示这是苹果手机首次面临此类安全考验。报告指出，GoldFactory开发了一套复杂的移动银行恶意软件，本次活动修改了此前仅针对安卓平台的GoldDigger木马，不仅增加了新的功能，还扩大了适用范围，使其能够同时攻击iOS设备。据悉，该新型复杂变种木马被命名为GoldPickaxe，于2023年10月首次被发现，会保持定期更新频率以规避检测。攻击者最初主要利用苹果的移动应用程序测试平台TestFlight来分发此恶意软件，后续开始转向采用多阶段社会工程学策略来引导受害者安装移动设备管理(MDM)配置文件，进而使得其能够完全控制受害者的设备。进一步调查显示，用户设备一旦感染GoldPickaxe，该木马就会收集面部识别数据、身份证件和拦截的短信，从而更容易地从银行和其他金融应用程序中窃取资金。更糟糕的是，这些生物识别数据随后还可能会被用于创建人工智能Deepfake，以冒充受害者并访问他们的银行账户。目前，GoldPickaxe活跃地区仅限于越南和泰国两个亚太国家，不过有新迹象表明其幕后攻击者已经开始扩大活动范围，将目标转向美国、加拿大和其他英语国家的iPhone和Android用户。GoldPickaxe木马病毒的感染流程如下图所示。\nGroup-IB的研究人员",
+    "reference": "https://www.group-ib.com/blog/goldfactory-ios-trojan/"
+  }
+]

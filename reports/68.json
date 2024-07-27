@@ -1,0 +1,17 @@
+[
+  {
+    "title": "APT攻击",
+    "txt": "APT攻击\nSandworm使用新的SwiftSlicer擦除器攻击乌克兰\nNoName057(16)组织针对乌克兰和北约发起DDoS攻击\nGroupA21利用政府官方文档攻击巴基斯坦\nUNC2565使用Gootkit开展攻击\nAPT29使用新的恶意软件GraphicalNeutrino针对外交实体\nSandWorm组织使用了5种擦除器攻击乌克兰新闻机构\nVice Society组织以制造业为目标开展攻击\n披露BITTER的样本\n\n攻击活动\n攻击活动\n亲俄罗斯组织Killnet对德国机场、行政机构和银行的网站发起DDoS攻击\n\n数据泄露\n数据泄露\n俄罗斯能源公司Gazprom发生数据泄露\n\n恶意软件\n恶意软件\n新的Python RAT恶意软件PY#RATION以Windows为目标进行攻击\n\n勒索软件\n勒索软件\n新的Mimic勒索软件使用“Everything”Windows搜索工具发起攻击\n\nSandworm使用新的SwiftSlicer擦除器攻击乌克兰\n近日，ESET的研究人员在最近一次针对乌克兰的攻击活动中发现了一种新的数据擦除恶意软件SwiftSlicer，并将其归因于具有俄罗斯背景的APT组织Sandworm。SwiftSlicer于1月25日在受害者的网络上被发现，其通过组策略部署，这表明攻击者已经控制了受害者的Active Directory环境。该恶意软件是用Go语言开发的，一旦执行就会删除卷影副本并覆盖Windows系统目录中的关键文件，特别是驱动程序和Active Directory数据。",
+    "reference": "https://www.welivesecurity.com/2023/01/27/swiftslicer-new-destructive-wiper-malware-ukraine/"
+  },
+  {
+    "title": "NoName057(16)组织针对乌克兰和北约发起DDoS攻击",
+    "txt": "近期，Sentinelone的研究人员披露了亲俄罗斯的黑客组织NoName057(16)针对乌克兰和北约组织发起DDoS攻击。NoName057(16)也称为NoName05716、05716nnm或Nnm05716，是自2022年3月以来与Killnet和其他亲俄团体一起支持俄罗斯的相对低调的APT组织。NoName057(16)攻击活动始于乌克兰战争初期，主要目标包括政府组织和关键基础设施，并且致力于通过DDoS攻击破坏那些批评俄罗斯入侵乌克兰的国家的重要网站。其攻击目标由集中在乌克兰新闻网站，后来转移到与北约相关的其他目标。2022年12月，该组织破坏了波兰政府网站。2023年1月11日，该组织开始针对2023年捷克总统选举候选人的网站。最近，该组织再次瞄准了丹麦金融部门。",
+    "reference": "https://www.sentinelone.com/labs/noname05716-the-pro-russian-hacktivist-group-targeting-nato/"
+  },
+  {
+    "title": "GroupA21利用政府官方文档攻击巴基斯坦",
+    "txt": "近期，微步的安全研究人员披露了具有印度背景的APT组织GroupA21的攻击活动。GroupA21组织是疑似来自印度的APT组织，又名“幼象”、“babyelephant”等，该组织至少自2017年开始活跃，持续针对南亚地区的巴基斯坦、斯里兰卡、马尔代夫和孟加拉等国的政府、军事、外交、情报、原子能和高校等行业和机构开展网络间谍活动的APT组织。研究人员通过分析发现，攻击者利用巴基斯坦官方网站的正常PDF文件作为诱饵，在文件内携带恶意LNK文件启动诱饵及木马文件。攻击者使用的最终载荷为WarHawk自研木马以及NetWire、CobaltStrike等公开木马。此外研究人员还发现了部署Sliver的C2服务器。",
+    "reference": "https://mp.weixin.qq.com/s/P7VXmHIB5dJl9ZoE1OBDww"
+  }
+]

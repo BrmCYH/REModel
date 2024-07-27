@@ -1,0 +1,47 @@
+[
+  {
+    "title": "APT攻击",
+    "txt": "\nAPT组织Gamaredon使用LittleDrifter蠕虫针对多个国家开展攻击\nAPT29利用CVE-2023-38831漏洞进行攻击活动\nAPT-C-35（肚脑虫）利用RemcosRAT远控攻击活动分析\n\n攻击活动\n\n美国多所学校遭受网络攻击\n\n数据泄露\n\n爱达荷国家实验室发生泄露数据\n超过33万名医疗保险受益人信息因MOVEit漏洞泄露\n\n恶意软件\n\nLumma窃密木马使用新型技术手段规避检测\n\n勒索软件\n\n8Base勒索团伙使用SmokeLoader传播Phobos勒索软件\n雅马哈菲律宾分公司遭到勒索软件攻击\n\nAPT攻击\nAPT组织Gamaredon使用LittleDrifter蠕虫针对多个国家开展攻击\nAPT组织Gamaredon使用LittleDrifter蠕虫针对多个国家开展攻击\nGamaredon使用\n近日，CheckPoint的研究人员对具有俄罗斯背景的APT组织Gamaredon使用的LitterDrifter 蠕虫病毒进行了分析。Gamaredon，也被称为Shuckworm、Iron Tilden和Primitive Bear。研究人员称，LittleDrifter蠕虫是用VBS编写的，旨在通过USB驱动器进行传播，是Gamaredon组织的USB PowerShell蠕虫的演进变种。研究人员在美国、乌克兰、德国、越南、波兰、智利看到了该蠕虫入侵的迹象，这表明Gamaredon组织可能失去了对LittleDrifter蠕虫的控制。该蠕虫使用的所有域都在'REGRU-RU'下注册，并使用'.ru'顶级域，这与Gamaredon组织过去的攻击活动特征一致。LitterDrifter蠕虫很可能是攻击活动的第一阶段，试图在受感染的系统上建立持久性，并与C2服务器连接等待接收新的载荷，以进一步进行攻击。但是在大多数情况下该蠕虫没有下载其他载荷，这可能表明这些攻击是具有高度针对性的。LitterDrifter蠕虫的执行流程图如下图所示。\nLitterDrifter 蠕虫病毒进行了分析。\nLitterDrifter蠕虫的执行流程图如下图所示。\n",
+    "reference": "https://research.checkpoint.com/2023/malware-spotlight-into-the-trash-analyzing-litterdrifter/"
+  },
+  {
+    "title": "APT29利用CVE-2023-38831漏洞进行攻击活动",
+    "txt": "APT29利用CVE-2023-38831漏洞进行攻击活动\n近日，乌克兰国家安全和国防委员会（NDSC）在发布的一份报告表示，APT29组织一直在使用一个恶意的ZIP文件进行攻击活动，该文件在后台运行脚本以显示一个PDF诱饵文件，并下载执行PowerShell代码以获取和执行载荷 文件。该文件的名称是“DIPLOMATIC-CAR-FOR-SALE-BMW.pdf”，APT29利用该文件针对包括阿塞拜疆、希腊、罗马尼亚和意大利在内的欧洲多个国家进行攻击，主要目标是各国大使馆。APT29曾在五月份的一次活动中使用过这个诱饵文件，当时通过HTML伪装技术传递ISO有效载荷，针对乌克兰外交官进行钓鱼攻击。APT29在此次攻击中新利用了WinRAR漏洞，该漏洞被标记为CVE-2023-38831。乌克兰NDSC表示，在这些攻击中，APT29将旧的钓鱼策略与新型攻击手段结合起来，以传播恶意载荷并实现与C2服务器的通信。",
+    "reference": "https://www.rnbo.gov.ua/files/2023_YEAR/CYBERCENTER/november/APT29%20attacks%20Embassies%20using%20CVE-2023-38831%20-%20report%20en.pdf"
+  },
+  {
+    "title": "APT-C-35（肚脑虫）利用RemcosRAT远控攻击活动分析",
+    "txt": "APT-C-35（肚脑虫）利用RemcosRAT远控攻击活动分析\nAPT-C-35（肚脑虫）组织，又称Donot，是一个针对巴基斯坦、斯里兰卡等印度周边国家政府机构等领域进行网络间谍活动，以窃取敏感信息为主的攻击组织。近期，360安全的研究人员检测到有一批针对巴基斯坦地区的攻击活动，通过对其的跟踪、分析和研判，初步将这次的攻击者归属于肚脑虫。同时在挖掘中，研究人员还发现了APT-C-35（肚脑虫）与APT-C-09（摩诃草）之间的关联性。此次攻击活动中，攻击者主要使用两个不同的手法“撬开”受害者的大门：1.使用带有漏洞的inp文档，当用户打开此inp文档后，便会在%UserProfile%\\AppData\\Local\\下释放Remcos的加载器，之后启动该加载器加载商业远控Remcos并接受控制；2.使用恶意lnk文件，当受害者打开投递的恶意压缩包中的lnk文件时，该lnk文件将会从远端https://webmail[.]mod[.]com[.]pk/uploads/dirmon32.hta下载二阶段攻击载荷（此处脚本中包含一段powershell脚本），当二阶段攻击载荷被触发执行后将从远端https://webmail[.]mod[.]com[.]pk/uploads/adrean.exe下载恶意样本并执行，该恶意样本为Remcos的加载器。\n",
+    "reference": "https://mp.weixin.qq.com/s/NpEpqjOCLKDRsRHJP-zTgA"
+  },
+  {
+    "title": "攻击活动",
+    "txt": "美国多所学校遭受网络攻击\n美国多所学校遭受网络攻击\n近期，美国多所K-12学校、大学和大专院校遭受网络攻击。北卡罗来纳中央大学的一位发言人称，该校的技术系统于11月12日上午遭受网络攻击，但未证实是否遭受勒索软件攻击；格伦代尔社区学院本周确认遭受了勒索软件攻击，该学院称攻击始于11月10日，恢复工作正在进行中；密歇根州北马斯基根公立学校本周因遭受网络攻击而被迫取消周三的课程，并指出其技术部门正在与网络安全团队合作以解决该问题；亚特兰大亨利县学校的总务长本周通过YouTube向家长发布了有关一起网络攻击事件的消息，俄勒冈州的比弗顿学区也遭遇了网络安全事件。",
+    "reference": "https://therecord.media/colleges-schools-facing-outages-cyberattacks?&web_view=true"
+  },
+  {
+    "title": "数据泄露",
+    "txt": "爱达荷国家实验室发生泄露数据\n爱达荷国家实验室发生泄露数据",
+    "reference": "来源："
+  },
+  {
+    "title": "https://www.bleepingcomputer.com/news/security/hacktivists-breach-us-nuclear-research-lab-steal-employee-data/",
+    "txt": "\n超过33万名医疗保险受益人信息因MOVEit漏洞泄露\n超过33万名医疗保险受益人信息因MOVEit漏洞泄露",
+    "reference": "https://therecord.media/more-than-hundreds-thousands-medicare-moveit"
+  },
+  {
+    "title": "恶意软件",
+    "txt": "Lumma窃密木马使用新型技术手段规避检测\nLumma窃密木马使用新型技术手段规避检测\n今日，Outpost24的研究人员对Lumma窃密木马4.0版本进行分析，发现该窃密木马在规避检测及对抗分析方面使用了新的技术手段。这些手段包括控制流平坦化混淆、鼠标活动检测、XOR加密字符串、动态配置文件以及在构建时进行加密。其中，Lumma窃密木马在对鼠标活动进行检测时，使用GetCursor跟踪主机上鼠标光标的位置，并在50毫秒的间隔内记录五个不同位置，然后它采用三角函数对这些位置进行分析，对移动形成的角度和矢量大小进行计算。如果计算出的矢量角度低于45度，Lumma窃密木马会认为这些动作不是由软件模拟的，将继续运行；如果角度大于45度，该恶意软件会停止所有恶意行为，但会继续监视鼠标移动，直到检测到类似人类的行为。\nutpost24的",
+    "reference": "https://outpost24.com/blog/lummac2-anti-sandbox-technique-trigonometry-human-detection/"
+  },
+  {
+    "title": "勒索软件",
+    "txt": "8Base勒索团伙使用SmokeLoader传播Phobos勒索软件\n8Base勒索团伙使用SmokeLoader传播Phobos勒索软件\n近日，研究人员最近发现由8Base团伙发起的攻击活动有所增加，该团伙使用SmokeLoader木马传播Phobos勒索软件。SmokeLoader采用了多层解密的方式释放最终载荷文件。在初始阶段，SmokeLoader采用大量随机API调用来混淆执行流程，然后在内存中执行Shellcode并释放执行最终的载荷。Phobos是一种典型的勒索软件，能够在受感染的系统中建立持久性、执行快速加密并删除备份。2019年以后出现的Phobos勒索软件使用自定义的AES-256加密实现，每个加密文件使用不同的随机对称密钥。一旦文件被加密，用于加密的密钥以及附加元数据将使用硬编码的公钥进行RSA-1024加密，并保存到文件末尾。SmokeLoader 嵌入有效载荷的解密过程。\nSmokeLoader 嵌入有效载荷的解密过程。\n",
+    "reference": "https://blog.talosintelligence.com/deep-dive-into-phobos-ransomware/"
+  },
+  {
+    "title": "雅马哈菲律宾分公司遭到勒索软件攻击",
+    "txt": "雅马哈菲律宾分公司遭到勒索软件攻击\n雅马哈摩托车制造公司的菲律宾分公司遭到了一次勒索软件攻击，导致部分员工个人信息被窃取并泄漏。在于10月25日首次发现入侵后，雅马哈一直在与外部安全专家合作进行调查。雅马哈表示，攻击者入侵了雅马哈摩托车菲律宾公司的一台服务器，他们的攻击并未影响总部或雅马哈摩托车集团的任何其他子公司。公司还向相关的菲律宾当局报告了此次事件，目前正在评估事件的完整影响。尽管该公司尚未透露此次攻击的幕后攻击者，但INC勒索团伙声称对这次攻击负责，并泄露了他们声称从雅马哈摩托车菲律宾公司网络中窃取的数据。该团伙于11月15日将该公司添加到其暗网泄漏站点中，并此后发布了包含员工ID信息、备份文件以及公司和销售信息等约37GB的多个文件存档。",
+    "reference": "https://www.bleepingcomputer.com/news/security/yamaha-motor-confirms-ransomware-attack-on-philippines-subsidiary/"
+  }
+]

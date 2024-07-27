@@ -1,0 +1,47 @@
+[
+  {
+    "title": "APT组织Imperial Kitten使用新型恶意软件针对中东地区开展攻击",
+    "txt": "\n近日，研究人员发现APT组织Imperial Kitte对运输、物流和技术公司发起的新一轮攻击活动。该组织被认为与伊朗伊斯兰革命卫队（IRGC）相关，至少自2017年以来一直活跃，对包括国防、技术、电信、海事、能源、咨询和专业服务在内的各个行业组织进行网络攻击。研究人员表示，该组织在十月份发动了网络钓鱼攻击，使用“职位招聘”为主题的钓鱼邮件，其中附有恶意Microsoft Excel附件。文档中的恶意宏代码将会提取两个批处理文件，通过修改注册表实现持久化，并运行用于进行Reverse Shell的Python载荷。然后攻击者使用PAExec等工具在网络上进行横向移动，远程执行进程，并使用NetScan进行网络侦察。此外，他们使用ProcDump从系统内存中获取凭据。攻击者使用恶意软件IMAPLoader和StandardKeyboard实现与C2服务器的通信。",
+    "reference": "https://www.crowdstrike.com/blog/imperial-kitten-deploys-novel-malware-families/"
+  },
+  {
+    "title": "疑似APT组织TA505利用SYSAID零日漏洞开展攻击",
+    "txt": "近日，Avertium的研究人员观察到有攻击者正在积极利用SysAid服务管理软件中的零日漏洞 (CVE-2023-47246)。经研究人员分析，该漏洞是一个路径遍历缺陷，允许攻击者未经授权访问企业本地服务器，从而导致数据盗窃和Cl0p勒索软件的部署。SysAid是一种广泛使用的IT服务管理解决方案，为企业提供管理各种IT服务的工具。Microsoft已确定该漏洞背后的威胁发起者为Lace Tempest，也称为TA505。攻击者通过将包含Webshell的Web应用程序资源 (WAR) 存档上传到SysAid Tomcat Web 服务的Webroot来利用零日漏洞。这使得攻击者能够执行额外的PowerShell 脚本、加载GraceWire恶意软件并危害合法进程（msiexec.exe、svchost.exe和spoolsv.exe）。窃取数据后，攻击者还会尝试使用PowerShell脚本删除活动日志来清除其踪迹。最新软件更新版本 23.3.36 中提供了CVE-2023-47246补丁。在此强烈建议所有SysAid用户立即更新到此版本。",
+    "reference": "https://www.avertium.com/resources/threat-reports/threat-actors-exploiting-sysaid-zero-day-vulnerability"
+  },
+  {
+    "title": "APT组织焰魔蛇利用桃色陷阱针对巴基斯坦开展攻击",
+    "txt": "近日，360安全的研究人员披露了APT组织（又名APT-C-52焰魔蛇）\nA\nP\nT-C-52焰魔蛇\n焰\n魔\n蛇\n针对巴基斯坦的攻击活动。\n焰魔蛇组织是一个来自南亚的APT组织，主要针对巴基斯坦进行有组织、有计划、针对性的网络攻击行动。该组织攻击活动开始于2021年初，至今仍处于活跃状态。研究人员获取攻击者服务器泄露的部分数据，受害者主要为巴基斯坦军事人员。\n焰魔蛇组织早期使用自建的服务器进行载荷投递，中后期使用Google Play应用商店进行载荷投递。\n早期使用自建的服务器进行载荷投递，中后期使用Google Play应用商店进行载荷投递。\n焰魔蛇组织攻击者在Facebook平台上创建了多个账号，伪装成女性用户，并添加巴基斯坦军方相关人员为好友，进一步获取其联系方式，为后续攻击做准备。\n当获取到目标联系方式后，攻击者会利用Facebook Messenger、WhatsApp、短信传递恶意样本或下载地址，并诱导受害者安装使用，最终实现获取军事情报的目的。攻击链图如下图所示。\n",
+    "reference": "https://mp.weixin.qq.com/s/MhyGLPqOthzG-H2RVeobAw"
+  },
+  {
+    "title": "TA402 使用复杂的 IronWind 感染链来针对中东政府实体开展攻击",
+    "txt": "近日，Proofpoint 的研究人员披露了APT组织TA402针对中东政府实体的网络钓鱼活动。\nProofpoint 的研究人员披露了APT组织TA402针对中东政府实体的网络钓鱼活动。\n披露了APT组织TA402针对中东政府实体的网络钓鱼活动。\n2023年中期，Proofpoint研究人员首次发现TA402（Molerats、Gaza Cybergang、Frankenstein、WIRTE）活动，利用迷宫般的感染链，通过Proofpoint称为IronWind的新初始访问下载程序来针对中东政府。从2023年7月到10月，TA402 利用了该感染链的三种变体——Dropbox链接、XLL文件附件和RAR文件附件——每种变体都会导致下载包含多功能恶意软件的 DLL。在这些攻击活动中，TA402还放弃了对Dropbox API等云服务的使用（Proofpoint 研究人员在 2021 年和 2022 年的活动中观察到了这种服务），转而使用由参与者控制的基础设施进行C2通信。\n截至2023年10月下旬，Proofpoint的研究人员尚未观察到 TA402的目标发生任何变化，也没有发现任何尽管该地区当前存在冲突但任务授权发生变化的迹象。该组织两个时期的攻击链图如下图所示。\n\n2021年11月至2022年1月TA402的攻击链图\n\n2023 年 7 月活动中TA402使用的攻击链图\n",
+    "reference": "https://www.proofpoint.com/uk/blog/threat-insight/ta402-uses-complex-ironwind-infection-chains-target-middle-east-based-government"
+  },
+  {
+    "title": "披露BITTER的样本",
+    "txt": "近日，研究人员披露了BITTER组织的恶意样本，IOC信息如下所示。\nFilename：Event Schedule.rar、Event ScheduleJan24.chm\nMD5：5729d343fcd2133455078021c4393991、b44ab8c6670a3fe75c3466be121ac0ca\nURL：http://farlookclinic[.]com/DMMA/hfo.php?pi=%username%*%computername%",
+    "reference": "https://twitter.com/1zrr4h/status/1722995855412638098"
+  },
+  {
+    "title": "加密货币交易平台Poloniex遭到网络攻击",
+    "txt": "近日，加密货币交易平台Poloniex在社交媒体上确认遭受网络攻击并正在进行调查，计划全额赔偿受到盗窃影响的用户。该平台表示，其团队已成功识别并冻结与黑客地址相关的部分资产，目前损失在可控范围内。区块链安全公司对平台被盗金额的估算不一。PeckShield的研究人员表示，被盗的金额约为1.25亿美元，包括价值5600万美元的以太坊、4800万美元的Sun的TRX币和1800万美元的比特币。另一家安全公司Slow Mist称，损失总计约为1.3亿美元，并指出除了较大的币种外，攻击者还窃取了价值数百万美元的其他币种。加密安全公司Beosin则估计损失为1.14亿美元。\n加密货币交易平台",
+    "reference": "https://therecord.media/poloniex-cryptocurrency-platform-millions-stolen?&web_view=true"
+  },
+  {
+    "title": "医疗保健机构McLaren泄露近220万人的敏感信息",
+    "txt": "医疗保健机构McLaren通知近220万人，称今年7月底至8月间该机构发生了一起数据泄露事件，导致敏感个人信息泄露。McLaren于2023年8月22日发现了安全漏洞，在随后的调查显示，该漏洞自2023年7月28日以来一直影响着其系统。证据表明，在8月31日，一个未经授权的攻击者访问了其系统中的数据，并于10月10日确认以下数据泄露：全名、社会安全号码（SSN）、健康保险信息、出生日期、账单或索赔信息、诊断、医生信息、病历号、Medicare/Medicaid信息、处方/药物信息、诊断结果和治疗信息。McLaren表示目前没有证据表明网络犯罪分子滥用这些数据。尽管该机构没有透露有关网络攻击的许多细节，但ALPHV/BlackCat勒索软件组织声称于10月4日对McLaren的网络发动了攻击。",
+    "reference": "https://www.bleepingcomputer.com/news/security/mclaren-health-care-says-data-breach-impacted-22-million-people/"
+  },
+  {
+    "title": "安全人员发现新型安卓恶意软件Kamran",
+    "txt": "近日，研究人员发现针对吉尔吉特-巴尔蒂斯坦地区的乌尔都语用户的攻击活动，攻击者在此次攻击活动中传播一种新型安卓恶意软件Kamran。该恶意软件在安装时请求多种权限，以允许其从设备中收集敏感信息，其中包括联系人、通话记录、日历事件、位置信息、文件、短信消息、照片、已安装应用程序列表和设备元数据。收集的数据将被上传到托管在Firebase上的命令和控制（C2）服务器。Kamran缺乏远程控制功能，设计也相对简单，仅在受害者打开应用程序时执行其渗透活动，并且没有追踪已传输数据的功能。",
+    "reference": "https://www.welivesecurity.com/en/eset-research/unlucky-kamran-android-malware-spying-urdu-speaking-residents-gilgit-baltistan/"
+  },
+  {
+    "title": "LockBit勒索团伙泄露波音公司数据",
+    "txt": "LockBit勒索团伙称波音公司无视了其将要泄露数据的警告，并威胁要发布大约4GB数据样本。在波音公司拒绝支付赎金后，LockBit勒索团伙泄露了43GB以上的波音公司文件。2023年11月10日，LockBit在他们的网站上发布了从波音公司窃取的所有数据，其中包括IT管理软件的配置备份，以及监视和审计工具的日志。此外，LockBit还列出了Citrix设备的备份，这表示该团伙可能利用了最近披露的Citrix Bleed漏洞（CVE-2023-4966）。尽管波音确认了这次网络攻击，但该公司没有提供关于事件的任何细节或攻击者是如何入侵其网络的信息。",
+    "reference": "https://www.bleepingcomputer.com/news/security/lockbit-ransomware-leaks-gigabytes-of-boeing-data/"
+  }
+]

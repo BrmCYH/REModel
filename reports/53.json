@@ -1,0 +1,7 @@
+[
+  {
+    "title": "APT攻击",
+    "txt": "APT攻击\nSideWinder APT组织针对中国和巴基斯坦持续攻击\nScarCruft组织利用恶意文档投递RokRat木马\n印度白象组织向我国发起网络钓鱼攻击\n针对中东和南亚政府的新APT组织GoldenJackal\nKimsuky组织再次使用高级侦察恶意软件\n披露Donot的样本\n攻击活动\n攻击活动\n波兰多家新闻网站遭到DDoS攻击或与俄罗斯黑客有关\n\n数据泄露\n数据泄露\n攻击者于黑客论坛泄露7000万Luxottica客户的个人信息\n\n恶意软件\n恶意软件\n著名的屏幕录制软件iRecorder被木马化用于分发AhRAT\n\n勒索软件\n勒索软件\nRheinmetall遭遇Black Basta勒索软件攻击\n\nSideWinder APT组织针对中国和巴基斯坦持续攻击\n",
+    "reference": "https://www.group-ib.com/blog/hunting-sidewinder/"
+  }
+]

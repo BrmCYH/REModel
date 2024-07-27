@@ -1,0 +1,17 @@
+[
+  {
+    "title": "披露APT组织OilRig多个依赖云服务进行C2通信的恶意下载程序",
+    "txt": "\n近日，ESET的研究人员揭露了具有伊朗背景的APT组织OilRig(也称APT34、Lyceum或Siamesekitten)在2022年的一系列依赖于合法云服务API进行C2通信和数据泄露的新型恶意软件下载程序，包括SampleCheck5000(SC5k v1-v3)、OilCheck、ODAgent和OilBooster。据悉，这些下载程序并非OilRig所独有，但其复杂程度较低，并通常会给系统带来不必要的困扰。目前，受此类软件影响的受害者全部位于以色列，目标包括医疗保健部门、制造公司和地方政府组织。其中，SC5k是一个C#/.NET应用程序，其负责使用Microsoft Office Exchange Web Services (EWS) API下载并执行其他的OilRig工具。SC5k v2版本引入了一些更改，使分析师更难检索和分析恶意负载，SC5k v3则引入了新的渗透功能。ODAgent于2022年2月首次被检测到，同样是一个C#/.NET下载器，它与OilRig的Marlin后门类似，使用Microsoft OneDrive API进行C2通信，但其功能仅限于下载和执行有效负载以及窃取暂存的文件。OilCheck是一个于2022年4月被发现的C#/.NET下载器，它使用基于REST的Microsoft Graph API来访问共享的Microsoft Office 365 Outlook电子邮件帐户，进而实现C2通信。OilBooster则是一个基于Microsoft Visual C/C++编写的64位可移植可执行文件，具有从远程服务器下载文件、执行shell命令和窃取数据的功能。与OilCheck 一样，它使用Microsoft Graph API连接到Microsoft Office 365帐户，不同的是，它使用此API与攻击者控制的OneDrive帐户进行交互，以进行C2通信和渗透。OilBooster使用共享OneDrive帐户的C2通信协议如下图所示。",
+    "reference": "https://www.welivesecurity.com/en/eset-research/oilrig-persistent-attacks-cloud-service-powered-downloaders/"
+  },
+  {
+    "title": "APT组织TA577通过冒充AnyDesk网站分发PikaBot恶意软件",
+    "txt": "APT组织TA577通过冒充AnyDesk网站分发PikaBot恶意软件\n\n近日，Malwarebytes的研究人员观察到攻击者正通过冒充AnyDesk品牌网站的Google恶意广告活动传播PikaBot恶意软件。据悉，PikaBot于2023年2月首次被发现，是TA577组织的首选有效载荷之一。该组织曾参与QakBot、IcedID、SystemBC以及Cobalt Strike等有效载荷的分发，且其与勒索软件感染活动有关。研究人员表示，PikaBot的典型分发链常以包含外部网站链接的电子邮件开始，用户经被诱骗将下载包含恶意JavaScript的zip压缩文档。JavaScript会创建一个随机目录结构，并利用curl实用程序从外部网站检索恶意负载，再通过rundll32执行恶意的paylod。PikaBot的核心模块则被注入到合法的SearchProtocolHost.exe进程中，其加载程序还会通过使用间接系统调用以隐藏其注入过程，使恶意软件更具隐蔽性。攻击链图如下图所示。\n",
+    "reference": "https://www.malwarebytes.com/blog/threat-intelligence/2023/12/pikabot-distributed-via-malicious-ads?&web_view=true"
+  },
+  {
+    "title": "APT组织Konni利用邮件安全检查手册为诱饵开展窃密行动",
+    "txt": "近日，奇安信的研究人员发现了一些针对韩国地区的恶意LNK文件，该LNK文件\n运行后将释放诱饵文件和VBS脚本，其中一个样本使用的诱饵HWP文档为关于如何进行电子邮件安全检查的指导手册。经进一步溯源分析，研究人员发现恶意样本与Konni组织关联紧密。据悉，Konni最开始是Cisco Talos团队于2017年披露的一类远控木马，其活动时间可追溯到2014年，攻击目标涉及俄罗斯、韩国地区。2018年，Palo Alto发现该类恶意软件与APT37有关的木马NOKKI存在一些关联。2019年起，ESTsecurity将Konni单独作为疑似具有东亚背景的APT组织进行报告和披露，并发现该组织与Kimsuky有一定联系。此外，调查显示，本次发现的Konni样本不再像以往攻击活动中投递多个脚本文件，仅以单一脚本文件执行攻击者下发的代码，攻击者可通过收集的感染主机信息决定是否展开进一步行动，并且使用的C2服务端很可能托管在攻陷网站上，反映出该团伙在提升行动隐蔽性上所做的努力。同时，这些样本也说明Konni组织借用了APT37经常使用的构造LNK文件的方法，对LNK文件体积进行膨胀处理，并且只释放诱饵文档和单个脚本文件。值得注意的是，LNK文件目前已经成为多个APT组织投递恶意软件的常用手段，主要是因为它能以假乱真地模仿出各\n类诱饵文件，非常适合网络钓鱼。攻击链图如下图所示。\n",
+    "reference": "https://mp.weixin.qq.com/s/bdAb1Bbgtd3amuziu2_Tsw"
+  }
+]

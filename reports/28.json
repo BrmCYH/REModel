@@ -1,0 +1,27 @@
+[
+  {
+    "title": "Konni组织伪装为韩国网络监管人员分发网络钓鱼邮件",
+    "txt": "近日，ASEC的发现Konni组织伪装为韩国网络监管人员实施钓鱼攻击活动。Konni组织是一个有朝鲜国家背景的APT组织，自2014年以来一直持续活动。最早Konni这一名称作为恶意软件被披露，后期安全研究人员开始将Konni跟踪为一个威胁组织。此次攻击活动中，攻击者向目标发送电子邮件，邮件内容表示目标身份信息泄露，要求目标下载附件核对身份信息。附件是一个伪装成word文档的exe文件，当用户双击运行该文件后，文件将在指定路径保存其.data段存放的内容。文件将提取出多个jse脚本文件、一个Powershell脚本和一个普通word文档。用户将看到word文档中的内容，同时jse脚本运行，创建计划任务，运行ps1脚本，与C2服务器进行通信。由于脚本暂时无法连接C2服务器，安全人员无法进一步确认C2服务器传递的命令。目前脚本将每分钟重复运行一次。",
+    "reference": "https://asec.ahnlab.com/ko/59625/"
+  },
+  {
+    "title": "韩国Higaisa组织近期钓鱼攻击活动追踪",
+    "txt": "\n近日，毒霸安全团队发现了韩国Higaisa组织的多个钓鱼活动。据悉，Higaisa自2019年首次被公开披露以来持续活跃，其攻击目标多元化，涵盖政府机构、商业实体以及参与国际贸易的公司和个人。该组织常通过精心设计的钓鱼邮件和鱼叉式网络攻击手段来传播恶意软件，且其主要的恶意操作通过Shellcode执行，包括但不限于白加黑动态加载技术、代码解密机制、反调试措施，以及利用密钥加密技术来保护其通信数据。研究人员表示，Higaisa在近期活动中，主要通过将恶意模块与多个常规软件进行捆绑，再将它们伪装成如\"PassGuard(密码卫士)\"的正常安装包，然后借助钓鱼网站、下载站等途径诱导用户下载。一旦用户在本地设备执行这些看似合法的安装程序，隐藏的恶意模块便被激活并开始执行资源中的加密Shellcode。最终，攻击者还将建立一个加密通信通道，通过生成密钥，与C2服务器实现进一步的通信和部署。攻击链图如下图所示。\n",
+    "reference": "https://mp.weixin.qq.com/s/2cxW68ION9Ch2Fg37_cDqw"
+  },
+  {
+    "title": "Rare Wolf组织使用Mipko Employee Monitor开展攻击活动",
+    "txt": "\n近期，BI.ZONE发现了Rare Wolf组织的近期活动。Rare Wolf是一个自2019年开始活跃的攻击组织，常使用钓鱼攻击。近期活动中，攻击者发送携带附件的恶意网络钓鱼邮件，邮件内容为电子发票相关，并表示附件为加密压缩包，压缩包中包含发票。邮件内容中给出了压缩包解密密钥。压缩文件解压后包含一个scr安装程序，当用户运行该程序后，程序将创建一个特定文件夹并将该文件夹设置为隐藏、不可索引属性。随后，程序将创建特定注册表项，同时使用curl从远程服务器下载加密压缩包。其中名为driver.exe的程序将收集和归档所有Microsoft Word文档，该程序还会将Telegram Messenger数据收集并打包发送至远程服务器。发送方式采用电子邮件的形式。数据窃取完成后，程序将通过del命令删除收集到的数据及相关文件。最终攻击者通过其他程序部署Mipko Employee Monitor，重启系统，删除其余辅助程序，以隐藏其渗透痕迹，仅通过Mipko Employee Monitor监控受害主机。",
+    "reference": "https://bi.zone/expertise/blog/rare-wolf-okhotitsya-za-privatnymi-dannymi-s-pomoshchyu-falshivykh-nakladnykh-1s-predpriyatie/"
+  },
+  {
+    "title": "Hellhounds组织利用Decoy Dog木马攻击俄罗斯多个实体",
+    "txt": "\n近日，PT CSIRT发现某电力公司遭到Decoy Dog木马的攻击。据悉，至少自2022年9月起，Decoy Dog就一直被Hellhounds组织用于对俄罗斯公司和政府组织的网络攻击。调查显示，该恶意软件活动执行链分为两个阶段。第一阶段涉及利用Decoy Dog Loader，其可执行文件存在于/usr/bin/dcrond中，大小为9KB，受到UPX加壳器的保护，通过伪装成合法的cron、irqbalance服务以及lib7.so库，以在系统中运行。运行期间，加载器首先会读取/proc/self/status 并检查TracerPid值是否为0，以确定它是否被调试。若为0，加载程序会尝试读取每个包含受感染主机标识符的文件，并计算文件系统中存在的第一个文件的MD5哈希值，再利用获取的MD5哈希值作为密钥来解密配置，最终解密出主要载荷，并使用128位的CLEFIA算法进行加密。第二阶段的恶意样本主要有效载荷Decoy Dog存储在/usr/share/misc/pcie.cache中，其实际上是Pupy RAT的修改版本。其中，Pupy RAT是一个跨平台多功能后门和开源后利用工具，由Python编写，支持Windows和Linux，部分支持Android和macOS，具有全内存执行指南，且占用空间最小。Pupy RAT可使用多种传输方式维持与C2服务器的连接，并利用反射注入技术迁移到进程中。目前，Pupy RAT的开发已于两年前停止，但Decoy Dog的开发仍在积极进行中。数据显示，位于俄罗斯的至少20个组织已受到Decoy Dog的攻击。Decoy Dog攻击流程如下图所示。",
+    "reference": "https://www.ptsecurity.com/ww-en/analytics/pt-esc-threat-intelligence/hellhounds-operation-lahat/"
+  },
+  {
+    "title": "APT37组织构造诱饵文件向韩文用户投递Chinotto恶意软件",
+    "txt": "\nAPT37，又名ScarCruft，是一个具有朝鲜背景的APT组织，主要攻击目标日本、韩国、越南、俄罗斯、尼泊尔、中国等亚洲国家，常采用钓鱼攻击的方式感染目标用户，针对行业涵盖化学、电子、制造、航空航天、汽车和医疗保健等。近期，360的研究人员发现了该组织托管在某网站后台的恶意攻击文件并对其进行了分析。攻击者构造了一批诱饵ZIP文件和RAR文件，当用户下载并解压文件后，解压目录下包含一个携带恶意代码的LNK文件，当用户运行LNK文件时，文件将释放诱饵文档，同时运行其携带的恶意BAT文件。BAT文件会先将自身复制到指定路径，随后设置注册表自启动，同时运行Poweshell混淆的代码，去混淆得到ps1脚本文件。脚本首先会设置开机启动项，然后与远程服务器进行交互，获取其传递的base64加密的文件并解密执行。最终实现信息窃取、文件上传/下载、插件执行等功能，并利用无文件技术加载Chinotto木马进行窃密行动。安全人员对此次活动进行了归因分析，本次活动中LNK文件携带的恶意代码与APT37组织此前使用的代码一致，并且此次攻击活动涉及的诱饵内容均为韩文，同时诱饵文件中携带的恶意代码最终都是获取Chinotto木马。因此，研究人员将此次攻击活动归因为APT37组织。攻击链图如下图所示。\n",
+    "reference": "https://mp.weixin.qq.com/s/s3WVSPNjkfvhROufXrDtiQ"
+  }
+]

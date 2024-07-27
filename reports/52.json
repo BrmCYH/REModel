@@ -1,0 +1,7 @@
+[
+  {
+    "title": "APT攻击",
+    "txt": "Dark Pink继续以政府和军事组织为目标开展攻击活动\nVoid Rabisu组织伪造知名软件网站部署RomCom后门\n伊朗组织Tortoiseshell针对以色列多个网站发起水坑攻击\nAgrius使用MONEYBIRD恶意软件针对以色列开展攻击\n披露Gamaredon Group的样本\n\n攻击活动\n出于财务动机的攻击活动——CMDStealer行动\n数据泄露\nPoint32Health遭勒索软件攻击泄露了其子公司的会员数据\n\n恶意软件\nDogeRAT木马冒充流行应用程序感染印度安卓用户\n\n勒索软件\n新的Buhti勒索软件使用泄露的Windows和Linux加密器\n\nDark Pink继续以政府和军事组织为目标开展攻击活动\n",
+    "reference": "https://www.group-ib.com/blog/dark-pink-episode-2/"
+  }
+]
