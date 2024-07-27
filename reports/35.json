@@ -1,17 +1,1 @@
-[
-  {
-    "title": "数据泄露",
-    "txt": "数据泄露\nD-Link发生数据泄露，泄露信息包括员工和合作伙伴\nD-Link发生数据泄露，泄露信息包括员工和合作伙伴\n\n恶意软件\n恶意软件\nAgentTesla通过CHM和PDF文件进行传播\nDarkGate恶意软件通过即时通讯平台传播\nDarkGate恶意软件通过即时通讯平台传播\n\n勒索软件\n勒索软件\nALPHV勒索软件攻击美国莫里森社区医院\n\nAPT组织Lazarus Group利用TeamCity服务器漏洞实施软件供应链攻击\n\n近日，微软的研究人员披露了，自2023年10月初以来，具有朝鲜背景的APT组织Lazarus Group(又称Diamond Sleet)与其子组织Andariel(又称Onyx Sleet)开始通过利用TeamCity服务器中的CVE-2023-42793漏洞部署后门等恶意软件，以发动软件供应链攻击。据了解，TeamCity是用于DevOps和其他软件开发活动的持续集成/持续部署(CI/CD)应用程序，其CVE-2023-42793漏洞于2023年9月份被披露，影响了多个版本的JetBrains TeamCity服务器，可允许未经身份验证的攻击者远程执行代码。研究人员表示，Lazarus Group在本次攻击活动中共执行了两个攻击链，即在第一个攻击链中部署了ForestTiger后门，在第二个攻击链中则使用DLL搜索顺序劫持攻击手段启动了名为FeedLoad的恶意软件加载程序，进而安装了远程访问木马。其自组织Andariel则通过在受攻击的服务器上创建\"krtbgt\"管理员帐户并运行命令收集了系统信息，最终部署了一个安装HazyLoad代理工具的有效负载，从而建立了持久连接。不过研究人员还表示，无论黑客通过哪种方式进行攻击，最终都会从LSASS转储凭据，以在受感染的网络上进行横向传播。攻击链图如下图所示。\n使用ForestTiger后门的Diamond Sleet攻击链\n使用DLL搜索顺序劫持的Diamond Sleet攻击链\nOnyx Sleet攻击链",
-    "reference": "https://www.microsoft.com/en-us/security/blog/2023/10/18/multiple-north-korean-threat-actors-exploiting-the-teamcity-cve-2023-42793-vulnerability/"
-  },
-  {
-    "title": "APT组织Kimsuky使用RDP服务控制受害主机并开展攻击",
-    "txt": "\nKimsuky是一个具有朝鲜背景的APT组织，至少自2013年9月以来一直活跃。主要攻击目标为韩国，涉及行业包括国防、教育、能源、政府、医疗以及智囊团等领域，并以机密信息窃取为主要目的。通常使用社会工程学、鱼叉邮件、水坑攻击等手段投递恶意软件，拥有功能完善的恶意代码武器库。在近期的攻击活动中，攻击者疑似通过鱼叉式网络钓鱼攻击方式分发包含恶意代码的文件，安全人员在受害主机上发现了一个名为hwp.bat的文件，BAT恶意软件使用WMIC命令探查防病毒软件并另外安装恶意脚本。随后攻击者使用k.ps1和OneNote.vbs恶意软件进行进一步感染，k.ps1文件负责键盘记录并将记录的数据存储到指定路径下，OneNote.vbs则负责执行命令。除此之外，安全人员还在受害主机上发现了恶意程序pow.ps1和加密文件desktop.r7u，pow.ps1负责解密desktop.r7u并使其运行在内存中，desktop.r7u是集合了加载器和远控木马的功能。攻击者还安装了一个名为multiple.exe的恶意软件，该恶意软件可以添加用户帐户、激活RDP并支持多会话功能。恶意软件首先终止RDP服务，然后授予修改负责RDP服务的termsrv.dll的权限。然后，将termsrv.dll文件的名称更改为termsrv.pdb，并将%APPDATA%路径中已存在的修复了多会话功能的termsrv.dll复制到%SystemDirectory%路径。此外，受害主机上还存在一个名为RevClient的恶意代码，RevClient是与RDP服务器相关的恶意代码，通过接收C&C服务器的命令进行操作，可以根据命令进行用户账户操作和端口转发。",
-    "reference": "https://asec.ahnlab.com/ko/57748/"
-  },
-  {
-    "title": "新APT组织Sticky Werewolf活动披露",
-    "txt": "\n近日，BI.ZONE的研究人员发现了一个新APT组织名为Sticky Werewolf，该组织使用合法软件来干扰政府组织的工作，主要针对俄罗斯和白俄罗斯的政府单位，该组织至少从2023年4月起开始活跃。Sticky Werewolf利用携带恶意文件链接的钓鱼邮件获取初始访问权限，使用IP Logger服务生成恶意文件链接。当用户点击链接时，用户的城市、浏览器版本、操作系统等信息将被收集。并且，IP Logger服务允许用户使用其自身掌控的域名，因此攻击者可以仿造合法域名制造钓鱼链接，从而诱骗用户。钓鱼链接伪装成Microsoft Word或PDF文档的下载链接，当用户打开此类文件后，文件会演示适当格式的合法文档，同时安装NetWire RAT，展示的文档内容包括俄罗斯紧急情况部的紧急警告、权利要求书等。安全人员分析发现，Sticky Werewolf使用Themida对NetWire远控木马进行混淆，以绕过安全检测。而NetWire恶意软件可以收集受害主机信息，同时执行多种命令，包括管理文件、进程、服务、窗口以及已安装的应用程序、编辑Windows注册表、从剪贴板检索数据、录屏等。",
-    "reference": "https://bi.zone/expertise/blog/shpiony-sticky-werewolf-atakuyut-gosudarstvennye-organizatsii-rossii-i-belarusi/"
-  }
-]
+[]

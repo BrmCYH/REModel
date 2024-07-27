@@ -45,101 +45,116 @@ def get(url,i):
     canel = pop()
     # for i,url in enumerate(pathlist[33:],start=34):
         # print(i)
-    reports =[]
-    # time.sleep(1)
-    
-    infos = requests.get(url)
-    # print(infos)
-    soup = BeautifulSoup(infos.content, 'html.parser')
-    spans = soup.find_all("span")
-    # print(spans)
-    ref = False
-    sum_strip =0
-    for span in spans:
+    for retry in range(3):
+        reports =[]
+        # time.sleep(1)
         
-        x = span.get_text(strip=True)
-        if x.strip() =="" or x =="":
-            if ref:
-                canel.clear()
-            else:
-                try:
-                    space = canel.x[-1]
-                    if space.strip() =="":
-                        canel.clear()
-                    else:
+        infos = requests.get(url)
+        # print(infos)
+        soup = BeautifulSoup(infos.content, 'html.parser')
+        spans = soup.find_all("span")
+        # print(spans)
+        ref = False
+        sum_strip =0
+        for span in spans:
+            
+            x = span.get_text(strip=True)
+            if x.strip() =="" or x =="":
+                if ref:
+                    canel.clear()
+                else:
+                    try:
+                        space = canel.x[-1]
+                        if space.strip() =="":
+                            canel.clear()
+                        else:
+                            canel.add(x)
+                    except:
                         canel.add(x)
-                except:
-                    canel.add(x)
+                    
+                    
                 
+        
+            else:
+                # print(x)
+                if ref:
+                    targetdict['reference']=x
+                    ref=False
+                    reports.append(targetdict.copy())
+                    targetdict={}
+                    canel.clear()
+                    continue
                 
-            
-    
-        else:
-            # print(x)
-            if ref:
-                targetdict['reference']=x
-                ref=False
-                reports.append(targetdict.copy())
-                targetdict={}
-                canel.clear()
-                continue
-            
-            # print("参考链接" in x or "来源" in x or "https://" in x)
-            if "参考链接" in x or "来源" in x or "https://" in x:
-                # print(canel.x)
-                do = -1
-                liststr  =[]
-                while True:
-                    do +=1
-                    if do ==0:
-                        
-                        title = canel.pop()
-                        if title is None:
-                            break
-                        while title.strip() =="":
-                        
+                # print("参考链接" in x or "来源" in x or "https://" in x)
+                if "参考链接" in x or "来源" in x or "https://" in x:
+                    # print(canel.x)
+                    do = -1
+                    liststr  =[]
+                    while True:
+                        do +=1
+                        if do ==0:
+                            
                             title = canel.pop()
                             if title is None:
                                 break
-                    if title is None:
-                        break
-                    
-                    txt = canel.pop()
-                    
-                    if txt is None or "图" in txt and len(canel.x)==0:
-                        break
-                    
-                    liststr.append(txt)
-                    
-                if title is not None:
-                    # targetdict = {"title":title}
-                    if len(liststr) ==0:
-                        break
-                    
-                    info = "\n".join(liststr)
-                    if info.strip() =="":
-                        break
-                    targetdict = {"title":title,
-                                "txt": info ,
-                                "reference":""}
-                    ref = True
-                    continue
-            else:
-                canel.add(x)
-        print(canel.x)
-            
+                            while title.strip() =="":
+                            
+                                title = canel.pop()
+                                if title is None:
+                                    break
+                        if title is None:
+                            break
+                        
+                        txt = canel.pop()
+                        
+                        if txt is None or "图" in txt and len(canel.x)==0:
+                            break
+                        
+                        liststr.append(txt)
+                        
+                    if title is not None:
+                        # targetdict = {"title":title}
+                        if len(liststr) ==0:
+                            break
+                        
+                        info = "\n".join(liststr)
+                        if info.strip() =="":
+                            break
+                        targetdict = {"title":title,
+                                    "txt": info ,
+                                    "reference":""}
+                        ref = True
+                        continue
+                else:
+                    canel.add(x)
+            # print(canel.x)
+        if len(reports)<2:
+            continue
+        else:
+            break
         
 
 
     with open(f"reports/{i}.json",'w',encoding="utf-8") as f:
         json.dump(reports, f, indent=2, ensure_ascii=False)
+import os
 if __name__ =="__main__":
     print(len(pathlist))
     all_task = []
     t=time.time()
+    
     with ThreadPoolExecutor(max_workers=4) as pool:
-        for i,url in enumerate(pathlist[33:],start=33):
+        for i,url in enumerate(pathlist[32:],start=33):
             all_task.append(pool.submit(get, url,i))
+
+        # 主线程等待所有子线程完成
+        wait(all_task, return_when=ALL_COMPLETED)
+        print("----complete-----",f"{time.time()-t}")
+        all_task=[]
+        tsa = os.listdir("reports")
+        for i,url in enumerate(pathlist[33:],start=33):
+            if f"{i}.json" not in tsa:
+                all_task.append(pool.submit(get, url,i))
 
         # 主线程等待所有子线程完成
         wait(all_task, return_when=ALL_COMPLETED)

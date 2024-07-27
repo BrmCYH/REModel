@@ -1,37 +1,12 @@
 [
   {
-    "title": "攻击活动",
-    "txt": "攻击活动\n亲乌克兰黑客团伙CH01在入侵周年纪念日攻破数十个俄罗斯网站\n\n数据泄露\n数据泄露\n美国法警署发生敏感信息泄露\n\n恶意软件\n恶意软件\n利用PureCrypter攻击政府机构的活动\n\n勒索软件\n勒索软件\n美国石油生产商Encino Energy遭勒索软件攻击\n\nWinorDLL64后门疑似来自Lazarus组织武器库",
-    "reference": "https://www.welivesecurity.com/2023/02/23/winordll64-backdoor-vast-lazarus-arsenal/"
+    "title": "RedEyes组织伪装为金融公司投递CHM恶意软件",
+    "txt": "近期，AhnLab的研究人员检测到了一起通过伪装为来自一家金融公司的安全邮件，向用户分发CHM恶意软件的攻击行为。经研究人员分析发现，该恶意软件是由RedEyes组织(也称为APT37)创建，并且使用的命令与RedEyes组织在其M2RAT恶意软件攻击过程中所使用的相同。用户在运行恶意CHM时，首先会创建一个伪装成来自金融公司的安全邮件的帮助窗口，此时虽然存在于CHM内部的初始恶意脚本正通过Click方法以调用LNK文件的方式运行，但用户很难察觉。因此，一旦攻击者借助mshta进程执行了特定URL指向的恶意脚本，CHM就将根据攻击者的指令执行文件下载、信息窃取等各种恶意行为。",
+    "reference": "https://asec.ahnlab.com/ko/48764/"
   },
   {
-    "title": "针对TA569攻击活动的分析报告",
-    "txt": "近日，Proofpoint的研究人员披露了关于TA569攻击活动的分析报告。根据报告描述，TA569是一个多产的攻击团伙，利用了多种类型的注入方式、流量分配系统(TDS)和有效载荷，包括但不限于SocGholish。TA569还被认为是一个初始访问掮客(IAB)或独立的网络犯罪团伙，当其渗透到受害主机后，会将访问权出售给其他团体，进而投递勒索软件等后续有效载荷。此外，TA569的TTP在过去几个月中发生了变化：当受害者访问遭受TA569注入攻击的网站时，浏览器被注入的JavaScript；若受害者满足特定条件，则会抛出一个诱饵，如虚假的浏览器更新；诱饵用于分发各种恶意软件，包括信息窃取程序或远程访问木马(RAT)。",
-    "reference": "https://www.proofpoint.com/us/blog/threat-insight/ta569-socgholish-and-beyond"
-  },
-  {
-    "title": "新组织Clasiopa针对亚洲机构攻击",
-    "txt": "近日，Symantec的研究人员披露了新组织Clasiopa针对亚洲某机构的攻击活动。根据研究人员分析，Clasiopa具有独特的工具集，包括一个自定义恶意软件(Backdoor.Atharvan)，而自定义恶意软件Atharvan后门中使用了印地语命名的互斥体，所以推测该组织或许与印度有关。此外，该组织使用的初始感染媒介目前任然未知，但一些证据表明攻击者可能通过对公共服务器进行暴力攻击来获得访问权限。入侵时会清除系统监测(Sysmon)记录和事件日志，并安装多个后门，如Atharvan和开源Lilith RAT的修改版本，用于收集和窃取敏感信息。",
-    "reference": "https://symantec-enterprise-blogs.security.com/blogs/threat-intelligence/clasiopa-materials-research"
-  },
-  {
-    "title": "Blind Eagle冒充政府税务机构攻击哥伦比亚机构",
-    "txt": "近日，Blackberry的研究人员披露了Blind Eagle针对哥伦比亚关键行业的新一轮攻击活动。Blackberry于2月20日检测到此次攻击活动，攻击者冒充哥伦比亚政府税务机构——国家税务和海关总署(DIAN)，主要针对哥伦比亚的卫生、金融、执法、移民和负责谈判的机构。钓鱼邮件带有一个指向PDF文件的链接，该文件据称托管在DIAN网站上，实际上会安装恶意软件。假冒的DIAN网站页面包含一个蓝色按钮，当受害者单击蓝色按钮会启动从Discord内容分发网络(CDN)下载恶意文件，其有效载荷是一个混淆的Visual Basic脚本(VBS)，会在打开“PDF”文件时执行，并利用PowerShell检索基于.NET的DLL文件，最终将AsyncRAT加载到内存中，以便攻击者能够随时连接到受感染的终端，并执行他们想要的任何操作。",
-    "reference": "https://blogs.blackberry.com/en/2023/02/blind-eagle-apt-c-36-targets-colombia"
-  },
-  {
-    "title": "披露BITTER的样本",
-    "txt": "近日，研究人员披露了BITTER组织的恶意样本，IOC信息如下所示。\nFilename：Project Plan 2023 .chm\nMD5：7a63a9c07595ef70eef2f01e1a630958、cce89f4956a5c8b1bec82b21e371645b",
-    "reference": "来源："
-  },
-  {
-    "title": "亲乌克兰黑客团伙CH01在入侵周年纪念日攻破数十个俄罗斯网站",
-    "txt": "根据媒体2月26日报道，亲乌克兰黑客团伙CH01已入侵至少32个俄罗斯的网站，而Anonymous也通过其Twitter分享了这一消息。攻击发生在乌克兰战争的周年纪念日，目前尚不清楚被攻击网站的确切数量，以及黑客是如何攻击的。此外，Anonymous在2月23日还入侵了俄罗斯的多个广播电台，包括Yumor FM、Relax FM、Comedy Radio、Humor FM和Avatoradio，并发布了假的空袭警报。",
-    "reference": "https://securityaffairs.com/142713/hacktivism/ch01-defaced-russian-websites.html"
-  },
-  {
-    "title": "美国法警署发生敏感信息泄露",
-    "txt": "本周一，多名美国高级执法官员表示，美国法警署（U.S.Marshals Service）在一个多星期前遭受漏洞攻击，泄露了敏感信息。在发表的一份声明中，美国法警署发言人Drew Wade承认了这一入侵事件，并表示：“受影响的系统包含了执法相关敏感信息，包括法律程序的申报、行政信息以及与美国法警署调查对象有关的个人身份信息，还包含法警署的员工信息。”Wade称该事件发生在2月17日，当时法警署“发现了一个影响独立USMS系统的勒索软件和数据泄露事件”。目前，该系统已断开网络连接，并且正在进行调查。",
-    "reference": "https://www.nbcnews.com/politics/politics-news/major-us-marshals-service-hack-compromises-sensitive-info-rcna72581"
+    "title": "APT-C-56组织针对印度双平台的攻击组件披露",
+    "txt": "近期，360的安全研究人员在追踪一起针对印度移动端的攻击活动中发现了分别针对Android、Windows和Linux系统的新型攻击工具。通过溯源分析，研究人员将此次活动归因于APT-C-56(又名透明部落)组织。APT-C-56是一个具有巴基斯坦政府背景的南亚APT组织，该组织长期针对周边国家和地区的军队和政府机构实施定向攻击，旨在收集各类情报。本次攻击活动中，APT-C-56同时针对印度的移动端和PC端展开了攻击，并且主要借助了伪装成印度国家奖学金门户、印度陆军福利教育学会的钓鱼页面来窃取特定用户信息。其中，Android恶意样本的投递使用了伪装成印度国家奖学金门户的钓鱼网站。钓鱼网站打开后会弹出“重要提示”提示框，诱导受害者下载ScholarshipPortal.apk安装包文件，该文件即为Android系统新型RAT工具——RlmRat。PC端的恶意样本投递则使用了伪装成印度陆军福利教育学会的钓鱼网站。该钓鱼网站打开后同样会弹出一个“重要提示”提示框，不同的是受害者点击后会进入一个提交Studient ID的钓鱼页面，提交ID后会出现三个文件下载的按钮，下载的文件即为该组织新开发的针对Windows系统的LimePad组件以及Linux系统的波塞冬组件。攻击链图如下图所示。\n移动端攻击链图",
+    "reference": "https://mp.weixin.qq.com/s/lvSraGnMsl3a1jEUubuvyw"
   }
 ]

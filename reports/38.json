@@ -1,1 +1,7 @@
-[]
+[
+  {
+    "title": "APT攻击",
+    "txt": "APT攻击\nAPT组织ScarCruft利用RokRAT针对韩国高校开展攻击\nAPT组织Stealth Falcon使用后门Deadglyph针对中东政府部门开展攻击\nAPT组织OilRig针对以色列的两次攻击活动的分析\n新APT组织AtlasCross以美国红十字会为诱饵开展钓鱼活动\nKonni组织基于人权等话题对朝鲜本土目标发起网络攻击\n披露BITTER的样本\n\n攻击活动\n攻击活动\n攻击者利用Predator间谍软件针对埃及议员开展攻击\n\n数据泄露\n数据泄露\n美国国家学生信息交换所遭遇数据泄露影响890所学校\n\n勒索软件\n勒索软件\n索尼PlayStation制造商遭遇新勒索组织Ransomed.vc攻击\n全球汽车音频和视频设备制造商Clarion遭到ALPHV勒索软件组织入侵\n\n恶意软件\n恶意软件\n新型恶意软件ZenRAT通过假密码管理器将攻击目标瞄准Windows用户\n\nAPT组织ScarCruft利用RokRAT针对韩国高校开展攻击",
+    "reference": "https://mp.weixin.qq.com/s/hwvEqIB68AAdnpQvrKNAeQ"
+  }
+]

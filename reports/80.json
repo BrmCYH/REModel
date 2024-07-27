@@ -1,7 +1,12 @@
 [
   {
-    "title": "APT攻击",
-    "txt": "APT攻击\nDucktail使用Infostealer新变种攻击Facebook企业用户\nDiceyF使用GamePlayerFramework框架针对在线赌场展开攻击\nFIN7使用JssLoader展开定向网络钓鱼攻击\n披露Lazarus Group的样本\n\n攻击活动\n攻击活动\n保加利亚受到俄罗斯黑客KillNet 的网络攻击\n\n数据泄露\n数据泄露\n微软发生数据泄露暴露了客户的部分信息\n\n恶意软件\n恶意软件\nRedLine Stealer通过冒充Convertio网站进行传播\n勒索软件\n勒索软件\n新勒索软件Prestige主要针对乌克兰和波兰的组织\n日本科技公司Oomiya遭LockBit 3.0勒索软件攻击\n\nDucktail使用Infostealer新变种攻击Facebook企业用户",
-    "reference": "https://www.zscaler.com/blogs/security-research/new-php-variant-ducktail-infostealer-targeting-facebook-business-accounts"
+    "title": "响尾蛇组织使用新的后门WarHawk针对巴基斯坦",
+    "txt": "最近，Zscaler的研究人员披露了具有印度背景的APT组织SideWinder，在针对巴基斯坦的活动中使用了一种新的恶意软件：WarHawk后门。攻击者使用托管在巴基斯坦国家电力监管局的合法网站nepra.org.pk的一个武器化ISO文件，来部署WarHawk恶意软件。ISO文件还充当了诱饵，通过冒充巴基斯坦内阁部门发布的网络安全建议文档来隐藏恶意活动。而WarHawk则伪装成ASUS Update Setup等合法应用程序，诱导受害者执行。WarHawk后门通过连接硬编码在代码中的C2服务器回传窃取数据，同时还支持通过URL拉取和执行额外载荷。目前已知的有效载荷会验证受害机的时区是否与巴基斯坦标准时间(PKT)匹配，如果通过所有反分析检测，加载程序会使用称为KernelCallbackTable的进程注入技术将shellcode注入到notepad.exe进程中，进而展开\n下一步的攻击活动。",
+    "reference": "https://www.zscaler.com/blogs/security-research/warhawk-new-backdoor-arsenal-sidewinder-apt-group-0"
+  },
+  {
+    "title": "微软关于Vice Society组织攻击活动的分析报告",
+    "txt": "近日，Microsoft发布了关于Vice Society（DEV-0832）组织针对全球教育行业的攻击活动的分析报告。该组织在过去一年利用了多种商业化勒索软件变体实施了勒索攻击，包括BlackCat、QuantumLocker、Zeppelin，以及最近的Zeppelin的Vice Society变体。在今年9月下旬，攻击者使用了.locked文件扩展名并将勒索软件payload改为RedAlert变体。但在今年7月的一次攻击中，攻击者尝试安装了QuantumLocker，并在五个小时内又安装了Zeppelin。这些事件表明攻击者可能维护了多个勒索软件有效载荷，并根据目标防御情况进行切换。另一种可能性是，在攻击者的保护伞下，分散运营的勒索团伙可能分发和维护不同的首选的勒索软件载荷。",
+    "reference": "https://www.microsoft.com/en-us/security/blog/2022/10/25/dev-0832-vice-society-opportunistic-ransomware-campaigns-impacting-us-education-sector/"
   }
 ]

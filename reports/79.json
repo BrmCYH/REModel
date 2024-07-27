@@ -1,12 +1,52 @@
 [
   {
-    "title": "响尾蛇组织使用新的后门WarHawk针对巴基斯坦",
-    "txt": "最近，Zscaler的研究人员披露了具有印度背景的APT组织SideWinder，在针对巴基斯坦的活动中使用了一种新的恶意软件：WarHawk后门。攻击者使用托管在巴基斯坦国家电力监管局的合法网站nepra.org.pk的一个武器化ISO文件，来部署WarHawk恶意软件。ISO文件还充当了诱饵，通过冒充巴基斯坦内阁部门发布的网络安全建议文档来隐藏恶意活动。而WarHawk则伪装成ASUS Update Setup等合法应用程序，诱导受害者执行。WarHawk后门通过连接硬编码在代码中的C2服务器回传窃取数据，同时还支持通过URL拉取和执行额外载荷。目前已知的有效载荷会验证受害机的时区是否与巴基斯坦标准时间(PKT)匹配，如果通过所有反分析检测，加载程序会使用称为KernelCallbackTable的进程注入技术将shellcode注入到notepad.exe进程中，进而展开\n下一步的攻击活动。",
-    "reference": "https://www.zscaler.com/blogs/security-research/warhawk-new-backdoor-arsenal-sidewinder-apt-group-0"
+    "title": "恶意软件",
+    "txt": "恶意软件\nGoogle Play商店中存在恶意软件投放Xenomorph银行木马\n基于Golang的新KmsdBot恶意软件\n\n勒索软件\n勒索软件\n俄罗斯黑客组织FRwL使用新的Somnia勒索软件针对乌克兰\n\nLazarus Group使用DTrack后门针对欧洲和拉丁美洲\nLazarus Group使用DTrack后门针对欧洲和拉丁美洲",
+    "reference": "https://securelist.com/dtrack-targeting-europe-latin-america/107798/"
   },
   {
-    "title": "微软关于Vice Society组织攻击活动的分析报告",
-    "txt": "近日，Microsoft发布了关于Vice Society（DEV-0832）组织针对全球教育行业的攻击活动的分析报告。该组织在过去一年利用了多种商业化勒索软件变体实施了勒索攻击，包括BlackCat、QuantumLocker、Zeppelin，以及最近的Zeppelin的Vice Society变体。在今年9月下旬，攻击者使用了.locked文件扩展名并将勒索软件payload改为RedAlert变体。但在今年7月的一次攻击中，攻击者尝试安装了QuantumLocker，并在五个小时内又安装了Zeppelin。这些事件表明攻击者可能维护了多个勒索软件有效载荷，并根据目标防御情况进行切换。另一种可能性是，在攻击者的保护伞下，分散运营的勒索团伙可能分发和维护不同的首选的勒索软件载荷。",
-    "reference": "https://www.microsoft.com/en-us/security/blog/2022/10/25/dev-0832-vice-society-opportunistic-ransomware-campaigns-impacting-us-education-sector/"
+    "title": "XDSpy APT组织近期针对俄罗斯国防部的攻击活动分析",
+    "txt": "XDSpy APT组织近期针对俄罗斯国防部的攻击活动分析\nXDSpy是ESET于2020年首次披露的APT组织，该组织最早活跃于2011年，主要针对东欧和塞尔维亚地区的政府、军队、外交部及私人公司进行窃密活动。2020年9月，该组织在攻击活动中使用Covid-19主题诱饵下发恶意Windows脚本文件(WSF)。时隔两年，安恒信息的猎影实验室再次捕获到该组织利用WSF文件针对俄罗斯国防部的攻击活动。活动包含如下特点：此次攻击只针对特定用户，非目标用户不会触发恶意代码执行；样本中用于执行恶意行为的Windows API函数、DLL库、字符串等均被加密，且样本包含较为完整的反沙箱、反虚拟机、反杀软检测功能；后续负载为模块化恶意软件，主要功能为执行C2下发的其他恶意组件。",
+    "reference": "https://mp.weixin.qq.com/s/cW2Evf6Nqb3fhQ7ntnKHsA"
+  },
+  {
+    "title": "俄罗斯APT组织Sandworm与Prestige勒索软件攻击有关",
+    "txt": "俄罗斯APT组织Sandworm与Prestige勒索软件攻击有关\n自10月以来，攻击者使用Prestige勒索软件针对乌克兰和波兰的运输和物流组织进行了一系列的攻击。在经过微软的研究人员根据取证分析、受害者、交易技巧、功能以及与该组织先前活动重叠的基础设施，将勒索软件攻击归因于俄罗斯Sandworm组织。几个显著关联特征包括：1.攻击者在受害者的企业网络中部署了勒索软件，这种策略在针对乌克兰的其他组织的攻击中很少见；2.该活动与此前的俄罗斯国家联盟行动存在受害者特征一致，并且与此前HermeticWiper破坏性恶意软件的受害者存在重叠。",
+    "reference": "https://www.microsoft.com/en-us/security/blog/2022/10/14/new-prestige-ransomware-impacts-organizations-in-ukraine-and-poland/"
+  },
+  {
+    "title": "Konni APT组织针对东欧和东北亚地区的攻击活动分析",
+    "txt": "Konni APT组织针对东欧和东北亚地区的攻击活动分析\n近日，安恒信息的研究人员发布了具有朝鲜背景的APT组织Konni，在2022年针对东欧和东北亚地区的攻击活动分析报告。报告中，安恒信息的研究人员捕获到一批来自Konni APT组织的恶意样本。按照针对地域，研究人员将样本区分为针对韩国地区和针对俄罗斯地区两类。针对韩国地区的样本中，发现该组织重新开始针对加密货币行业，而在针对俄罗斯地区的样本中，发现恶意样本主要针对外交实体及相关人员。此外，安恒信息还在10月中旬捕获了该组织利用政治新闻话题传播恶意CHM文件的样本，并怀疑该组织开始将目标转向东南亚地区国家。报告中还总结了该组织在后续下发的组件存在的更新：RAT重新启用x86版本，疑似扩大攻击范围，提高与目标机器适配性；启用除INI后缀之外的配置文件，逃避行为检测；采用新的加密算法对C2配置文件、Windows API函数等进行加解密；不再以明文传输窃取数据，而是通过AES加密避免流量检测；通过修改合法软件，设置异常函数，以加载恶意代码；灵活应用VBscript、Powershell等脚本组成攻击链。样本攻击链图如下所示。\n来\n源：",
+    "reference": "披露疑似Inception Framework的样本"
+  },
+  {
+    "title": "披露疑似Inception Framework的样本",
+    "txt": "近日，研究人员披露了疑似Inception Framework组织的恶意样本，IOC信息如下所示：\n文件名：ДСП №3-2022 финал.doc、Действия работодателя в связи с Указом.doc\nMD5：ae828e3c03cc1aaedc43bb391e8b47ed、c7a1dd829b03b47c6038afa870b2f965、89d40dd2db9c2cfd6a03b20b307dcdec\n",
+    "reference": "https://twitter.com/h2jazi/status/1592158354113462273"
+  },
+  {
+    "title": "冒充西班牙税务局的网络钓鱼活动",
+    "txt": "冒充西班牙税务局的网络钓鱼活动\n近日，Avast的研究人员发现西班牙出现了一起新的网络钓鱼活动，攻击者在钓鱼活动中冒充西班牙税务局对受害者进行欺骗。钓鱼活动由一个欺诈性的短信开始，该短信通知受害者点击链接在网站中填写表格以获得财务报销。当受害者点击链接后，会被重定向至伪装成税务机构的页面，并在页面中询问信用卡的相关信息，包括信用卡的CVV码和PIN码等敏感信息。",
+    "reference": "https://blog.avast.com/phishing-spain-tax-agency"
+  },
+  {
+    "title": "俄罗斯城市交通服务平台Whoosh发生数据泄露",
+    "txt": "俄罗斯城市交通服务平台Whoosh发生数据泄露\nWhoosh是俄罗斯领先的城市交通服务平台，在40个城市运营，并提供超过75000辆踏板车的共享服务。黑客对Whoosh进行网络攻击后，开始在黑客论坛上出售窃取的数据。黑客在论坛中出售相关数据库，其中有720万Whoosh客户的详细信息，包括电子邮件地址、电话号码和名字等，还包含190万名用户的部分支付卡信息。黑客表示将以4200美元或0.21490980比特币的价格将数据出售给五名买家，目前还没有人购买这些数据。",
+    "reference": "https://www.bleepingcomputer.com/news/security/whoosh-confirms-data-breach-after-hackers-sell-72m-user-records/"
+  },
+  {
+    "title": "Google Play商店中存在恶意软件投放Xenomorph银行木马",
+    "txt": "Google Play商店中存在恶意软件投放Xenomorph银行木马",
+    "reference": "https://www.zscaler.com/blogs/security-research/rise-banking-trojan-dropper-google-play-0"
+  },
+  {
+    "title": "基于Golang的新KmsdBot恶意软件",
+    "txt": "基于Golang的新KmsdBot恶意软件\n近日，Akamai的安全研究人员披露了一种基于Golang的新型恶意软件KmsdBot。攻击者对多个领域的公司进行SSH爆破并植入此恶意软件。恶意软件的程序名称为“kmsd.exe”，研究人员基于此名称将其命名为KmsdBot。KmsdBot具有扫描功能并且可以通过下载用户名和密码组合列表进行传播，也配备挖矿、自我更新和发起分布式拒绝服务攻击（DDoS）的功能。现已发现攻击针对各种公司，从游戏到豪华汽车品牌再到安全公司。",
+    "reference": "https://www.akamai.com/blog/security-research/kmdsbot-the-attack-and-mine-malware"
+  },
+  {
+    "title": "勒索软件",
+    "txt": "俄罗斯黑客组织FRwL使用新的Somnia勒索软件针对乌克兰\n俄罗斯黑客组织FRwL使用新的Somnia勒索软件针对乌克兰\n近日，乌克兰计算机应急小组(CERT-UA)披露了俄罗斯黑客组织FRwL(又名Z-Team)新一轮的攻击活动。攻击者使用了冒充Advanced IP Scanner软件的网站来诱骗目标下载安装程序。实际上，安装程序会使用Vidar窃取程序感染系统，并窃取Telegram会话数据来控制他们的帐户。然后，其会利用目标的Telegram帐户来窃取VPN连接数据(身份验证和证书)，用来部署Cobalt Strike信标和窃取数据，之后使用Netscan、Rclone、Anydesk和Ngrok执行各种监视和远程访问活动。除此之外，CERT-UA还指出，这些攻击中使用了新版本采用了AES算法的Somnia勒索软件。该勒索软件在加密文件时会将.somnia扩展名附加到加密文件后，但是其不要求受害者支付赎金以换取可用的解密器，因为攻击者的动机在于破坏而非牟取经济收益。",
+    "reference": "https://cert.gov.ua/article/2724253"
   }
 ]

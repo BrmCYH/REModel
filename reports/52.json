@@ -1,7 +1,17 @@
 [
   {
     "title": "APT攻击",
-    "txt": "Dark Pink继续以政府和军事组织为目标开展攻击活动\nVoid Rabisu组织伪造知名软件网站部署RomCom后门\n伊朗组织Tortoiseshell针对以色列多个网站发起水坑攻击\nAgrius使用MONEYBIRD恶意软件针对以色列开展攻击\n披露Gamaredon Group的样本\n\n攻击活动\n出于财务动机的攻击活动——CMDStealer行动\n数据泄露\nPoint32Health遭勒索软件攻击泄露了其子公司的会员数据\n\n恶意软件\nDogeRAT木马冒充流行应用程序感染印度安卓用户\n\n勒索软件\n新的Buhti勒索软件使用泄露的Windows和Linux加密器\n\nDark Pink继续以政府和军事组织为目标开展攻击活动\n",
-    "reference": "https://www.group-ib.com/blog/dark-pink-episode-2/"
+    "txt": "APT攻击\nKimsuky使用社会工程手段攻击智库、学术界和媒体部门\nAPT-C-55(Kimsuky)组织以“生日祝福”为诱饵分发Quasar RAT的攻击活动分析\n响尾蛇组织使用DLL侧加载Cobalt Strike攻击巴基斯坦政府\nVMware揭秘TrueBot僵尸网络的攻击手法\n披露BITTER的样本\n\n攻击活动\nOutlook被Anonymous Sudan DDoS攻击服务再次中断\nKaspersky披露利用零点击漏洞攻击iOS的Triangulation活动\n\n漏洞情报\nMOVEit Transfer中的零日漏洞被用于数据窃取\n\n数据泄露\nScrubs & Beyond泄露400GB的用户和银行卡详细信息\n\n恶意软件\n\n恶意软件PowerDrop针对美国航空航天业\n\n勒索软件\nBlackSuit与Royal勒索软件存在高度相似性\n\nKimsuky使用社会工程手段攻击智库、学术界和媒体部门\n\n近日，美国和韩国的网络安全和情报机构联合发布了一份关于朝鲜网络攻击者的警告，指出攻击者仿冒关键人物进行针对性网络攻击。这些攻击者属于朝鲜的APT组织Kimsuky，其利用钓鱼邮件和伪造的网站来诱使受害者输入自己的凭证，然后利用这些凭证来访问受害者的网络和数据。攻击目标包括政府、军事、外交、媒体、人权、研究等领域的机构和个人。美、韩机构提供了一些攻击者使用的域名、IP地址、电子邮件地址等，以帮助受影响的组织检测和防御这些攻击。",
+    "reference": "https://media.defense.gov/2023/Jun/01/2003234055/-1/-1/0/JOINT_CSA_DPRK_SOCIAL_ENGINEERING.PDF"
+  },
+  {
+    "title": "APT-C-55(Kimsuky)组织以“生日祝福”为诱饵分发Quasar RAT的攻击活动分析",
+    "txt": "\n近日，360安全的研究人员检测到了具有朝鲜背景的APT组织，Kimsuky采用带有“生日祝福”诱饵信息的CHM类型文件实施钓鱼攻击活动。研究人员表示，最初捕获到的样本是一种CHM类型的文件，一旦受害者执行该文件，恶意命令将被用来加载远程的VBS脚本。接着，该VBS脚本将负责加载远程的PowerShell脚本。该PowerShell脚本经过quicklz算法压缩，需要进行解压缩后方能继续执行。解压缩后，通过Loader将QuasarRat加载到CasPol.exe进程空间中，并最终执行QuasarRat以获取用户信息。根据攻击文件中的韩语特征，研究人员表示，此次攻击的目标主要是针对韩国。攻击链图如下图所示。\n",
+    "reference": "https://mp.weixin.qq.com/s/Sy09IsO_hL8fSPxvC6ZXjA"
+  },
+  {
+    "title": "响尾蛇组织使用DLL侧加载Cobalt Strike攻击巴基斯坦政府",
+    "txt": "\n近日，深信服的研究人员监测到了响尾蛇组织使用钓鱼邮件攻击巴基斯坦政府单位的攻击事件。在本次攻击活动中，攻击者使用使用钓鱼邮件攻击政府单位，而且其邮件的附件名称为“Adv-16-2023”，这是关于巴基斯坦内阁部门发布的网络安全咨询16号文件。此外，钓鱼文件内容以文档被微软Azure云安全保护为由，引诱受害者下载带有密码的压缩包文件，压缩包中包含一个伪装成pdf文件的恶意lnk文件，用于下载第二阶段HTA下载脚本，最后劫持本地Onedrive客户端程序及其更新程序实现DLL侧加载，最终上线Cobalt Strike载荷。受害者机器中Onedrive定时更新的计划任务也会成为攻击者的持久化计划任务，整个攻击过程与之前披露的攻击大相径庭，但攻击过程更为简单，样本制作成本更低。",
+    "reference": "https://mp.weixin.qq.com/s/MZadlpXbpCfQAv41rtVm3A"
   }
 ]

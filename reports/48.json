@@ -1,7 +1,12 @@
 [
   {
     "title": "APT攻击",
-    "txt": "APT攻击\nMuddyWater使用新的恶意C2框架PhonyC2开展攻击\nCharming Kitten使用新变体POWERSTAR后门开展攻击\nREF9135使用RUSTBUCKET恶意软件针对macOS开展攻击\nNoName057(16)利用DDoS工具包DDoSia中断多国网站\n疑似摩诃草组织武器库更新WarHawk后门\nAndariel组织使用新型恶意软件EasyRat开展攻击\n披露DUCKTAIL的样本\n\n攻击活动\n俄罗斯卫星通信供应商Dozor-Teleport遭受网络攻击\n研究人员披露针对金融机构的网络犯罪活动\n\n数据泄露\n数据泄露\n研究人员发现包括多个流行社交平台的数据泄露事件\n印第安纳大学泄露近25万条用户信息\n\n恶意软件\n恶意软件\n针对Windows用户的新型信息窃取程序Meduza Stealer揭秘\n\n勒索软件\n勒索软件\n新型勒索软件Underground Team信息公开\n\nMuddyWater使用新的恶意C2框架PhonyC2开展攻击\n",
-    "reference": "https://www.deepinstinct.com/blog/phonyc2-revealing-a-new-malicious-command-control-framework-by-muddywater"
+    "txt": "\nTA453针对中东核安全专家开展攻击\nStorm-0978组织借助零日漏洞攻击欧洲和北美地区\nGroup123组织近期攻击活动分析\nRomCom针对北约峰会与会者发起网络钓鱼攻击\n披露Donot的样本\n\n攻击活动\n\n加密货币平台Multichain遭受网络攻击\n\n数据泄露\n\n德意志银行称供应商遭到攻击导致其客户的信息泄露\n美国HCA Healthcare发生数据泄露影响约1100万患者\n\n恶意软件\n\n针对中文用户及中国网吧的浏览器劫持程序RedDriver\nTOITOIN银行木马入侵拉丁美洲企业网络\n\n勒索软件\n\n日本名古屋港因勒索软件攻击而暂停货运业务\n\nTA453针对中东核安全专家开展攻击\n近日，Proofpoint的研究人员披露了具有伊朗背景的APT组织——TA453，发起了新一轮的鱼叉式网络钓鱼攻击活动。研究人员表示，本次攻击活动始于2023年5月中旬，TA453大幅度地调整其感染链，即开始通过部署LNK感染链，而不是带有宏的Microsoft Word文档，使得检测工作变得更加复杂。经研究人员调查显示，TA453主要伪装成皇家联合军种研究所(RUSI)的高级研究员，并通过向公共媒体联系人发送良性的对话诱饵邮件与目标建立联系，随后使用多人角色模拟技术以针对中东事务和核安全专家。同时，TA453还会借助各种云服务来执行攻击链，用以传播其新型的PowerShell后门GorjolEcho。此外，当有机会时，TA453还会试图启动一个被研究人员称为NokNok的针对MAC系统的恶意软件感染链。PowerShell后门GorjolEcho和恶意软件NokNok的攻击链图如下图所示。\nGorjolEcho 完整感染链\nNokNok 的感染链",
+    "reference": "https://www.proofpoint.com/us/blog/threat-insight/welcome-new-york-exploring-ta453s-foray-lnks-and-mac-malware"
+  },
+  {
+    "title": "Storm-0978组织借助零日漏洞攻击欧洲和北美地区",
+    "txt": "近日，微软的研究人员表示，零日漏洞(CVE-2023-36884)正被Storm-0978组织用于针对欧洲和北美地区的政府及国防部门。Storm-0978(又称RomCom、Tropical Scorpius)是一个与俄罗斯有关的APT组织，主要参与间谍和网络犯罪活动，该组织因使用RomCom远程访问木马(RAT)而得名。而CVE-2023-36884漏洞主要影响Microsoft Windows和Office产品，于2023年7月11日首次披露。攻击者可以通过创建特制的Microsoft Office文档，从而在目标计算机上远程执行代码。在本次攻击活动中，攻击者使用包含CVE-2023-36884漏洞的Microsoft Word文档伪装成与乌克兰世界大会有关的信息以诱导受害者打开。此外，值得注意的是，美国网络安全和基础设施安全局(CISA)称Hawker和RomCom之间似乎还存在密切联系。不过，目前尚不清楚这两个组织是否归属于同一个组织。",
+    "reference": "https://www.microsoft.com/en-us/security/blog/2023/07/11/storm-0978-attacks-reveal-financial-and-espionage-motives/"
   }
 ]

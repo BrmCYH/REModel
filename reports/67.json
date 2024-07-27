@@ -1,7 +1,7 @@
 [
   {
-    "title": "APT攻击",
-    "txt": "APT攻击\nNewsPenguin使用间谍工具攻击巴基斯坦的军事组织\n新APT组织TA866使用Screenshotter恶意软件针对性攻击美、德组织\n蔓灵花(BITTER)组织2023年初攻击行动与新组件揭秘\nAPT-C-56(透明部落)伪装简历攻击活动分析\n披露Lazarus Group的样本\n\n攻击活动\n攻击活动\n黑客组织Killnet对北约网站发起分布式拒绝服务攻击\n攻击者利用虚假工作机会针对性攻击东欧地区目标\n\n数据泄露\n数据泄露\n加利福尼亚州多个医疗组织发生数据泄露\n\n勒索软件\n勒索软件\n以色列理工学院Technion被DarkBit勒索170万美元\n\nNewsPenguin使用间谍工具攻击巴基斯坦的军事组织\n近期，BlackBerry的安全研究人员披露了一个新的APT组织NewsPenguin，使用网络钓鱼邮件攻击巴基斯坦的军事组织。NewsPenguin发送的钓鱼邮件使用即将举行的巴基斯坦国际海事博览会和PIMEC-2023会议作为诱饵主题，并携带高级间谍工具。恶意文档会伪装成参展商手册，并通过嵌入VBA宏来执行恶意软件。主要攻击目标包括巴基斯坦的军事技术公司、国家机构和军事组织，包括PIMEC会议的组织者、参展商和参观者。恶意软件会执行多项检查以确认其是否在沙盒环境中运行，以此来多躲避安全检测；然后连接到IP地址硬编码的命令和控制(C&C)服务器并开始接收base64编码的命令。根据收到的命令，恶意软件会收集和发送受害主机的系统信息、运行附加线程、复制或移动文件、删除文件、创建目录、将文件内容发送到服务器、执行文件以及向C&C服务器上传或下载文件。",
-    "reference": "https://blogs.blackberry.com/en/2023/02/newspenguin-a-previously-unknown-threat-actor-targets-pakistan-with-advanced-espionage-tool"
+    "title": "恶意软件",
+    "txt": "恶意软件\nMyloBot僵尸网络每天感染5万多台设备\n\n新APT组织WIP26入侵中东地区",
+    "reference": "https://www.sentinelone.com/labs/wip26-espionage-threat-actors-abuse-cloud-infrastructure-in-targeted-telco-attacks/"
   }
 ]

@@ -1,1 +1,7 @@
-[]
+[
+  {
+    "title": "APT攻击",
+    "txt": "\nAPT28针对乌克兰组织的Roundcube邮件服务器开展攻击\nShuckworm通过USB分发后门Pterodo针对乌克兰实体\nDoNot在Google Play商店中部署Android间谍软件针对巴基斯坦个人用户\nAPT37借助Ably服务开展间谍活动\nLazarus组织利用虚假的ComcastVNC软件开展钓鱼活动\n披露Lazarus Group的样本\n\n攻击活动\n银行木马Anatsa针对欧美国家的攻击活动\n\n漏洞情报\n僵尸网络Condi通过TP-Link漏洞CVE-2023-1389传播\n\n数据泄露\nReddit发生数据泄露，80GB数据被窃取并被勒索赎金\niOttie被黑客入侵后发生数据泄露\n美国航空和西南航空披露影响飞行员的数据泄露事件\n\n恶意软件\n美国陆军人员中出现疑似携带恶意软件的智能手表\n隐蔽型窃取者恶意软件Mystic Stealer分析\n伪装成游戏安装程序的SupremeBot恶意软件分析\n\n勒索软件\n智利军队遭遇新型勒索软件Rhysida的攻击\n\nAPT28针对乌克兰组织的Roundcube邮件服务器开展攻击\n",
+    "reference": "https://cert.gov.ua/article/4905829"
+  }
+]

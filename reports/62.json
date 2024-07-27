@@ -1,7 +1,7 @@
 [
   {
     "title": "APT攻击",
-    "txt": "APT攻击\nWinter Vivern针对欧洲政府组织和电信服务提供商开展攻击\nDarkPink组织袭击印度尼西亚外交及菲律宾军事部门\nSideCopy组织针对印度国防部开展钓鱼活动\n朝鲜APT37组织TTP揭秘\n披露响尾蛇的样本\n\n攻击活动\n攻击活动\nKillNet近期针对医疗保健行业的DDoS攻击\n\n数据泄露\n数据泄露\n法拉利遭到勒索攻击导致部分客户的信息泄露\n\n恶意软件\n恶意软件\n新型恶意软件DotRunpeX正被用于传播多个恶意软件\n\n勒索软件\n勒索软件\n荷兰航运公司Royal Dirkzwager遭到Play勒索团伙攻击\n\nWinter Vivern针对欧洲政府组织和电信服务提供商开展攻击\n近日，SentinelLabs的研究人员披露了关于APT组织Winter Vivern以欧洲政府组织和电信服务提供商为目标进行间谍活动的分析报告。Winter Vivern于2021年首次被DomainTools记录在案，当时有人发现其针对立陶宛、斯洛伐克、梵蒂冈和印度的政府组织。在本次攻击活动中，该组织主要针对波兰政府机构、乌克兰外交部、意大利外交部和印度政府内部的个人以及电信公司。该组织使用了一种新的诱饵技术，涉及模仿政府域名来分发恶意软件。在一个案例中，攻击者使用Windows批处理文件来冒充杀毒扫描程序，而实际上是在下载恶意payload。从批处理文件中可以看出，恶意文件会假装执行防病毒扫描，显示剩余运行时间百分比，同时使用PowerShell悄悄下载恶意载荷。此外，Winter Vivern使用的一种新payload根据其PDB路径被命名为“Aperetif”，乌克兰CERT在2023年2月的一份报告中对其进行过详细分析。",
-    "reference": "https://www.sentinelone.com/labs/winter-vivern-uncovering-a-wave-of-global-espionage/"
+    "txt": "APT攻击\nBitter APT组织针对中国核能行业开展攻击\n朝鲜新APT组织APT43详情披露\nEvilnum组织针对以色列地区的攻击活动分析\n肚脑虫组织近期攻击手法披露\n披露BITTER的样本\n\n攻击活动\n攻击活动\n研究人员发现针对智能手机和音响等设备的NUIT攻击\n\n数据泄露\n数据泄露\n澳金融公司Latitude Finance 1400万条客户记录泄露\n\n恶意软件\n恶意软件\n新的MacStealer恶意软件窃取iCloud Keychain数据和密码\n\n勒索软件\n勒索软件\n针对新勒索团伙Dark Power的分析\n\nBitter APT组织针对中国核能行业开展攻击",
+    "reference": "https://www.intezer.com/blog/research/phishing-campaign-targets-nuclear-energy-industry/"
   }
 ]

@@ -1,1 +1,22 @@
-[]
+[
+  {
+    "title": "Lorenz勒索软件通过电话系统入侵企业网络",
+    "txt": "\nLazarus Group利用Log4J漏洞攻击能源供应商\n近期，安全研究人员将针对美国、加拿大和日本能源供应商的网络间谍活动与具有朝鲜背景的APT组织Lazarus Group联系起来。攻击者利用存在Log4Shell漏洞的VMware Horizon 服务器执行shellcode，并在受害目标上建立随时可运行各种命令的反向shell。一旦漏洞利用成功，Lazarus Group会部署自定义恶意软件系列VSingle、YamaBot以及远程访问木马MagicRAT，用于窃取受感染设备的数据。",
+    "reference": "https://blogs.blackberry.com/en/2022/09/shields-up-north-korean-state-sponsored-lazarus-group-targets-american-energy-firms"
+  },
+  {
+    "title": "TeamTNT泄露DockerHub的账户凭据",
+    "txt": "根据趋势科技的研究人员披露，疑似具有德国背景的APT组织TeamTNT持续通过其控制的两个DockerHub账户泄露凭据数据（该组织滥用DockerHub免费的Container Registry服务分发各种恶意载荷，包括硬币矿工）。其中一个DockerHub账户（名为“alpineos”）托管了一个恶意容器映像，其中包含rootkit、Docker容器逃逸工具包、XMRig Monero硬币矿工、凭证窃取器和Kubernetes漏洞利用工具包。",
+    "reference": "https://www.trendmicro.com/en_us/research/22/i/security-breaks-teamtnts-dockerhub-credentials-leak.html"
+  },
+  {
+    "title": "TA453使用欺骗性角色瞄准核安全研究人员",
+    "txt": "Proofpoint的研究人员披露了具有伊朗背景的APT组织TA453，针对中东事务或核安全的研究人员的攻击活动。此次活动中TA453使用一种新的、精心设计的网络钓鱼技术，通过使用多个角色和电子邮件帐户，诱导目标认为这是一个真实的电子邮件对话。研究人员将这种社会工程技术称为“多角色模拟”（MPI）。攻击者向目标发送一封电子邮件，同时抄送由攻击者控制的另一个电子邮件地址，然后从该电子邮件中回复，进行虚假对话，进一步开展攻击活动。",
+    "reference": "https://www.proofpoint.com/us/blog/threat-insight/ta453-uses-multi-persona-impersonation-capitalize-fomo"
+  },
+  {
+    "title": "披露BITTER样本",
+    "txt": "近日，研究人员披露BITTER组织的样本，IOC信息如下所示：\n文件名：MoM APSCO and SUPARCO Meeting_09 Sept 2022.chm\nMD5：16696b82884de21b3ef5a3b27872d53c\nURL：http://novaoutletclub.com/drop/fall.php?st=%computername%*%username% /qn/norestart",
+    "reference": "https://twitter.com/shadowchasing1/status/1569625009177653248"
+  }
+]

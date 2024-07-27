@@ -1,17 +1,12 @@
 [
   {
     "title": "APT攻击",
-    "txt": "APT攻击\nCharming Kitten使用BellaCiao恶意软件针对多国开展攻击\nNomadic Octopus组织通过入侵塔吉克斯坦电信运营商成功监视18个实体\nAPT28利用伪造的Windows更新指南攻击乌克兰政府\nAPT37使用大量LNK文件传递RokRAT恶意软件\n披露APT28的样本\n\n攻击活动\n攻击活动\n德国IT供应商Bitmarck遭到攻击所有系统暂时关闭\n数据泄露\n数据泄露\n通信公司T-Mobile发生数据泄露\n\n恶意软件\n恶意软件\n针对企业网络的新恶意软件工具包——Decoy Dog\n\n勒索软件\n勒索软件\nALPHV勒索软件团伙入侵西部数据公司的网络\n\nCharming Kitten使用BellaCiao恶意软件针对多国开展攻击\n",
-    "reference": "https://www.bitdefender.com/blog/businessinsights/unpacking-bellaciao-a-closer-look-at-irans-latest-malware/"
+    "txt": "APT攻击\nKimsuky使用新侦察工具ReconShark在全球范围内开展网络间谍活动\nSideWinder使用恶意代码多态技术针对巴基斯坦政府官员开展攻击\nSideCopy利用钓鱼邮件针对印度开展攻击\n披露Transparent Tribe的样本\n\n攻击活动\n攻击活动\nNoName黑客组织针对多个法国网站发起DDoS攻击\n\n数据泄露\n数据泄露\nLockBit 3.0勒索团伙泄露了从印度银行窃取的600GB数据\n\n恶意软件\n恶意软件\n新型Android恶意软件FluHorse窃取密码和2FA代码\n\n勒索软件\n勒索软件\n新的Cactus勒索软件通过自我加密来规避检测\n\nKimsuky使用新侦察工具ReconShark在全球范围内开展网络间谍活动\n近日，Sentinel Labs的研究人员披露了具有朝鲜背景的APT组织，Kimsuky近期利用其新版本的侦察恶意软件“ReconShark”在全球范围内开展网络间谍活动，并且现在正在针对性攻击美国、欧洲和亚洲的政府组织、研究中心、大学和智库。Kimsuky组织利用包含指向托管在Microsoft OneDrive上的恶意文档链接的鱼叉式网络钓鱼电子邮件，分发ReconShark恶意软件来感染受害者主机。一旦受害者打开下载的文档并按照指示启用宏，恶意文档中嵌入的ReconShark恶意软件便会被激活。ReconShark恶意软件曾是Kimsuky组织使用过的“BabyShark”恶意软件的变种，并且另一个朝鲜组织APT43也曾部署过该恶意软件。ReconShark可利用WMI收集受感染系统的信息，如正在运行的进程、电池数据等，并且可以通过HTTP POST请求将所有内容发送到C2服务器，而不在本地存储任何内容。除了窃取信息外，ReconShark还将以多阶段方式部署更多恶意载荷，这些有效载荷包括：脚本(VBS、HTA和Windows Batch）、启用宏的Microsoft Office模板或Windows DLL文件。此外，攻击者还使用了两种隐蔽的恶意载荷部署方式，以确保持久驻留。第一种方法涉及修改Chrome、Outlook、Firefox或Edge等流行浏览器关联的Windows快捷方式文件(LNK)。另一种方法则是通过将默认的Microsoft Office模板Normal.dotm替换为托管在C2服务器上的恶意版本，以便在受害者启动Microsoft Word时加载恶意代码。",
+    "reference": "https://www.sentinelone.com/labs/kimsuky-evolves-reconnaissance-capabilities-in-new-global-campaign/"
   },
   {
-    "title": "Nomadic Octopus组织通过入侵塔吉克斯坦电信运营商成功监视18个实体",
-    "txt": "近日，Prodaft的研究人员披露，一个名为“Nomadic Octopus”的俄罗斯APT组织成功渗透了一家塔吉克斯坦电信运营商，以监视18个实体，包括政府官员和公共服务基础设施。作为被跟踪为Paperbug活动的一部分，此次网络间谍行动破坏的设备非常广泛，从个人计算机到OT设备。Nomadic Octopus(也被称为DustSquad)至少从2014年便开始活跃，以攻击中亚(主要是阿富汗和前苏联国家)的个人和外交实体为目标而闻名。Prodaft表示，Nomadic Octopus在Paperbug活动中使用了多台服务器作为其后门和工具的C2。在本次活动中，攻击者的主要特点是使用了公开渠道可获得的攻击工具，并且在需要时，攻击者还会将工具的名称更改为通用的程序，如Google Update、Chrome Update、Java Update和Google Crash Handler等，以获得防火墙许可或额外特权。",
-    "reference": "https://www.prodaft.com/m/reports/PAPERBUG_TLPWHITE-1.pdf"
-  },
-  {
-    "title": "APT28利用伪造的Windows更新指南攻击乌克兰政府",
-    "txt": "\n近日，乌克兰计算机应急响应小组(CERT-UA)表示，俄罗斯黑客正针对该国的各个政府机构发送恶意电子邮件，这些电子邮件据称包含有关如何更新Windows以防御网络攻击的说明。CERT-UA的研究人员认为，具有俄罗斯背景的APT组织APT28（又名Fancy Bear）发送了这些电子邮件，并且冒充了目标政府实体的系统管理员，以便更容易地欺骗受害者。为此，攻击者在攻击准备阶段使用了通过未知方式获取的真实雇员姓名创建了@outlook.com电子邮件地址。恶意电子邮件建议收件人运行PowerShell命令，而不是按照正常流程升级Windows系统。此命令在计算机上下载PowerShell脚本，模拟Windows更新过程，同时在后台下载第二个PowerShell有效载荷。第二阶段的payload是一个基本的信息收集工具，它滥用“tasklist”和“systeminfo”命令来收集数据，并通过HTTP请求将它们发送到Mocky服务。Mocky是一个合法的应用程序，可以帮助用户生成自定义HTTP响应，APT28滥用了该服务进行数据泄露。CERT-UA建议系统管理员限制在关键计算机上启动PowerShell和监控连接到Mocky服务API的网络流量。",
-    "reference": "https://cert.gov.ua/article/4492467"
+    "title": "SideWinder使用恶意代码多态技术针对巴基斯坦政府官员开展攻击",
+    "txt": "近日，BlackBerry的研究人员披露了具有印度背景的APT组织，SideWinder针对巴基斯坦政府的最新攻击活动。SideWinder也称为Razor Tiger、Rattlesnake和响尾蛇。至少自2012年以来便一直处于活跃状态，主要通过鱼叉式网络钓鱼、恶意文档利用和DLL侧加载等技术来规避检测以投递针对性的植入程序。本次攻击活动始于2022年11月下旬，但截止2023年3月，攻击目标已从巴基斯坦扩展至土耳其。在攻击活动期间，SideWinder主要使用了基于服务器的多态性技术，这种技术可允许攻击者绕过传统的基于签名的防病毒(AV)检测来投递下一阶段的有效载荷。由于多态(字面意思是“多种形状”)恶意软件是通过加密和混淆改变其外观，因此基于签名的传统AV软件很难捕获此类恶意软件。尽管此技术名称听起来颇具科技感，但实际上是一种自1990年代初以来就被攻击者使用的旧技术。",
+    "reference": "https://blogs.blackberry.com/en/2023/05/sidewinder-uses-server-side-polymorphism-to-target-pakistan"
   }
 ]

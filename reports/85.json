@@ -1,17 +1,52 @@
 [
   {
     "title": "APT攻击",
-    "txt": "Kimsuky攻击韩国的媒体和智囊机构\nNOBELIUM新增恶意工具MagicWeb\nMERCURY利用Log4j2漏洞针对以色列目标\n披露TeamTNT组织的活动时间表\nLazarus Group组织新样本\n“魔笛”开展勒索攻击活动\n\n漏洞情报\nAtlassian Bitbucket命令注入漏洞CVE-2022-36804\n安全厂商Palo Alto Networks操作系统存在漏洞\nTikTok Android应用程序中存在高危漏洞\n恶意软件\n伪装成合法应用程序的Crypto Miner恶意软件\n勒索软件\n基于GoLang的Agenda勒索软件针对亚洲和非洲企业\n\n数据泄露\n黑客攻击DoorDash公司造成数据泄露\nNelnet服务泄露了250万学生贷款账户数据\nKimsuky攻击韩国的媒体和智囊机构\nKimsuky\n攻击韩国的媒体和智囊\n机构\n具有朝鲜背景的APT组织Kimsuky（又名Thallium、Black Banshee）主要针对韩国实体开展攻击活动。Kaspersky研究人员发现Kimsuky使用了被命名为GoldDragon感染链，攻击了韩国的媒体和智囊机构。攻击者发送包含嵌入宏Word文档的鱼叉式网络钓鱼电子邮件，并滥用合法的博客服务来托管Visual Basic脚本，植入的VBS文件能够收集有关受害者的信息并下载其他有效载荷，最后释放一个Windows可执行文件类型的恶意软件，从受害主机窃取信息，包括文件列表、键盘记录和存储的Web浏览器登录凭据等。下图是GoldDragon感染链。\n具有朝鲜背景的APT组织\n具有朝鲜背景的\nKimsuky（又名Thallium、Black Banshee）主要针对韩国实体开展攻击活动。\nKaspersky研究人员发\n现Kimsuky使用了被命名为GoldDragon感染链，攻击了韩国的媒体和智囊机构。攻击者发送包含嵌入宏Word文档的鱼叉式网络钓鱼电子邮件，并滥用合法的博客服务来托管Visual Basic脚本，植入的VBS文件能够收集有关受害者的信息并下载其他有效载荷，最后释放一个Windows可执行文件类型的恶意软件，从受害主机窃取信息，包括文件列表、键盘记录和存储的Web浏览器登录凭据等。下图是GoldDragon感染链。\n现\n使用了被命名为\n感染链，攻击了韩国的媒体和智囊机构。攻击者发送包含嵌入宏\n并滥用合法的博客服务来托管\n，植入的\n受害者的信息并下载其他有效载荷，最后释放一个\n文件类型的恶意软件，从受害主机窃取信息，包括文件列表、键盘记录和存储的\n等。下图是\n感染链。",
-    "reference": "https://securelist.com/kimsukys-golddragon-cluster-and-its-c2-operations/107258/"
+    "txt": "Mandiant披露伊朗组织APT42\nLazarus Group利用远程访问木马MagicRAT开展攻击活动\nEvilnum针对在线交易平台进行攻击\nTA505使用ServHelper恶意软件开展攻击活动\nUAC-0098使用IcedID银行木马针对乌克兰\nDonot攻击样本\n\n针对非洲法语区金融机构的攻击活动\n使用CodeRAT攻击波斯语代码开发人员\n恶意软件\n针对Linux平台的新型恶意软件Shikitega\n勒索软件\n新型勒索软件Play\nMandiant披露伊朗组织APT42\nMandiant\n披露伊朗组织APT42\n披露伊朗组织\nAPT42疑似具有伊朗伊斯兰革命卫队 (IRGC)背景，是一个多产和资源充足的APT组织，疑似从事伊朗国家支持的网络间谍活动，与APT35存在一定历史渊源关系。该组织至少从2015年末开始活跃，以与伊朗政府有关的个人和组织为目标，以实现伊朗国内政治、外交政策和政权稳定。APT42使用高度针对性的鱼叉式网络钓鱼和社会工程技术，旨在与受害者建立信任关系，以便访问目标的个人或公司电子邮件帐户，或在受害目标的移动设备上安装Android恶意软件。\nAPT42疑似具有伊朗伊斯兰革命卫队 (IRGC)\n，是一个多产和资源充足的APT组织，疑似从事伊朗国家支持的网络间谍活动，与APT35存在一定历史渊源关系。该组织至少从2015年末开始活跃，以与伊朗政府有关的个人和组织为目标，以实现伊朗国内政治、外交政策和政权稳定。APT42使用高度针对性的鱼叉式网络钓鱼和社会工程技术，旨在与受害者建立信任关系，以便访问目标的个人或公司电子邮件帐户，或在受害目标的移动设备上安装Android恶意软件。",
+    "reference": "https://www.mandiant.com/resources/blog/apt42-charms-cons-compromises"
   },
   {
-    "title": "NOBELIUM新增恶意工具MagicWeb",
-    "txt": "\n具有俄罗斯背景的APT组织NOBELIUM（又名APT29），在近期的攻击中使用了新的恶意工具MagicWeb。MagicWeb是一个恶意DLL，能够操纵Active Directory联合服务(AD FS)的服务器生成的令牌中传递的证书。攻击者通过复制AD FS操作中使用的合法Microsoft.IdentityServer.Diagnostics.dll文件创建了一个后门DLL，并进一步开展攻击活动。",
-    "reference": "https://www.microsoft.com/security/blog/2022/08/24/magicweb-nobeliums-post-compromise-trick-to-authenticate-as-anyone/"
+    "title": "Lazarus Group利用远程访问木马MagicRAT开展攻击活动",
+    "txt": "Lazarus Group利用远程访问木马MagicRAT开展攻击活动\n思科研究人员披露了Lazarus Group利用VMWare Horizon平台中的漏洞，部署远程访问木马MagicRAT的攻击活动。攻击者一旦在受感染的系统上成功部署MagicRAT，就会执行额外的有效载荷，例如定制的端口扫描器。此外，研究人员还发现MagicRAT的C2基础设施还用于托管已知Lazarus植入物的更新变体TigerRAT。基于TTP、恶意软件同源性和与已知Lazarus Group活动重叠的基础设施，将此次攻击活动归因于Lazarus Group。",
+    "reference": "https://blog.talosintelligence.com/2022/09/lazarus-magicrat.html"
   },
   {
-    "title": "MERCURY利用Log4j2漏洞针对以色列目标",
-    "txt": "\n具有伊朗背景的APT组织MERCURY（又名MuddyWater），自2017年针对中东地区开展攻击活动。近期，微软研究人员发现攻击者将存在漏洞的SysAid Server作为初始访问向量，并利用Web shell执行多个命令，通过编码的PowerShell下载横向移动和持久驻留工具，进一步开展攻击活动。下图是完整攻击链。\n",
-    "reference": "https://www.microsoft.com/security/blog/2022/08/25/mercury-leveraging-log4j-2-vulnerabilities-in-unpatched-systems-to-target-israeli-organizations/"
+    "title": "来",
+    "txt": "源：",
+    "reference": "TA505使用ServHelper恶意软件开展攻击活动"
+  },
+  {
+    "title": "TA505使用ServHelper恶意软件开展攻击活动",
+    "txt": "TA505是疑似具有俄罗斯背景的APT组织，以牟取经济利益为目的，自2014年以来一直活跃，主要针对美国、英国、俄罗斯、巴西等国家的金融机构。此次攻击活动中，攻击者使用了一个名为TeslaGun的软件控制面板来操纵ServHelper恶意软件，并通过远程桌面协议(RDP)会话下载和安装定制的恶意工具，如(sep12.exe)。",
+    "reference": "https://www.prodaft.com/resource/detail/ta505-ta505-groups-tesla-gun-depth-analysis"
+  },
+  {
+    "title": "UAC-0098使用IcedID银行木马针对乌克兰",
+    "txt": "UAC-0098使用IcedID银行木马针对乌克兰\n谷歌研究人员披露了疑似具有俄罗斯背景的APT组织UAC-0098。该组织以牟取经济利益和获取间谍情报为目的，在2022年4月到8月期间开展了五次攻击活动，攻击目标从欧洲非政府组织转移到乌克兰政府实体。该组织对破坏乌克兰酒店业实体表现出浓厚的兴趣，甚至针对同一家连锁酒店发起数次不同的攻击活动。研究人员在首次攻击活动中发现了“LackeyBuilder”，它是此前未公开的AnchorMail（Conti勒索软件使用的私有后门之一）的生成器。此外，攻击者还会使用IcedID、EtterSilent等工具开展攻击活动。",
+    "reference": "https://blog.google/threat-analysis-group/initial-access-broker-repurposing-techniques-in-targeted-attacks-against-ukraine/"
+  },
+  {
+    "title": "Donot攻击样本",
+    "txt": "Donot攻击样本\n近日，研究人员披露Donot组织的攻击样本，IOC信息如下所示。\n文件名：5th Meeting.doc;\nMD5：1dec2d48c853ec46751754f5b510e949;\nURL：http://wordclips.buzz/uE2rDaf9CdHcauDS/4oXCFBqnnxeb7vIM.php",
+    "reference": "https://twitter.com/jameswt_mht/status/1565954368742068230"
+  },
+  {
+    "title": "来",
+    "txt": "源\n：",
+    "reference": "‍"
+  },
+  {
+    "title": "使用CodeRAT攻击波斯语代码开发人员",
+    "txt": "使用CodeRAT攻击波斯语代码开发人员\n近日，研究人员发现攻击者使用包含Microsoft动态数据交换(DDE)漏洞利用的Microsoft Word文档，针对性攻击使用波斯语的代码开发人员。攻击中使用的钓鱼文档名为:432gsbse5，内容涉及有关硬件设计语言（如Verilog）和超高速集成电路硬件描述语言(VHDL)的信息。攻击者通过诱导用户钓鱼文档并触发漏洞，从存储库中下载并执行远控木马CodeRAT开展攻击活动。\n近日，研究人员发现攻击者使用包含\n动态数据交换(DDE)漏洞利用的\n文档，针对性攻击使用波斯语的代码开发人员。攻击中使用的钓鱼文档名为\n，内容涉及有关硬件设计语言（如\n）和超高速集成电路硬件描述语言\n的信息。攻击者通过诱导用户钓鱼文档并触发漏洞，从存储库中下载并执行远控木马\n开展攻击活动。",
+    "reference": "https://www.safebreach.com/resources/blog/remote-access-trojan-coderat/"
+  },
+  {
+    "title": "针对Linux平台的新型恶意软件Shikitega",
+    "txt": "Linux\nShikitega\nAT&T的Alien Labs研究人员发现一款针对Linux操作系统的恶意软件Shikitega。该恶意软件下载并执行Metasploit框架的“Mettle”meterpreter，并利用系统漏洞获取管理者权限、完成持久化并启动恶意挖矿。除此之外，该恶意软件使用了多态编码器来规避检测，同时还滥用合法的云服务来搭建其一些C2。下图是Shikitega操作流程。\n的Alien Labs研究人员发现一款针对\n操作流程。",
+    "reference": "："
+  },
+  {
+    "title": "新型勒索软件Play",
+    "txt": "新型勒索软件\nPlay",
+    "reference": "勒索软件存在许多相似之处。下图是其感染链。"
   }
 ]

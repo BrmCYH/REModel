@@ -1,17 +1,7 @@
 [
   {
     "title": "APT攻击",
-    "txt": "APT攻击\nKimsuky使用社会工程手段攻击智库、学术界和媒体部门\nAPT-C-55(Kimsuky)组织以“生日祝福”为诱饵分发Quasar RAT的攻击活动分析\n响尾蛇组织使用DLL侧加载Cobalt Strike攻击巴基斯坦政府\nVMware揭秘TrueBot僵尸网络的攻击手法\n披露BITTER的样本\n\n攻击活动\nOutlook被Anonymous Sudan DDoS攻击服务再次中断\nKaspersky披露利用零点击漏洞攻击iOS的Triangulation活动\n\n漏洞情报\nMOVEit Transfer中的零日漏洞被用于数据窃取\n\n数据泄露\nScrubs & Beyond泄露400GB的用户和银行卡详细信息\n\n恶意软件\n\n恶意软件PowerDrop针对美国航空航天业\n\n勒索软件\nBlackSuit与Royal勒索软件存在高度相似性\n\nKimsuky使用社会工程手段攻击智库、学术界和媒体部门\n\n近日，美国和韩国的网络安全和情报机构联合发布了一份关于朝鲜网络攻击者的警告，指出攻击者仿冒关键人物进行针对性网络攻击。这些攻击者属于朝鲜的APT组织Kimsuky，其利用钓鱼邮件和伪造的网站来诱使受害者输入自己的凭证，然后利用这些凭证来访问受害者的网络和数据。攻击目标包括政府、军事、外交、媒体、人权、研究等领域的机构和个人。美、韩机构提供了一些攻击者使用的域名、IP地址、电子邮件地址等，以帮助受影响的组织检测和防御这些攻击。",
-    "reference": "https://media.defense.gov/2023/Jun/01/2003234055/-1/-1/0/JOINT_CSA_DPRK_SOCIAL_ENGINEERING.PDF"
-  },
-  {
-    "title": "APT-C-55(Kimsuky)组织以“生日祝福”为诱饵分发Quasar RAT的攻击活动分析",
-    "txt": "\n近日，360安全的研究人员检测到了具有朝鲜背景的APT组织，Kimsuky采用带有“生日祝福”诱饵信息的CHM类型文件实施钓鱼攻击活动。研究人员表示，最初捕获到的样本是一种CHM类型的文件，一旦受害者执行该文件，恶意命令将被用来加载远程的VBS脚本。接着，该VBS脚本将负责加载远程的PowerShell脚本。该PowerShell脚本经过quicklz算法压缩，需要进行解压缩后方能继续执行。解压缩后，通过Loader将QuasarRat加载到CasPol.exe进程空间中，并最终执行QuasarRat以获取用户信息。根据攻击文件中的韩语特征，研究人员表示，此次攻击的目标主要是针对韩国。攻击链图如下图所示。\n",
-    "reference": "https://mp.weixin.qq.com/s/Sy09IsO_hL8fSPxvC6ZXjA"
-  },
-  {
-    "title": "响尾蛇组织使用DLL侧加载Cobalt Strike攻击巴基斯坦政府",
-    "txt": "\n近日，深信服的研究人员监测到了响尾蛇组织使用钓鱼邮件攻击巴基斯坦政府单位的攻击事件。在本次攻击活动中，攻击者使用使用钓鱼邮件攻击政府单位，而且其邮件的附件名称为“Adv-16-2023”，这是关于巴基斯坦内阁部门发布的网络安全咨询16号文件。此外，钓鱼文件内容以文档被微软Azure云安全保护为由，引诱受害者下载带有密码的压缩包文件，压缩包中包含一个伪装成pdf文件的恶意lnk文件，用于下载第二阶段HTA下载脚本，最后劫持本地Onedrive客户端程序及其更新程序实现DLL侧加载，最终上线Cobalt Strike载荷。受害者机器中Onedrive定时更新的计划任务也会成为攻击者的持久化计划任务，整个攻击过程与之前披露的攻击大相径庭，但攻击过程更为简单，样本制作成本更低。",
-    "reference": "https://mp.weixin.qq.com/s/MZadlpXbpCfQAv41rtVm3A"
+    "txt": "APT攻击\nAsylum Ambuscade针对全球中小企业开展攻击活动\nSidecopy近期针对印度国防、军事部门投送新后门FetaRAT\nITG10针对韩国政府、大学、智库和持不同政见者开展攻击\n披露BITTER的样本\n\n攻击活动\n攻击活动\n瑞士政府遭受勒索软件和DDoS攻击的双重打击\n亲乌克兰黑客攻击俄罗斯银行服务商Infotel JSC\n\n数据泄露\n数据泄露\n8500万土耳其居民的敏感数据被泄露\n\n恶意软件\n恶意软件\n攻击者利用DoubleFinger部署GreetingGhoul加密货币窃取器\n\n勒索软件\n勒索软件\n攻击者伪造俄罗斯游戏网站传播WannaCry-Imitator勒索软件\n\nAsylum Ambuscade针对全球中小企业开展攻击活动\n\n近日，ESET的研究人员发表了一篇报道称，在最近针对全球中小型公司的攻击活动中，观察到了一个被追踪为“Asylum Ambuscade”的网络间谍组织。据称，Asylum Ambuscade于2022年3月首次被Proofpoint披露，至少从2020年便开始运作，曾针对帮助乌克兰难民的实体开展过网络钓鱼攻击活动。Asylum Ambuscade通常借助携带可运行恶意VBS代码的文档附件的鱼叉式网络钓鱼电子邮件来发起初始攻击，并于2022年6月之后开始利用CVE-2022-30190(Follina)漏洞。攻击者主要利用该漏洞启动MSI安装程序，进而部署该组织的Sunseed恶意软件。Sunseed是一个基于Lua的下载程序，该程序首先会在Windows启动文件夹中生成一个LNK文件以实现持久性，接着便将从C2服务器获取后续阶段的有效载荷Akhbot，并通过继续ping服务器以接收和执行额外的Lua代码。2023年，该组织持续更新攻击媒介，包括通过恶意Google Ads将用户重定向到运行恶意JavaScript代码的网站。同年3月，Asylum Ambuscade还开始部署名为“Nodebot”的新工具，该工具似乎是Ahkbot基于Node.js的代码实现。研究人员表示，Asylum Ambuscade在2023年针对的目标范围广泛，涉及北美、欧洲和中亚的银行客户、加密货币交易商、政府实体以及各种中小企业等。据统计，自2022年1月以来，Asylum Ambuscade已攻击4500名受害者，相当于每月大约265名受害者，对全球组织构成了严重威胁。",
+    "reference": "https://www.welivesecurity.com/2023/06/08/asylum-ambuscade-crimeware-or-cyberespionage/"
   }
 ]

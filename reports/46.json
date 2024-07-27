@@ -1,22 +1,7 @@
 [
   {
     "title": "APT攻击",
-    "txt": "APT攻击\nTurla组织针对乌克兰和东欧国防部门开展攻击\nRedCurl使用新工具针对俄罗斯某大型银行开展攻击\nFIN8采用改进的Sardonic后门变体传播Noberus勒索软件\nTeamTNT利用多个后门部署Tsunami恶意软件\nUNC1151针对乌克兰和波兰的政府、军事和民用实体开展攻击\n披露Kimsuky的样本\n\n攻击活动\n攻击活动\n利用WooCommerce Payments插件漏洞进行的攻击活动\n\n数据泄露\n数据泄露\n研究人员发现Docker Hub中的大量镜像泄露敏感数据\nVirusTotal泄露大量用户信息涉及FBI和NSA等机构\n\n恶意软件\n恶意软件\n研究人员发现一种名为WormGPT的恶意工具\n\n勒索软件\n勒索软件\n雅诗兰黛公司遭到来自ALPHV和Clop的两次勒索攻击\n\nTurla组织针对乌克兰和东欧国防部门开展攻击\n",
-    "reference": "https://cert.gov.ua/article/5213167"
-  },
-  {
-    "title": "RedCurl使用新工具针对俄罗斯某大型银行开展攻击",
-    "txt": "近日，FACCT的研究人员发布了关于APT组织RedCurl的最新攻击活动报告。据悉，RedCurl于2019年底首次被Group-IB的研究人员披露，专门从事商业间谍活动。在过去几年中，已对来自英国、德国、加拿大、挪威、乌克兰、澳大利亚的公司发起了至少34次攻击，且其中超过一半的袭击(20起)发生在俄罗斯，受影响行业则涉及建筑、金融、咨询、零售商、银行、保险、法律等。攻击者的主要目的为窃取商业机密以及包含员工个人数据的文件。该报告显示，RedCurl近期攻击了俄罗斯的一家大型银行和澳大利亚的一家国际航运公司。其中，RedCurl针对俄罗斯银行发起了两次攻击，且均想通过使用网络钓鱼邮件以获取初始访问权限。在2022年11月的第一次尝试中，诱饵邮件伪装成来自人力资源部门的邮件，但是失败了。在2023年5月，该团伙再次发送了伪装为来自俄罗斯知名市场的以企业折扣优惠为主题的诱饵邮件，通过瞄准该银行的一名承包商，进而成功地入侵了目标的基础设施。同年6月，RedCurl还被观察到在对澳大利亚公司的攻击中使用了相同的策略和工具。期间，研究人员还发现了RedCurl使用的新工具：RedCurl.SimpleDownloader。其中，RedCurl.SimpleDownloader目前仍在开发状态，是为RedCurl新活动所量身定制的，其使用了知名品牌作为诱饵，是一个具有单个导出函数的DLL文件，代码轻量且功能简单，主要充当诱饵并被用于下载额外有效载荷。",
-    "reference": "https://www.facct.ru/blog/redcurl-2023/"
-  },
-  {
-    "title": "FIN8采用改进的Sardonic后门变体传播Noberus勒索软件",
-    "txt": "\n近日，赛门铁克发布了FIN8组织使用改进的Sardonic后门变体传播Noberus勒索软件的活动分析报告。FIN8(又名Syssphinx)，至少自2016年1月开始活跃，是一个出于经济动机的网络犯罪组织，以酒店、零售、娱乐、保险、技术、化学品和金融行业的组织为目标。该组织通常利用PowerShell、WMI等内置工具，主要采用社会工程学和鱼叉式网络钓鱼的攻击方法。此次改进的Sardonic后门使用C语言进行编写。在本次攻击活动中，攻击者首先使用Powershell执行一系列命令以获取计算机的详细信息并建立持久性。然后，攻击者使用Power shell脚本部署后门，脚本首先检查当前进程的体系结构，选择使用32位或者64位编码的.NET加载器，随后运行相应的加载器，解密注入器和后门文件。注入器为Shellcode形式，目的是在新创建的WmiPrvSE.exe进程中启动后门。后门文件与注入器相似，也采用Shellcode形式，可以与C2服务器进行通信，执行C2服务器下发的命令。通信内容的正文和页脚字段使用rc4_key作为加密密钥，使用RC4算法进行加密。加密每个单独字段时还会重复使用密钥流。",
-    "reference": "https://symantec-enterprise-blogs.security.com/blogs/threat-intelligence/syssphinx-fin8-backdoor"
-  },
-  {
-    "title": "TeamTNT利用多个后门部署Tsunami恶意软件",
-    "txt": "\n近日，Aquasec的研究人员发现了一个针对配置不当的Docker API和JupyterLab实例的新兴活动，并且经过分析将此次活动归因于TeamTNT组织。TeamTNT针对Kubernetes集群、Docker API、Hadoop服务等，利用多种脚本外联C2服务器下载二进制文件。在分析过程中，研究人员发现TeamTNT使用了4种类型的后门，第一个通过修改passwd、shadow和sudoers文件来创建新帐户、插入RSA密钥来创建SSH后门、向C2服务器回传新建账号密码等信息。第二个文件可进行反弹shell。第三个为正规工具Tmate，攻击者将其作为Webshell。第四个则使用Ngrok建立HTTP隧道。TeamTNT使用dload函数来绕过常规检测，dload函数利用dev/tcp来执行通信并下载有效载荷。研究人员表示TeamTNT正在跨多个云环境(包括AWS、Azure和GCP)扫描凭证。此外，TeamTNT还在寻找特定应用程序，例如Grafana、Kubernetes、Docker Compose、Git和NPM。TeamTNT还会搜索数据库和存储系统，例如Postgres、AWS S3、Filezilla、SQLite、ngrok data、Samba、Censys等。另外，TeamTNT在攻陷服务器后，还会部署Tsunami软件。Tsunami是一种恶意软件，主要针对Linux系统拓展僵尸网络，可通过IRC协议与C2服务器进行通信。",
-    "reference": "https://blog.aquasec.com/teamtnt-reemerged-with-new-aggressive-cloud-campaign"
+    "txt": "APT攻击\nAPT29借助Microsoft Teams服务针对全球组织开展钓鱼活动\n疑似Kimsuky组织利用诱饵文档攻击投资领域用户\nTA544利用WikiLoader针对意大利的企业分发Ursnif\nBahamut组织利用安卓恶意软件进行网络钓鱼活动\nKonni组织疑似针对韩国企业的攻击活动\n披露BITTER的样本\n\n攻击活动\n攻击活动\n幽谍犬黑产团伙伪装为国家税务服务平台实施窃密攻击\n数据泄露\n数据泄露\n美国南方独立学校协会泄露572GB的数据信息\n美国南方独立学校协会泄露572GB的数据信息\n\n恶意软件\n恶意软件\nNodeStealer 2.0可窃取Facebook企业帐户\nNodeStealer 2.0可窃取Facebook企业帐户\n新型P2P僵尸网络恶意软件P2Pinfect\n\n勒索软件\n勒索软件\nBankCard USA遭到Black Basta攻击已交5万美元赎金\n\nAPT29借助Microsoft Teams服务针对全球组织开展钓鱼活动\n",
+    "reference": "https://www.microsoft.com/en-us/security/blog/2023/08/02/midnight-blizzard-conducts-targeted-social-engineering-over-microsoft-teams/"
   }
 ]

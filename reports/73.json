@@ -1,1 +1,47 @@
-[]
+[
+  {
+    "title": "勒索软件",
+    "txt": "勒索软件\nPlay勒索软件声称攻击了德国连锁酒店H-Hotels\nGamaredon APT针对北约某国的大型炼油厂\nGamaredon APT针对北约某国的大型炼油厂",
+    "reference": "https://unit42.paloaltonetworks.com/trident-ursa/"
+  },
+  {
+    "title": "响尾蛇组织近期攻击活动简报",
+    "txt": "响尾蛇组织近期攻击活动简报\n近期，奇安信的研究人员披露了具有印度背景的APT组织——响尾蛇组织的多个攻击样本。该类样本使用与巴基斯坦相关的学校或者军队为诱饵进行鱼叉攻击，其TTP均使用了DotNetToJScript工具生成JS代码来加载.net程序。在近期的攻击活动中，响尾蛇组织的攻击手段呈现如下特点：善用社会工程学，使用更贴切的诱饵，诱饵甚至来自真实文件；多阶段下载，并对后续载荷进行混淆处理；使用轻量级远程Shell后门，在被曝光后甚至仍继续使用相关C2。此外，响尾蛇组织主要利用电子邮件鱼叉式网络钓鱼、漏洞利用文档和DLL侧加载技术来逃避检测并提供有针对性的植入。常采用的攻击诱饵类型为office文档和Ink。其中Ink执行后会由Powershell释放真正的文件并下载执行hta脚本，加载后续恶意文件；Office文档则是该组织最喜欢的攻击诱饵，通过利用已知漏洞（如CVE-2017-11882漏洞）来执行后续活动。同时该组织也会利用白加黑的方式来加载恶意文件。",
+    "reference": "https://mp.weixin.qq.com/s/NOpFJx4LnMOWhTm0iluFfw"
+  },
+  {
+    "title": "APT28试图渗透美国卫星网络",
+    "txt": "APT28试图渗透美国卫星网络",
+    "reference": "https://www.cyberscoop.com/apt28-fancy-bear-satellite/"
+  },
+  {
+    "title": "UAC-0142通过钓鱼攻击乌克兰Delta军事情报系统",
+    "txt": "UAC-0142通过钓鱼攻击乌克兰Delta军事情报系统\n近日，乌克兰CERT-UA发布通告，披露了APT组织UAC-0142针对其Delta军事情报系统的攻击活动。据报道，初始钓鱼邮件是从国防部一名雇员的被入侵邮箱和messenger发送的，该邮件敦促收件人(受害者)更新DELTA系统中的证书。此外，该钓鱼邮件中还包含一个附加的PDF文件，其模仿了Zaporizhzhia警察局ISTAR部门的合法摘要。当受害者在执行附件中的certificates_rootCA.exe后，将安装两个恶意软件，分别为窃取电子邮件、数据库、脚本和文件等数据的信息窃取恶意软件FateGrab，及窃取浏览器数据的恶意软件StealDeal。",
+    "reference": "https://securityaffairs.co/wordpress/139859/intelligence/ukraine-delta-military-intelligence-attack.html"
+  },
+  {
+    "title": "披露Kimsuky的样本",
+    "txt": "披露Kimsuky的样本\n近日，研究人员披露了Kimsuky组织的恶意样本，IOC信息如下所示：\nMD5：bf41074e39bb3abbe4e4640401e7e655\nURL：http://infotechkorea.com/gnuboard4/adm/cmg/upload/list.php?query=1",
+    "reference": "https://twitter.com/shadowchasing1/status/1603549647410077696"
+  },
+  {
+    "title": "DraftKings遭受撞库攻击致6万客户的信息泄露",
+    "txt": "DraftKings遭受撞库攻击致6万客户的信息泄露\n近日，据媒体报道，体育博彩公司DraftKings透露，67995个客户的个人信息在11月份的一次撞库攻击中被泄露。该公司表示，攻击者从其它地方获得了登录客户帐户所需的凭据，但是客户的社会安全号码、驾照号码和金融账号并未被泄露。DraftKings在检测到攻击后重置了受影响帐户的密码，并实施了额外的欺诈警报。Okta在9月份报告称，今年的数据安全状况急剧恶化，仅在2022年前三个月就记录了超过100亿次撞库事件。",
+    "reference": "https://www.bleepingcomputer.com/news/security/draftkings-warns-data-of-67k-people-was-exposed-in-account-hacks/"
+  },
+  {
+    "title": "蔚来汽车数据被窃遭到“天价”勒索",
+    "txt": "蔚来汽车数据被窃遭到“天价”勒索",
+    "reference": "https://nev.ofweek.com/2022-12/ART-77014-8120-30582735.html"
+  },
+  {
+    "title": "Godfather银行木马伪装成合法的Google Play应用程序",
+    "txt": "Godfather银行木马伪装成合法的Google Play应用程序\n近日，研究人员发现，自3月以来一直以全球银行用户为目标的一种Android恶意软件通过高级混淆方法重新出现，并伪装成Google Play商店中下载量超过1000万次的合法应用程序。Cyble Research&Intelligence Labs的研究人员表示，Godfather是一种银行木马，以针对欧洲国家的银行用户而闻名，但其最新活动表明，该木马针对常见恶意软件检测方法的躲避能力有所提高。研究人员表示，一旦成功安装在受害者的设备上，Godfather就会启动一系列典型的银行木马行为，包括窃取银行和加密货币交易凭证。但Godfather也会窃取敏感数据，如SMS、基本设备详细信息（包括来自已安装应用程序的数据）和设备电话号码，并且它可以在后台隐蔽执行许多恶意操作。除此之外，其还可以使用VNC控制设备屏幕，转发受害者设备的来电并注入银行URL。研究人员发现的Godfather最新样本使用自定义加密技术进行了加密，这种技术可以逃避常见防病毒产品的检测。",
+    "reference": "https://www.darkreading.com/attacks-breaches/godfather-banking-trojan-masquerades-legitimate-google-play-app"
+  },
+  {
+    "title": "Play勒索软件声称攻击了德国连锁酒店H-Hotels",
+    "txt": "Play勒索软件声称攻击了德国连锁酒店H-Hotels\n近期，Pl\nay勒索软件团伙声称对德国连锁酒店H-Hotels的网络攻击负责，攻击导致H-Hotels的通信中断。\nH-Hotels是一家酒店企业，在德国、奥地利和瑞士等国拥有60家酒店，客房总数9,600间。\n这家连锁酒店拥有2,500名员工，是DACH地区最大的连锁酒店之一。\nH-Hotels最近披露了网络攻击事件，并表示安全事件发生在2022年12月11日星期日。\nH-Hotels在安全事件通报中解释说，根据内部和外部IT专家的初步调查结果，网络犯罪分子在专业性的攻击中设法突破了广泛的IT技术和管理防护系统；\n发现网络攻击后，IT系统立即关闭并与互联网断开连接，以防止进一步传播；\n虽然攻击没有影响客人的预订，但酒店工作人员仍然无法接收或回复客户通过电子邮件发送的请求。\nH-Hotels已将此事件告知德国调查当局，并正在与一家IT取证公司合作，以尽快恢复系统。\nPlay勒索软件声称对H-Hotels发动了攻击，并于19日在其Tor网站上列出了该公司作为受害目标，声称在网络攻击期间窃取了未公开数量的数据，包括客户文件、护照、身份证等。",
+    "reference": "https://www.bleepingcomputer.com/news/security/play-ransomware-claims-attack-on-german-hotel-chain-h-hotels/"
+  }
+]

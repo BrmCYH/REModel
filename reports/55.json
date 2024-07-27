@@ -1,12 +1,7 @@
 [
   {
-    "title": "APT攻击",
-    "txt": "APT攻击\nKimsuky使用新侦察工具ReconShark在全球范围内开展网络间谍活动\nSideWinder使用恶意代码多态技术针对巴基斯坦政府官员开展攻击\nSideCopy利用钓鱼邮件针对印度开展攻击\n披露Transparent Tribe的样本\n\n攻击活动\n攻击活动\nNoName黑客组织针对多个法国网站发起DDoS攻击\n\n数据泄露\n数据泄露\nLockBit 3.0勒索团伙泄露了从印度银行窃取的600GB数据\n\n恶意软件\n恶意软件\n新型Android恶意软件FluHorse窃取密码和2FA代码\n\n勒索软件\n勒索软件\n新的Cactus勒索软件通过自我加密来规避检测\n\nKimsuky使用新侦察工具ReconShark在全球范围内开展网络间谍活动\n近日，Sentinel Labs的研究人员披露了具有朝鲜背景的APT组织，Kimsuky近期利用其新版本的侦察恶意软件“ReconShark”在全球范围内开展网络间谍活动，并且现在正在针对性攻击美国、欧洲和亚洲的政府组织、研究中心、大学和智库。Kimsuky组织利用包含指向托管在Microsoft OneDrive上的恶意文档链接的鱼叉式网络钓鱼电子邮件，分发ReconShark恶意软件来感染受害者主机。一旦受害者打开下载的文档并按照指示启用宏，恶意文档中嵌入的ReconShark恶意软件便会被激活。ReconShark恶意软件曾是Kimsuky组织使用过的“BabyShark”恶意软件的变种，并且另一个朝鲜组织APT43也曾部署过该恶意软件。ReconShark可利用WMI收集受感染系统的信息，如正在运行的进程、电池数据等，并且可以通过HTTP POST请求将所有内容发送到C2服务器，而不在本地存储任何内容。除了窃取信息外，ReconShark还将以多阶段方式部署更多恶意载荷，这些有效载荷包括：脚本(VBS、HTA和Windows Batch）、启用宏的Microsoft Office模板或Windows DLL文件。此外，攻击者还使用了两种隐蔽的恶意载荷部署方式，以确保持久驻留。第一种方法涉及修改Chrome、Outlook、Firefox或Edge等流行浏览器关联的Windows快捷方式文件(LNK)。另一种方法则是通过将默认的Microsoft Office模板Normal.dotm替换为托管在C2服务器上的恶意版本，以便在受害者启动Microsoft Word时加载恶意代码。",
-    "reference": "https://www.sentinelone.com/labs/kimsuky-evolves-reconnaissance-capabilities-in-new-global-campaign/"
-  },
-  {
-    "title": "SideWinder使用恶意代码多态技术针对巴基斯坦政府官员开展攻击",
-    "txt": "近日，BlackBerry的研究人员披露了具有印度背景的APT组织，SideWinder针对巴基斯坦政府的最新攻击活动。SideWinder也称为Razor Tiger、Rattlesnake和响尾蛇。至少自2012年以来便一直处于活跃状态，主要通过鱼叉式网络钓鱼、恶意文档利用和DLL侧加载等技术来规避检测以投递针对性的植入程序。本次攻击活动始于2022年11月下旬，但截止2023年3月，攻击目标已从巴基斯坦扩展至土耳其。在攻击活动期间，SideWinder主要使用了基于服务器的多态性技术，这种技术可允许攻击者绕过传统的基于签名的防病毒(AV)检测来投递下一阶段的有效载荷。由于多态(字面意思是“多种形状”)恶意软件是通过加密和混淆改变其外观，因此基于签名的传统AV软件很难捕获此类恶意软件。尽管此技术名称听起来颇具科技感，但实际上是一种自1990年代初以来就被攻击者使用的旧技术。",
-    "reference": "https://blogs.blackberry.com/en/2023/05/sidewinder-uses-server-side-polymorphism-to-target-pakistan"
+    "title": "数据泄漏",
+    "txt": "数据泄漏\n法国旅游公司La Malle Postale泄露了9万名徒步旅行者的个人信息\n\n恶意软件\n恶意软件\nCopperStealer恶意软件开始使用新的Rootkit和网络钓鱼工具包\n\n勒索软件\n勒索软件\n新的RA Group勒索软件针对美国公司进行双重勒索攻击\n\nLancefly组织使用定制后门Merdoor针对南亚地区开展攻击\n\n近日，Symantec的研究人员披露了一个常年针对南亚和东南亚实体的APT组织：Lancefly。研究人员表示，该组织通常在其攻击活动中使用自定义编写的后门“Merdoor”。据研究人员观察，后门Merdoor似乎自2018年以来就已经存在。该后门功能强大，具有将自身安装为服务、键盘记录、与C2服务器进行通信、侦听本地端口上的命令等多种功能。2020年至2021年期间，Merdoor还曾被发现用于针对政府、通信和技术部门的攻击，有关Merdoor的攻击活动一直持续到了今年的第一季度。Lancefly的最新攻击活动于2022年年中开始，针对南亚和东南亚的政府、航空、教育和电信等行业。据称，攻击活动的初始接入手段疑似为SSH暴力破解或攻击存在漏洞公开服务器。攻击活动涉及的Merdoor释放器则是一个自解压的RAR(SFX），其中包含三个文件：存在DLL搜索顺序劫持缺陷的合法二进制文件、Merdoor加载程序和包含最终有效负载的加密文件(.pak)。一旦受害者打开RAR文档，Merdoor释放器便会通过执行合法的二进制文件最终植入Merdoor后门。接着，Merdoor再通过注入到perfhost.exe或svchost.exe中隐蔽执行并连接到其C2服务器以接收远程命令。此外，攻击者还会使用伪装的WinRAR(wmiprvse.exe)文件来暂存和加密文件。目前，研究人员表示，尚不清楚攻击者如何从受害者机器中窃取数据，但最有可能的仍然是利用Merdoor后门。",
+    "reference": "https://symantec-enterprise-blogs.security.com/blogs/threat-intelligence/lancefly-merdoor-zxshell-custom-backdoor"
   }
 ]

@@ -1,7 +1,1 @@
-[
-  {
-    "title": "APT攻击",
-    "txt": "APT攻击\nAndariel组织近期攻击活动披露\nCuba勒索软件针对美国关键基础设施部门与拉丁美洲IT集成商开展攻击\nCarderbee组织针对香港机构进行供应链攻击\nFBI警告称，朝鲜APT组织Lazarus Group涉嫌参与价值4000万美元的加密货币盗窃案\n披露摩诃草的样本\n\n攻击活动\n攻击活动\nAnonymous组织针对日本核网站发起网络攻击\n\n漏洞情报\n漏洞情报\n利用WinRAR 0day漏洞的恶意ZIP文档被攻击者投递到各大交易论坛\n\n数据泄露\n数据泄露\n260万Duolingo用户的爬取数据在黑客论坛上公布\n260万Duolingo用户的爬取数据在黑客论坛上公布\n\n恶意软件\n恶意软件\nXLoader新macOS变体伪装成已签名的OfficeNote程序\n\n勒索软件\n\nSpacecolon工具正被用于向全球用户投递Scarab勒索软件\n\nAndariel组织近期攻击活动披露\n\n近日，AhnLab安全紧急响应中心的研究人员发现了Andariel的多次攻击活动，并在攻击中识别出大量用Go语言开发的恶意代码。Andariel组织主要针对韩国国内企业和机构，与Lazarus组织有合作关系或者是Lazarus组织的下属组织。其主要目标是国防、政治组织、造船、能源、电信等与安全相关的领域。当然，除此之外，位于韩国的大学、交通、ICT公司等各种公司和机构也受到了攻击。Andariel威胁组织在初期渗透过程中主要采用鱼叉式网络钓鱼攻击、水坑攻击、供应链攻击等方式。Andariel组织的特点之一是创建并使用各种恶意代码进行攻击，特别是除了过去的Andarat之外，攻击中使用的Andaratm、Phandoor、Rifdoor、TigerRAT和MagicRAT后门有很多种类型。在过去针对Innorix Agent的攻击中Andariel组织使用的就是Go语言开发的Reverse Shell，后来针对国内企业的攻击则使用了Black RAT。这种趋势导致了近期的攻击活动，并促使其使用Go语言开发的其他新的恶意代码，如Goat RAT和DurianBeacon等。此外，DurianBeacon除了Go版本之外，还有一个使用Rust语言开发的版本。",
-    "reference": "https://asec.ahnlab.com/ko/56256/"
-  }
-]
+[]

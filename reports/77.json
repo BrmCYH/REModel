@@ -1,12 +1,12 @@
 [
   {
-    "title": "勒索软件",
-    "txt": "勒索软件\n亲俄罗斯的黑客使用Killnet勒索软件瞄准对手\n\n新APT组织OPERA1ER针对非洲目标开展攻击活动",
-    "reference": "https://blog.group-ib.com/opera1er-apt-fr"
+    "title": "APT攻击",
+    "txt": "APT攻击\nDUCKTAIL使用新的恶意软件变体展开攻击\nBahamut使用仿冒的VPN应用程序针对Android用户\nPatchwork 组织针对巴基斯坦最新攻击活动分析\nLuna Moth针对多个行业的callback网络钓鱼勒索活动\n披露Lazarus Group的样本\n\n攻击活动\n攻击活动\nKillnet声称对导致欧洲议会网站关闭的DDOS攻击负责\nDraftKings的客户遭到撞库攻击损失近30万美元\n\n数据泄漏\n数据泄漏\n印度坎努尔大学的官方网站泄露3万多学生的信息\n\n恶意软件\n恶意软件\n基于GoLang的新型恶意软件Aurora\n\n勒索软件\n勒索软件\n新勒索软件AXLocker加密文件同时还窃取Discord帐户\n\nDUCKTAIL使用新的恶意软件变体展开攻击",
+    "reference": "https://labs.withsecure.com/publications/ducktail-returns"
   },
   {
-    "title": "新的Black Basta勒索软件可能与FIN7有联系",
-    "txt": "近日，Sentinel Labs的安全研究人员披露了将Black Basta勒索软件团伙与出于经济动机的APT组织FIN7（也称为“Carbanak”）建立关联的证据。研究人员在分析勒索软件团伙使用的工具时，发现有迹象表明，FIN7的开发人员编写了自2022年6月以来Black Basta专门使用的规避EDR（端点检测和响应）检测的工具。同时，将两者联系起来的进一步证据还包括FIN7在2022年初使用的IP地址和特定的TTP，也出现在几个月后Black Basta的攻击中。",
-    "reference": "https://www.sentinelone.com/labs/black-basta-ransomware-attacks-deploy-custom-edr-evasion-tools-tied-to-fin7-threat-actor/"
+    "title": "Bahamut使用仿冒的VPN应用程序针对Android用户",
+    "txt": "近日，ESET研究人员披露了一场由APT组织Bahamut发起的，针对Android用户的恶意攻击活动。该活动自2022年1月以来一直活跃，ESET的研究人员在这次活动中发现了至少八个版本的Bahamut间谍软件。该恶意软件通过伪造的SecureVPN网站，分发木马化的合法应用程序——SoftVPN和OpenVPN)。最终释放恶意软件能够泄露敏感数据，例如联系人、短信、通话记录、设备位置和通话录音，还可以主动监视流行短消息应用程序中交换的聊天消息，包括Signal、Viber、WhatsApp、Telegram和Facebook Messenger。",
+    "reference": "https://www.welivesecurity.com/2022/11/23/bahamut-cybermercenary-group-targets-android-users-fake-vpn-apps/"
   }
 ]

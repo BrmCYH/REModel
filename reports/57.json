@@ -1,1 +1,17 @@
-[]
+[
+  {
+    "title": "APT攻击",
+    "txt": "APT攻击\nCharming Kitten使用BellaCiao恶意软件针对多国开展攻击\nNomadic Octopus组织通过入侵塔吉克斯坦电信运营商成功监视18个实体\nAPT28利用伪造的Windows更新指南攻击乌克兰政府\nAPT37使用大量LNK文件传递RokRAT恶意软件\n披露APT28的样本\n\n攻击活动\n攻击活动\n德国IT供应商Bitmarck遭到攻击所有系统暂时关闭\n数据泄露\n数据泄露\n通信公司T-Mobile发生数据泄露\n\n恶意软件\n恶意软件\n针对企业网络的新恶意软件工具包——Decoy Dog\n\n勒索软件\n勒索软件\nALPHV勒索软件团伙入侵西部数据公司的网络\n\nCharming Kitten使用BellaCiao恶意软件针对多国开展攻击\n",
+    "reference": "https://www.bitdefender.com/blog/businessinsights/unpacking-bellaciao-a-closer-look-at-irans-latest-malware/"
+  },
+  {
+    "title": "Nomadic Octopus组织通过入侵塔吉克斯坦电信运营商成功监视18个实体",
+    "txt": "近日，Prodaft的研究人员披露，一个名为“Nomadic Octopus”的俄罗斯APT组织成功渗透了一家塔吉克斯坦电信运营商，以监视18个实体，包括政府官员和公共服务基础设施。作为被跟踪为Paperbug活动的一部分，此次网络间谍行动破坏的设备非常广泛，从个人计算机到OT设备。Nomadic Octopus(也被称为DustSquad)至少从2014年便开始活跃，以攻击中亚(主要是阿富汗和前苏联国家)的个人和外交实体为目标而闻名。Prodaft表示，Nomadic Octopus在Paperbug活动中使用了多台服务器作为其后门和工具的C2。在本次活动中，攻击者的主要特点是使用了公开渠道可获得的攻击工具，并且在需要时，攻击者还会将工具的名称更改为通用的程序，如Google Update、Chrome Update、Java Update和Google Crash Handler等，以获得防火墙许可或额外特权。",
+    "reference": "https://www.prodaft.com/m/reports/PAPERBUG_TLPWHITE-1.pdf"
+  },
+  {
+    "title": "APT28利用伪造的Windows更新指南攻击乌克兰政府",
+    "txt": "\n近日，乌克兰计算机应急响应小组(CERT-UA)表示，俄罗斯黑客正针对该国的各个政府机构发送恶意电子邮件，这些电子邮件据称包含有关如何更新Windows以防御网络攻击的说明。CERT-UA的研究人员认为，具有俄罗斯背景的APT组织APT28（又名Fancy Bear）发送了这些电子邮件，并且冒充了目标政府实体的系统管理员，以便更容易地欺骗受害者。为此，攻击者在攻击准备阶段使用了通过未知方式获取的真实雇员姓名创建了@outlook.com电子邮件地址。恶意电子邮件建议收件人运行PowerShell命令，而不是按照正常流程升级Windows系统。此命令在计算机上下载PowerShell脚本，模拟Windows更新过程，同时在后台下载第二个PowerShell有效载荷。第二阶段的payload是一个基本的信息收集工具，它滥用“tasklist”和“systeminfo”命令来收集数据，并通过HTTP请求将它们发送到Mocky服务。Mocky是一个合法的应用程序，可以帮助用户生成自定义HTTP响应，APT28滥用了该服务进行数据泄露。CERT-UA建议系统管理员限制在关键计算机上启动PowerShell和监控连接到Mocky服务API的网络流量。",
+    "reference": "https://cert.gov.ua/article/4492467"
+  }
+]

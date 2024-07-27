@@ -1,12 +1,7 @@
 [
   {
-    "title": "RedEyes组织伪装为金融公司投递CHM恶意软件",
-    "txt": "近期，AhnLab的研究人员检测到了一起通过伪装为来自一家金融公司的安全邮件，向用户分发CHM恶意软件的攻击行为。经研究人员分析发现，该恶意软件是由RedEyes组织(也称为APT37)创建，并且使用的命令与RedEyes组织在其M2RAT恶意软件攻击过程中所使用的相同。用户在运行恶意CHM时，首先会创建一个伪装成来自金融公司的安全邮件的帮助窗口，此时虽然存在于CHM内部的初始恶意脚本正通过Click方法以调用LNK文件的方式运行，但用户很难察觉。因此，一旦攻击者借助mshta进程执行了特定URL指向的恶意脚本，CHM就将根据攻击者的指令执行文件下载、信息窃取等各种恶意行为。",
-    "reference": "https://asec.ahnlab.com/ko/48764/"
-  },
-  {
-    "title": "APT-C-56组织针对印度双平台的攻击组件披露",
-    "txt": "近期，360的安全研究人员在追踪一起针对印度移动端的攻击活动中发现了分别针对Android、Windows和Linux系统的新型攻击工具。通过溯源分析，研究人员将此次活动归因于APT-C-56(又名透明部落)组织。APT-C-56是一个具有巴基斯坦政府背景的南亚APT组织，该组织长期针对周边国家和地区的军队和政府机构实施定向攻击，旨在收集各类情报。本次攻击活动中，APT-C-56同时针对印度的移动端和PC端展开了攻击，并且主要借助了伪装成印度国家奖学金门户、印度陆军福利教育学会的钓鱼页面来窃取特定用户信息。其中，Android恶意样本的投递使用了伪装成印度国家奖学金门户的钓鱼网站。钓鱼网站打开后会弹出“重要提示”提示框，诱导受害者下载ScholarshipPortal.apk安装包文件，该文件即为Android系统新型RAT工具——RlmRat。PC端的恶意样本投递则使用了伪装成印度陆军福利教育学会的钓鱼网站。该钓鱼网站打开后同样会弹出一个“重要提示”提示框，不同的是受害者点击后会进入一个提交Studient ID的钓鱼页面，提交ID后会出现三个文件下载的按钮，下载的文件即为该组织新开发的针对Windows系统的LimePad组件以及Linux系统的波塞冬组件。攻击链图如下图所示。\n移动端攻击链图",
-    "reference": "https://mp.weixin.qq.com/s/lvSraGnMsl3a1jEUubuvyw"
+    "title": "APT攻击",
+    "txt": "APT攻击\n新组织YoroTrooper针对独联体国家政府和能源机构\n8220 Gang利用ScrubCrypt的攻击活动\nUNC2970以虚假的工作机会瞄准安全研究人员\nDark Pink组织利用KamiKakaBot攻击东南亚国家\n披露响尾蛇的样本\n\n攻击活动\n攻击活动\nAkamai透露其亚太地区某客户遭到大规模DDoS攻击\n\n数据泄露\n数据泄露\nAT&T数据泄露影响900万客户账户\n\n恶意软件\n恶意软件\n针对巴西银行的GoatRAT安卓木马\n\n勒索软件\n勒索软件\nMedusa勒索软件团伙愈发活跃\n\n新组织YoroTrooper针对独联体国家政府和能源机构",
+    "reference": "https://blog.talosintelligence.com/yorotrooper-espionage-campaign-cis-turkey-europe/"
   }
 ]

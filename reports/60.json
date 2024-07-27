@@ -1,12 +1,7 @@
 [
   {
     "title": "APT攻击",
-    "txt": "APT攻击\nKimsuky组织借助ADS隐藏恶意软件\nKimsuky组织借助ADS隐藏恶意软件\n双尾蝎组织通过钓鱼网站投递木马程序\nWinter Vivern利用Zimbra漏洞攻击北约军政和外交机构\nMantis利用Micropsia和Arid Gopher新变种攻击中东地区\n披露Lazarus Group的样本\n\n攻击活动\n攻击活动\nSecuronix发现针对美国的TACTICAL#OCTOPUS攻击活动\n\n数据泄露\n数据泄露\nTMX Finance及其子公司约480万个客户的数据泄露\n\n恶意软件\n恶意软件\n针对葡萄牙加密货币用户的新型Clipper恶意软件\n\n勒索软件\n勒索软件\nLockBit团伙声称将发布韩国国家税务局的数据\n\nKimsuky组织借助ADS隐藏恶意软件\n近日，AhnLab安全应急响应中心发现具有朝鲜背景的APT组织，Kimsuky组织正在使用备用数据流(Alternate Data Stream, ADS)来隐藏其所使用的恶意软件。该恶意软件是一种信息窃取程序，其通过启动包含在HTML文件中的VBScript来收集数据，特点是在大量伪代码之间添加实际的恶意代码。恶意软件通过在目标终端中执行一系列命令实现数据收集和传输目的。期间，在将经过十六进制编码的数据解码后，便将会保存为“C:\\ProgramData\\Uso2”目录中的“.Uso2Config.conf”。其中，攻击者所利用的解码文件是一个脚本，可用于连接到C2服务器并实现附加脚本的持久驻留。在保存“.Uso2Config.conf”时，“:honeyT”将被附加并保存在文件末尾，这将创建一个ADS。通过此方法保存，用户在目录中检查时，文件大小最终显示为0字节，进而实现恶意软件的隐藏效果。值得注意的是，Magniber勒索软件过去也曾使用过该方法规避检测。",
-    "reference": "https://asec.ahnlab.com/en/50625/"
-  },
-  {
-    "title": "双尾蝎组织通过钓鱼网站投递木马程序",
-    "txt": "双尾蝎(又名APT-C-23)，是一个针对巴以地区教育机构、军事机构等重要领域进行网络间谍活动，旨在窃取敏感信息的APT组织。2020年2月，哈马斯利用社交媒体伪装成美女针对色列国防军展开了一系列网络攻击，当时研究人员推测其背后的组织疑似为双尾蝎组织。近期，360的研究人员再次发现了哈马斯的最新攻击行动，本次行动始于2022年6月，至今仍然处于活跃状态中。本次攻击活动中，攻击者主要使用钓鱼网站进行载荷投递，涉及利用的合法程序包括一个专业的视频模仿工具“OPlayer”和一款流行的棋盘游戏“Align It”。此外，攻击样本还实施了将恶意应用作为子包打包进合法应用的重打包技术。恶意子包一旦运行，便将使用MQTT协议连接远程C2服务器并等待攻击者下发指令，最终实现根据远控指令执行相应功能的恶意操作。经关联分析，研究人员将此次攻击行动归属于双尾蝎组织，归因依据如下：1)本次攻击样本与色列国防军披露的样本属于同源样本；2)本次攻击样本使用的网络协议、加密方式、代码逻辑与色列国防军披露的样本基本一致；3)本次攻击的恶意样本为双尾蝎组织独有。",
-    "reference": "https://mp.weixin.qq.com/s/NomfjAjGYdsOpLBtiOSZpA"
+    "txt": "APT攻击\nMuddyWater和DEV-1084合作在勒索软件活动幌子下实施破坏性攻击\nWarSunflower组织针对CIS国家及中亚地区开展间谍活动\nKarakurt组织及2022年相关活动详情披露\nUNC4736组织是上个月3CX供应链攻击的幕后黑手\n披露Donot的样本\n攻击活动\n攻击活动\n韩国交易所GDAC遭到黑客攻击损失千万美元\n\n数据泄露\n数据泄露\nARES Leaks将成为新的数据泄露服务中心\n\n勒索软件\n勒索软件\n攻击者利用Windows零日漏洞部署Nokoyawa勒索软件\n台湾微星科技遭到Money Message攻击被勒索400万美元\nMuddyWater和DEV-1084合作在勒索软件活动幌子下实施破坏性攻击\n近日，微软的研究人员指出，具有伊朗背景的APT组织MuddyWater正与另一个名为DEV-1084的新兴活动集群合作，以攻击目标的本地和云基础设施，且攻击者试图将伪装成标准的勒索软件攻击活动。研究人员表示，MuddyWater极有可能与DEV-1084合作实施了间谍攻击，后者在MuddyWater成功进入目标环境后实施了一系列破坏性行动。MuddyWater疑似首先利用未打补丁的应用程序漏洞获取初始访问权限，然后将访问权限移交给DEV-1084，DEV-1084再继续执行后续广泛的内部侦察发现、持久性建立、横向移动等操作。经检测发现，DEV-1084最终利用高特权凭据对本地设备进行了加密操作并大规模地删除了云端资源。MuddyWater组织(别称Boggy Serpens、Earth Vetala、ITG17和Yellow Nix)自2017年开始活跃，主要攻击中东国家，过去一年曾利用Log4Shell漏洞破坏以色列实体。DEV-1084与MuddyWater的基础设施和工具存在重叠，DEV-1084被观察到使用了MuddyWater的一个工具：Ligolo。研究人员表示，目前没有确凿的证据可以确定DEV-1084是否独立于MuddyWater运作，或者说是否为MuddyWater的一个分支组织。攻击链图如下图所示。\n本地攻击链图",
+    "reference": "https://www.microsoft.com/en-us/security/blog/2023/04/07/mercury-and-dev-1084-destructive-attack-on-hybrid-environment/"
   }
 ]

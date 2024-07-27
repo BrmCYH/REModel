@@ -1,7 +1,12 @@
 [
   {
-    "title": "疑似朝鲜攻击者针对俄罗斯导弹工程公司开展攻击",
-    "txt": "近日，SentinelLabs的研究人员发现了朝鲜攻击者对俄罗斯国防工业基地发起攻击。研究人员在跟踪攻击活动时发现了一个泄露的电子邮件集合，其中包含大量之前曾被报道过的钓鱼邮件。此外，该集合中还存在一个当时受害机构未察觉的攻击活动，即朝鲜黑客组织对俄罗斯导弹和军用航天器制造商NPO Mashinostroyenia发起的攻击活动。NPO Mashinostroyeniya是一家受制裁的公司，拥有俄罗斯军方目前正在使用和正在开发的敏感导弹技术的高度机密知识产权。大概在2022年5月中旬，在俄罗斯一票否决了联合国决议“加强针对朝鲜的制裁”的前一周，黑客组织对NPO Mashinostroyenia发起了攻击。经过研究人员调查，在本次攻击过程中，存在一个Windows平台的后门样本OpenCarrot，该样本此前曾被IBM研究人员确认为朝鲜黑客组织Lazarus使用。OpenCarrot样本使用DLL文件进行部署，有二十多个后门命令可以执行，包括进行文件枚举、内网存活主机探测、进程终止等命令。此外，研究人员还在可疑流量中发现一个攻击者的基础设施并经过分析将其归因为ScarCruft组织。",
-    "reference": "https://www.sentinelone.com/labs/comrades-in-arms-north-korea-compromises-sanctioned-russian-missile-engineering-company/"
+    "title": "恶意软件",
+    "txt": "恶意软件\nJanelaRAT木马针对拉丁美洲金融行业开展攻击\n\n勒索软件\n勒索软件\n勒索软件Monti针对法律和政府领域机构再次攻击\n\nMoustachedBouncer组织针对白俄罗斯大使馆进行间谍活动",
+    "reference": "https://www.welivesecurity.com/en/eset-research/moustachedbouncer-espionage-against-foreign-diplomats-in-belarus/"
+  },
+  {
+    "title": "APT-C-35近期移动端载荷投递策略揭秘",
+    "txt": "APT-C-35（肚脑虫）是一个主要针对克什米尔地区相关国家政府机构的APT组织，旨在窃取敏感信息，具备针对Windows与Android双平台的攻击能力，并且在针对Android平台的历史攻击活动中，多次利用钓鱼网站和社交媒体进行网络攻击。近期，360的安全研究人员再次监控到了一批APT-C-35组织的移动端攻击样本，且样本使用的字符串加密方式以及载荷投递方式均有别于此前的攻击。经研究人员调查发现，本轮攻击活动时间范围跨越2022年6月至2023年2月，受影响的地区主要是孟加拉国和斯里兰卡。活动涉及两种载荷投递方式：1)通过社交应用直接传播，此类方式最为常用，即通过使用WhatsApp等社交软件直接向受害者传输伪装成聊天应用的APK安装包；2)通过PDF诱饵文档联网下载，该类方式为APT-C-35的创新之举，即利用文档类文件作为诱饵进行移动样本的投递。据悉，诱饵文件伪装成名为\"草稿\"的PDF文档，疑似通过鱼叉式网络钓鱼邮件或社交应用进行传播，当受害者打开文档后，会直接显示一个提示框，提示受害者需要安装一个插件才可查看。当受害者点击下载按钮后便会打开指定的URL，攻击者服务器端则会判断该URL请求端的平台类型，如果不是Android平台，则会返回错误页面，反之，则会下载一个名为\"PluginL26.9.22.apk\"(不同时间下载的版本不一样)的Android安装包，该安装包即为APT-C-35专用的Android RAT。此外，新样本对关键的字符串，如文件名、远控指令等使用了新的编码方式，不再沿用之前base64编码或硬编码的方法，而是采用了AES加密算法对关键的字符串进行加密存放，因此增加了分析和查杀难度。攻击链图如下图所示。\n",
+    "reference": "https://mp.weixin.qq.com/s/WJji5Dr9OHSgwIaySetCfg"
   }
 ]

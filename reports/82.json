@@ -1,27 +1,27 @@
 [
   {
-    "title": "Gamaredon Group使用信息窃取恶意软件针对乌克兰",
-    "txt": "近日，思科研究人员披露了具有俄罗斯背景的APT组织Gamaredon Group，针对乌克兰政府、国防和执法机构的攻击活动。攻击者使用网络钓鱼电子邮件，传递包含带有恶意VBScript宏脚本的文档附件，诱导受害者打开文档，下载宏并通过LNK执行MSHTA.EXE，进而下载并解析远程XML文件以执行恶意PowerShell脚本，随后在受感染的端点上下载并激活下一阶段的有效载荷开展攻击活动。鉴于此次攻击活动在TTP、恶意软件和基础设施方面，与此前乌克兰计算机应急响应团队(CERT-UA)披露的Gamaredon Group的一系列攻击活动存在重叠，因此将此次攻击归因于GamaredonGroup。",
-    "reference": "https://blog.talosintelligence.com/2022/09/gamaredon-apt-targets-ukrainian-agencies.html"
+    "title": "攻击活动",
+    "txt": "攻击活动\n针对美国军事武器承包商的攻击活动\nAnonymous黑客组织声称入侵了俄罗斯国防部\n\n数据泄露\n数据泄露\n以色列国防承包商Elbit的美国分公司发生数据泄露\n\n恶意软件\n恶意软件\nKaspersky研究人员发现新的NullMixer恶意软件\n\n新的APT组织Metador针对电信公\n司、ISP和大学",
+    "reference": "https://www.sentinelone.com/labs/the-mystery-of-metador-an-unattributed-threat-hiding-in-telcos-isps-and-universities/"
   },
   {
-    "title": "Sandworm组织冒充乌克兰电信公司投递恶意软件",
-    "txt": "Recorded Future研究人员披露了具有俄罗斯背景的APT组织Sandworm，伪装成乌克兰电信供应商，通过发送恶意ISO文件，向乌克兰的军事人员和实体，投递Colibri Loader和Warzone RAT等商业恶意软件的攻击活动。Colibri Loader是用户“c0d3r_0f_shr0d13ng3r”在XSS论坛上提供的针对Windows操作系统使用汇编和C语言编写的商业恶意软件；Warzone RAT是一种流行的商业远程访问工具 (RAT)，在地下论坛和开发者网站warzone.ws上出售，被宣传为使用C/C++开发的全功能RAT，声称“易于使用且高度可靠”。",
-    "reference": "https://www.recordedfuture.com//russia-nexus-uac-0113-emulating-telecommunication-providers-in-ukraine"
+    "title": "APT28利用PowerPoint文件投递恶意软件",
+    "txt": "近期，Cluster25的研究人员发现具有俄罗斯背景的APT组织APT28，使用诱饵文档投递Graphite恶意软件的变体。诱饵文档是利用了一种新颖的代码执行技术的PowerPoint文件，该技术设计为当用户启动演示模式并移动鼠标时触发执行，并且是通过超链接触发的。代码执行后会运行一个PowerShell脚本，该脚本会从OneDrive下载并执行一个dropper，而dropper会最终下载有效载荷。攻击者会利用这个有效载荷展开下一步的攻击活动。",
+    "reference": "https://blog.cluster25.duskrise.com/2022/09/23/in-the-footsteps-of-the-fancy-bear-powerpoint-graphite/"
   },
   {
-    "title": "APT37使用网络钓鱼电子邮件投递恶意软件",
-    "txt": "最近，FortiGuard Labs研究人员发现具有朝鲜背景的APT组织APT37，使用俄语编写的网络钓鱼邮件，向受害者投递恶意软件。攻击者通过在恶意邮件的附件中添加宏脚本，创建计划任务并执行PowerShell命令，从而连接到C2并下载恶意软件。经过研究人员确认，攻击使用的恶意软件与APT37远程访问工具(RAT)—Konni一致，因此将此次活动归因于APT37。",
-    "reference": "https://www.fortinet.com/blog/threat-research/konni-rat-phishing-email-deploying-malware"
+    "title": "Lazarus Group针对加密货币从业者的钓鱼攻击",
+    "txt": "近期，SentinelOne的研究人员发现了具有朝鲜背景的APT组织Lazarus Group，利用流行加密货币交易所Crypto.com的招聘广告作为诱饵，针对使用macOS平台的加密货币行业的从业者，发起网络钓鱼攻击活动。攻击者首先利用LinkedIn接触受害目标，发送一个伪装成PDF的Mach-O二进制文件，其中包含Crypto.com的招聘信息。当受害者打开PDF文件后，该Mach-O二进制文件会在用户的库目录中创建一个文件夹，并分发第二阶段和第三阶段的恶意模块，进而开展下一步的攻击活动。",
+    "reference": "https://www.sentinelone.com/blog/lazarus-operation-interception-targets-macos-users-dreaming-of-jobs-in-crypto/"
   },
   {
-    "title": "披露Donot样本",
-    "txt": "近日，研究人员披露Donot组织的恶意样本，IOC信息如下所示：\n文件名：doc125555.ppt\nMD5：3cd6fc1309294e4eb4bfb2e861e2f570\nDomain：furnish.spacequery.live",
-    "reference": "https://twitter.com/jameswt_mht/status/1572536554425548800"
+    "title": "Lazarus Group使用BYOVD技术的攻击活动",
+    "txt": "近期，AhnLab的研究人员披露了具有朝鲜背景的APT组织Lazarus Group，使用BYOVD技术开展新的攻击活动。根据研究人员分析，攻击者使用BYOVD（自带存在缺陷的驱动程序）技术，并利用了合法戴尔驱动程序中的漏洞CVE-2021-21551。攻击者在获得对内核内存空间的写访问权后，为了防止恶意软件被检出，屏蔽了系统中所有的安全解决方案和监控工具，从而开展后续的攻击活动。",
+    "reference": "https://asec.ahnlab.com/en/38993/"
   },
   {
-    "title": "针对中国用户的仿冒Telegram下载网站",
-    "txt": "Cyble研究人员发现了一个虚假的Telegram下载网站，其中的恶意安装程序滥用了Windows Defender应用程序来执行RAT操作。仿冒网站首先将用户重定向到Telegram的官方网站，以下载Android、iOS和macOS等非Windows平台上的应用程序，当用户选择安装Windows平台应用程序时，虚假网站就会下载恶意的MSI安装程序。MSI文件执行时会使用正版MpCmdRun.exe进行DLL侧加载，加载的恶意文件mpclient.dll进一步读取一个名为upgrade.xml的文件，对其进行解密，并将代码注入以逃避检测，进而展开下一步攻击活动。",
-    "reference": "https://blog.cyble.com/2022/09/17/fake-telegram-site-delivering-rat-aimed-at-chinese-users/"
+    "title": "披露Lazarus Group的样本",
+    "txt": "近日，研究人员披露了Lazarus Group组织的恶意样本，IOC信息如下所示：\n文件名：Galaxy JDs.pdf.lnk\nMD5：8878ee5d935facff0e04370324118c60",
+    "reference": "来源："
   }
 ]

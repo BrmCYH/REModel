@@ -1,17 +1,17 @@
 [
   {
-    "title": "APT攻击",
-    "txt": "APT攻击\n新APT组织Grayling针对台湾多个重要行业单位开展攻击\n新APT组织沙猁猫针对库尔德斯坦民主党活动人士分发远控木马\n研究人员对APT组织Lazarus Group使用的工具Volgmer后门及其加载器Scout的分析\nAPT组织Lazarus Group使用新后门LightlessCan针对西班牙航空公司开展攻击\n\n攻击活动\n攻击活动\n巴以近期相关DDoS攻击活动追踪\n\n漏洞情报\n漏洞情报\n黑客利用WordPress插件tagDiv的漏洞开展攻击\n\n数据泄露\n数据泄露\n欧洲航空公司遭遇数据泄露\n\n恶意软件\n恶意软件\nZenRAT通过伪装为Bitwarden的虚假安装包进行分发\n新型安卓木马GoldDigger针对越南政府单位和金融公司\nPurpleFox利用图片隐写术传递恶意代码\n\n勒索软件\n勒索软件\n佛罗里达州巡回法院遭ALPHV勒索软件攻击\nMGM度假村遭受勒索软件攻击，影响多个系统和服务\n\n新APT组织Grayling针对台湾多个重要行业单位开展攻击\n\n近期，Symantec的研究人员发现一个新APT组织针对台湾制造、IT和生物医学领域的许多公司与机构，研究人员将该组织命名为Grayling。研究人员表示，Grayling首先会针对暴露在公网的服务器来获取初始访问权限。攻击者一旦获得初始访问权限，就会采取各种的攻击行动，包括提升权限、网络扫描和下载恶意软件，目前监测到攻击者使用的TTPs包括使用Havoc框架、Cobalt Strike、Netspy，利用漏洞CVE-2019-0803进行提权，查询Active Directory，使用Mimikatz，杀死进程等。此外，Grayling近期在攻击活动中还使用了一种独特的DLL侧加载技术，该技术使用自定义解密器来部署有效载荷。研究人员人员推断，Grayling组织的主要目的是情报收集。",
-    "reference": "https://symantec-enterprise-blogs.security.com/blogs/threat-intelligence/grayling-taiwan-cyber-attacks"
+    "title": "数据泄露",
+    "txt": "数据泄露\nD-Link发生数据泄露，泄露信息包括员工和合作伙伴\nD-Link发生数据泄露，泄露信息包括员工和合作伙伴\n\n恶意软件\n恶意软件\nAgentTesla通过CHM和PDF文件进行传播\nDarkGate恶意软件通过即时通讯平台传播\nDarkGate恶意软件通过即时通讯平台传播\n\n勒索软件\n勒索软件\nALPHV勒索软件攻击美国莫里森社区医院\n\nAPT组织Lazarus Group利用TeamCity服务器漏洞实施软件供应链攻击\n\n近日，微软的研究人员披露了，自2023年10月初以来，具有朝鲜背景的APT组织Lazarus Group(又称Diamond Sleet)与其子组织Andariel(又称Onyx Sleet)开始通过利用TeamCity服务器中的CVE-2023-42793漏洞部署后门等恶意软件，以发动软件供应链攻击。据了解，TeamCity是用于DevOps和其他软件开发活动的持续集成/持续部署(CI/CD)应用程序，其CVE-2023-42793漏洞于2023年9月份被披露，影响了多个版本的JetBrains TeamCity服务器，可允许未经身份验证的攻击者远程执行代码。研究人员表示，Lazarus Group在本次攻击活动中共执行了两个攻击链，即在第一个攻击链中部署了ForestTiger后门，在第二个攻击链中则使用DLL搜索顺序劫持攻击手段启动了名为FeedLoad的恶意软件加载程序，进而安装了远程访问木马。其自组织Andariel则通过在受攻击的服务器上创建\"krtbgt\"管理员帐户并运行命令收集了系统信息，最终部署了一个安装HazyLoad代理工具的有效负载，从而建立了持久连接。不过研究人员还表示，无论黑客通过哪种方式进行攻击，最终都会从LSASS转储凭据，以在受感染的网络上进行横向传播。攻击链图如下图所示。\n使用ForestTiger后门的Diamond Sleet攻击链\n使用DLL搜索顺序劫持的Diamond Sleet攻击链\nOnyx Sleet攻击链",
+    "reference": "https://www.microsoft.com/en-us/security/blog/2023/10/18/multiple-north-korean-threat-actors-exploiting-the-teamcity-cve-2023-42793-vulnerability/"
   },
   {
-    "title": "新APT组织沙猁猫针对库尔德斯坦民主党活动人士分发远控木马",
-    "txt": "\n近期，奇安信的研究人员捕获到两个伪装成库尔德斯坦民主党(KDP)官方应用的恶意软件，并根据其命令特征将其命名为MOrder RAT。两个恶意软件分别伪装成名为kurdistanukurd和KurdistanMedia的KDP官方软件。恶意软件包含多个功能和指令，指令以M开头拼接特定指令缩写，功能包括向C2服务器传递通讯录信息、短信、向指定电话发送短信、开启指定界面、上传设备与授权信息等。在对攻击者的追踪过程中，研究人员还发现了一个名为Ahmyth RAT的样本。Ahmyth是一个开源的Android远程控制项目，分为服务器端和客户端，该项目常被用来制作Android端的RAT样本。其包含录音录屏拍照、获取设备文件、获取定位、获取联系人短信和通话记录及发送短信等功能。攻击者制作了该样本，但研究人员并未发现相关受害者，推测该样本可能处于制作测试阶段。由于攻击者的服务器配置不当，服务器泄露了大量受害者数据，从泄露数据可以看出，攻击者的攻击时间分为两个阶段，一个阶段为2021年7月至11月，另一个阶段则从2023年5月持续至今。此外泄露数据中的受害者名字均为库尔德语，电话号码多为伊朗号码，少量号码为伊拉克号码，经研究人员对部分信息进行验证，对应信息确有其人。研究人员因此推测此次活动是针对库尔德斯坦民主党活动人士的攻击，并根据攻击者的特征将该攻击组织命名为沙猁猫。",
-    "reference": "https://mp.weixin.qq.com/s/xy9PfucgtYTzae_XLWsN6w"
+    "title": "APT组织Kimsuky使用RDP服务控制受害主机并开展攻击",
+    "txt": "\nKimsuky是一个具有朝鲜背景的APT组织，至少自2013年9月以来一直活跃。主要攻击目标为韩国，涉及行业包括国防、教育、能源、政府、医疗以及智囊团等领域，并以机密信息窃取为主要目的。通常使用社会工程学、鱼叉邮件、水坑攻击等手段投递恶意软件，拥有功能完善的恶意代码武器库。在近期的攻击活动中，攻击者疑似通过鱼叉式网络钓鱼攻击方式分发包含恶意代码的文件，安全人员在受害主机上发现了一个名为hwp.bat的文件，BAT恶意软件使用WMIC命令探查防病毒软件并另外安装恶意脚本。随后攻击者使用k.ps1和OneNote.vbs恶意软件进行进一步感染，k.ps1文件负责键盘记录并将记录的数据存储到指定路径下，OneNote.vbs则负责执行命令。除此之外，安全人员还在受害主机上发现了恶意程序pow.ps1和加密文件desktop.r7u，pow.ps1负责解密desktop.r7u并使其运行在内存中，desktop.r7u是集合了加载器和远控木马的功能。攻击者还安装了一个名为multiple.exe的恶意软件，该恶意软件可以添加用户帐户、激活RDP并支持多会话功能。恶意软件首先终止RDP服务，然后授予修改负责RDP服务的termsrv.dll的权限。然后，将termsrv.dll文件的名称更改为termsrv.pdb，并将%APPDATA%路径中已存在的修复了多会话功能的termsrv.dll复制到%SystemDirectory%路径。此外，受害主机上还存在一个名为RevClient的恶意代码，RevClient是与RDP服务器相关的恶意代码，通过接收C&C服务器的命令进行操作，可以根据命令进行用户账户操作和端口转发。",
+    "reference": "https://asec.ahnlab.com/ko/57748/"
   },
   {
-    "title": "研究人员对APT组织Lazarus Group使用的工具Volgmer后门及其加载器Scout的分析",
-    "txt": "近期，ASEC的研究人员对Lazarus Group的后门Volgmer及其加载器Scout进行了分析。Volgmer是一种后门恶意软件，自2014年以来一直被Lazarus Group使用。Volgmer常伪装成普通文件运行，其特点是对配置数据进行加密并存储在注册表项“HKLM\\SYSTEM\\CurrentControlSet\\Control\\WMI\\Security”中。研究人员确认，自2014年到2021年左右，Volgmer后门已在攻击中使用了多种变体，并且从2022年开始，攻击者使用Scout作为Volgmer的下载器。Volgmer是一个DLL形式的后门恶意软件，需要通过加载器注册服务运行Volgmer，Volgmer运行后将解密存储在注册表中的配置信息，通过HTTP协议连接C2服务器进行验证。在HTTP请求头中，Volgmer存在将Mozilla拼写成Mozillar的特征。当C2服务器验证完成后，Volgmer将向C2服务器发送受感染主机的信息，同时接收C2服务器下发的指令。在Volgmer最新样本中，Volgmer已升级为使用HTTPS协议进行验证与通信，同时使用RC4算法进行加密。Scout加载器出现于2022年，根据其PDB信息的不同，研究人员人员将Scout分为v1和v2两个版本。Scout可通过创建窗口大小为0的GUI界面来伪装成正常程序，让用户无法察觉。",
-    "reference": "https://asec.ahnlab.com/ko/57427/"
+    "title": "新APT组织Sticky Werewolf活动披露",
+    "txt": "\n近日，BI.ZONE的研究人员发现了一个新APT组织名为Sticky Werewolf，该组织使用合法软件来干扰政府组织的工作，主要针对俄罗斯和白俄罗斯的政府单位，该组织至少从2023年4月起开始活跃。Sticky Werewolf利用携带恶意文件链接的钓鱼邮件获取初始访问权限，使用IP Logger服务生成恶意文件链接。当用户点击链接时，用户的城市、浏览器版本、操作系统等信息将被收集。并且，IP Logger服务允许用户使用其自身掌控的域名，因此攻击者可以仿造合法域名制造钓鱼链接，从而诱骗用户。钓鱼链接伪装成Microsoft Word或PDF文档的下载链接，当用户打开此类文件后，文件会演示适当格式的合法文档，同时安装NetWire RAT，展示的文档内容包括俄罗斯紧急情况部的紧急警告、权利要求书等。安全人员分析发现，Sticky Werewolf使用Themida对NetWire远控木马进行混淆，以绕过安全检测。而NetWire恶意软件可以收集受害主机信息，同时执行多种命令，包括管理文件、进程、服务、窗口以及已安装的应用程序、编辑Windows注册表、从剪贴板检索数据、录屏等。",
+    "reference": "https://bi.zone/expertise/blog/shpiony-sticky-werewolf-atakuyut-gosudarstvennye-organizatsii-rossii-i-belarusi/"
   }
 ]

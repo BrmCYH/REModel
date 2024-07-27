@@ -1,12 +1,22 @@
 [
   {
     "title": "APT攻击",
-    "txt": "\nTA453针对中东核安全专家开展攻击\nStorm-0978组织借助零日漏洞攻击欧洲和北美地区\nGroup123组织近期攻击活动分析\nRomCom针对北约峰会与会者发起网络钓鱼攻击\n披露Donot的样本\n\n攻击活动\n\n加密货币平台Multichain遭受网络攻击\n\n数据泄露\n\n德意志银行称供应商遭到攻击导致其客户的信息泄露\n美国HCA Healthcare发生数据泄露影响约1100万患者\n\n恶意软件\n\n针对中文用户及中国网吧的浏览器劫持程序RedDriver\nTOITOIN银行木马入侵拉丁美洲企业网络\n\n勒索软件\n\n日本名古屋港因勒索软件攻击而暂停货运业务\n\nTA453针对中东核安全专家开展攻击\n近日，Proofpoint的研究人员披露了具有伊朗背景的APT组织——TA453，发起了新一轮的鱼叉式网络钓鱼攻击活动。研究人员表示，本次攻击活动始于2023年5月中旬，TA453大幅度地调整其感染链，即开始通过部署LNK感染链，而不是带有宏的Microsoft Word文档，使得检测工作变得更加复杂。经研究人员调查显示，TA453主要伪装成皇家联合军种研究所(RUSI)的高级研究员，并通过向公共媒体联系人发送良性的对话诱饵邮件与目标建立联系，随后使用多人角色模拟技术以针对中东事务和核安全专家。同时，TA453还会借助各种云服务来执行攻击链，用以传播其新型的PowerShell后门GorjolEcho。此外，当有机会时，TA453还会试图启动一个被研究人员称为NokNok的针对MAC系统的恶意软件感染链。PowerShell后门GorjolEcho和恶意软件NokNok的攻击链图如下图所示。\nGorjolEcho 完整感染链\nNokNok 的感染链",
-    "reference": "https://www.proofpoint.com/us/blog/threat-insight/welcome-new-york-exploring-ta453s-foray-lnks-and-mac-malware"
+    "txt": "APT攻击\nTurla组织针对乌克兰和东欧国防部门开展攻击\nRedCurl使用新工具针对俄罗斯某大型银行开展攻击\nFIN8采用改进的Sardonic后门变体传播Noberus勒索软件\nTeamTNT利用多个后门部署Tsunami恶意软件\nUNC1151针对乌克兰和波兰的政府、军事和民用实体开展攻击\n披露Kimsuky的样本\n\n攻击活动\n攻击活动\n利用WooCommerce Payments插件漏洞进行的攻击活动\n\n数据泄露\n数据泄露\n研究人员发现Docker Hub中的大量镜像泄露敏感数据\nVirusTotal泄露大量用户信息涉及FBI和NSA等机构\n\n恶意软件\n恶意软件\n研究人员发现一种名为WormGPT的恶意工具\n\n勒索软件\n勒索软件\n雅诗兰黛公司遭到来自ALPHV和Clop的两次勒索攻击\n\nTurla组织针对乌克兰和东欧国防部门开展攻击\n",
+    "reference": "https://cert.gov.ua/article/5213167"
   },
   {
-    "title": "Storm-0978组织借助零日漏洞攻击欧洲和北美地区",
-    "txt": "近日，微软的研究人员表示，零日漏洞(CVE-2023-36884)正被Storm-0978组织用于针对欧洲和北美地区的政府及国防部门。Storm-0978(又称RomCom、Tropical Scorpius)是一个与俄罗斯有关的APT组织，主要参与间谍和网络犯罪活动，该组织因使用RomCom远程访问木马(RAT)而得名。而CVE-2023-36884漏洞主要影响Microsoft Windows和Office产品，于2023年7月11日首次披露。攻击者可以通过创建特制的Microsoft Office文档，从而在目标计算机上远程执行代码。在本次攻击活动中，攻击者使用包含CVE-2023-36884漏洞的Microsoft Word文档伪装成与乌克兰世界大会有关的信息以诱导受害者打开。此外，值得注意的是，美国网络安全和基础设施安全局(CISA)称Hawker和RomCom之间似乎还存在密切联系。不过，目前尚不清楚这两个组织是否归属于同一个组织。",
-    "reference": "https://www.microsoft.com/en-us/security/blog/2023/07/11/storm-0978-attacks-reveal-financial-and-espionage-motives/"
+    "title": "RedCurl使用新工具针对俄罗斯某大型银行开展攻击",
+    "txt": "近日，FACCT的研究人员发布了关于APT组织RedCurl的最新攻击活动报告。据悉，RedCurl于2019年底首次被Group-IB的研究人员披露，专门从事商业间谍活动。在过去几年中，已对来自英国、德国、加拿大、挪威、乌克兰、澳大利亚的公司发起了至少34次攻击，且其中超过一半的袭击(20起)发生在俄罗斯，受影响行业则涉及建筑、金融、咨询、零售商、银行、保险、法律等。攻击者的主要目的为窃取商业机密以及包含员工个人数据的文件。该报告显示，RedCurl近期攻击了俄罗斯的一家大型银行和澳大利亚的一家国际航运公司。其中，RedCurl针对俄罗斯银行发起了两次攻击，且均想通过使用网络钓鱼邮件以获取初始访问权限。在2022年11月的第一次尝试中，诱饵邮件伪装成来自人力资源部门的邮件，但是失败了。在2023年5月，该团伙再次发送了伪装为来自俄罗斯知名市场的以企业折扣优惠为主题的诱饵邮件，通过瞄准该银行的一名承包商，进而成功地入侵了目标的基础设施。同年6月，RedCurl还被观察到在对澳大利亚公司的攻击中使用了相同的策略和工具。期间，研究人员还发现了RedCurl使用的新工具：RedCurl.SimpleDownloader。其中，RedCurl.SimpleDownloader目前仍在开发状态，是为RedCurl新活动所量身定制的，其使用了知名品牌作为诱饵，是一个具有单个导出函数的DLL文件，代码轻量且功能简单，主要充当诱饵并被用于下载额外有效载荷。",
+    "reference": "https://www.facct.ru/blog/redcurl-2023/"
+  },
+  {
+    "title": "FIN8采用改进的Sardonic后门变体传播Noberus勒索软件",
+    "txt": "\n近日，赛门铁克发布了FIN8组织使用改进的Sardonic后门变体传播Noberus勒索软件的活动分析报告。FIN8(又名Syssphinx)，至少自2016年1月开始活跃，是一个出于经济动机的网络犯罪组织，以酒店、零售、娱乐、保险、技术、化学品和金融行业的组织为目标。该组织通常利用PowerShell、WMI等内置工具，主要采用社会工程学和鱼叉式网络钓鱼的攻击方法。此次改进的Sardonic后门使用C语言进行编写。在本次攻击活动中，攻击者首先使用Powershell执行一系列命令以获取计算机的详细信息并建立持久性。然后，攻击者使用Power shell脚本部署后门，脚本首先检查当前进程的体系结构，选择使用32位或者64位编码的.NET加载器，随后运行相应的加载器，解密注入器和后门文件。注入器为Shellcode形式，目的是在新创建的WmiPrvSE.exe进程中启动后门。后门文件与注入器相似，也采用Shellcode形式，可以与C2服务器进行通信，执行C2服务器下发的命令。通信内容的正文和页脚字段使用rc4_key作为加密密钥，使用RC4算法进行加密。加密每个单独字段时还会重复使用密钥流。",
+    "reference": "https://symantec-enterprise-blogs.security.com/blogs/threat-intelligence/syssphinx-fin8-backdoor"
+  },
+  {
+    "title": "TeamTNT利用多个后门部署Tsunami恶意软件",
+    "txt": "\n近日，Aquasec的研究人员发现了一个针对配置不当的Docker API和JupyterLab实例的新兴活动，并且经过分析将此次活动归因于TeamTNT组织。TeamTNT针对Kubernetes集群、Docker API、Hadoop服务等，利用多种脚本外联C2服务器下载二进制文件。在分析过程中，研究人员发现TeamTNT使用了4种类型的后门，第一个通过修改passwd、shadow和sudoers文件来创建新帐户、插入RSA密钥来创建SSH后门、向C2服务器回传新建账号密码等信息。第二个文件可进行反弹shell。第三个为正规工具Tmate，攻击者将其作为Webshell。第四个则使用Ngrok建立HTTP隧道。TeamTNT使用dload函数来绕过常规检测，dload函数利用dev/tcp来执行通信并下载有效载荷。研究人员表示TeamTNT正在跨多个云环境(包括AWS、Azure和GCP)扫描凭证。此外，TeamTNT还在寻找特定应用程序，例如Grafana、Kubernetes、Docker Compose、Git和NPM。TeamTNT还会搜索数据库和存储系统，例如Postgres、AWS S3、Filezilla、SQLite、ngrok data、Samba、Censys等。另外，TeamTNT在攻陷服务器后，还会部署Tsunami软件。Tsunami是一种恶意软件，主要针对Linux系统拓展僵尸网络，可通过IRC协议与C2服务器进行通信。",
+    "reference": "https://blog.aquasec.com/teamtnt-reemerged-with-new-aggressive-cloud-campaign"
   }
 ]
