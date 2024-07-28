@@ -84,9 +84,20 @@ def get(url,i):
                     targetdict={}
                     canel.clear()
                     continue
-                
+                if x.strip() in ['漏洞情报',"数据泄露","恶意软件","勒索软件","攻击活动","APT攻击"]:
+                    txt = canel.pop()
+                    liststr  =[]
+                    while txt is not None:
+                        liststr.append(txt)
+                    targetdict = {"title":"",
+                                    "txt": "\n".join(liststr) ,
+                                    "reference":""}
+                    reports.append(targetdict.copy())
+                    targetdict={}
+                    canel.clear()
+                    continue
                 # print("参考链接" in x or "来源" in x or "https://" in x)
-                if "参考链接" in x or "来源" in x or "https://" in x:
+                elif "参考链接" in x or "来源" in x or "https://" in x:
                     # print(canel.x)
                     do = -1
                     liststr  =[]
